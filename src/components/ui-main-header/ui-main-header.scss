@@ -1,0 +1,57 @@
+@use'../../styles/foundations/variables' as *;
+
+.ui-main__header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-width: 3px;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-color: rgba($primary, 1);
+
+    .ui-main__heading {
+        letter-spacing: -0.05em;
+        font-style: italic;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0;
+    }
+
+    .ui-main__filters {
+        display: flex;
+        gap: 1rem;
+
+        .ui-main__filter-button {
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            cursor: pointer;
+            color: rgba($black, 1);
+            transition: all 0.25s ease;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -6px;
+                width: 0%;
+                height: 2px;
+                background: rgba($primary, 1);
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: rgba($primary, 1);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}

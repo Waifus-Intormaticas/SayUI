@@ -1,0 +1,18 @@
+.ui-layout {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+
+    &__content {
+        display: flex;
+        gap: 3rem;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ui-layout__content {
+        flex-direction: row;
+    }
+
+}
