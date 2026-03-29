@@ -1,0 +1,8 @@
+@use'../../styles/foundations/variables' as *;
+
+/* responsive */
+@media (min-width: 1024px) {
+    .ui-main {
+        width: 66.666667%;
+    }
+}

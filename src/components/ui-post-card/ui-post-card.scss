@@ -1,0 +1,85 @@
+@use'../../styles/foundations/variables' as *;
+
+.ui-post-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: rgba($white, 1);
+    border-radius: 0.5rem;
+    gap: 1rem;
+    box-shadow: 0 10px 30px rgba($black, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover {
+        box-shadow: 0 20px 40px rgba($primary, 0.1);
+        transform: translateY(-4px);
+    }
+
+    &:hover .ui-post-card__image {
+        transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.05) scaleY(1.05);
+        transition: ease-in-out 700ms;
+    }
+
+    &:hover .ui-post-card__title {
+        color: rgba($primary, 1);
+        transition: ease-in-out 150ms;
+    }
+
+    .ui-post-card__image-wrapper {
+        border-radius: 0.25rem;
+        overflow: hidden;
+        aspect-ratio: 16 / 10;
+
+        .ui-post-card__image {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .ui-post-card__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .ui-post-card__eyebrow {
+            color: rgba($primary, 1);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 10px;
+        }
+
+        .ui-post-card__title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.375;
+            margin: 0;
+        }
+
+        .ui-post-card__description {
+            color: $slate;
+            line-height: 1.625;
+            font-size: 0.875rem;
+            overflow: hidden;
+            display: -webkit-box;
+            display: box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            overflow-wrap: break-word;
+            mask-image: linear-gradient(to bottom, rgba($black, 1) 70%, transparent);
+            margin: 0;
+        }
+
+        .ui-post-card__meta {
+            color: rgba($slate-light, 1);
+            font-weight: 500;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            margin-top: 0.5rem;
+        }
+    }
+}

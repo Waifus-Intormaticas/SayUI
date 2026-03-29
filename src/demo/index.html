@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="demo.css">
     <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +13,7 @@
 </head>
 
 <body>
-    <div class="contianerDemo">
+    <div class="ui-page">
         <header class="ui-topbar">
             <div class="ui-topbar__inner">
                 <div class="ui-topbar__left">
@@ -50,8 +52,7 @@
             </div>
 
         </header>
-        <div class="demoContainer">
-
+        <div class="ui-layout">
             <section class="ui-banner">
                 <div class="ui-banner__wrapper">
                     <div class="ui-banner__media">
@@ -87,67 +88,243 @@
                     </div>
                 </div>
             </section>
-        </div>
-    </div>
-    <footer class="ui-footer">
-        <div class="ui-footer__inner">
-            <div class="ui-footer__header">
-                <div class="ui-footer__brand">
-                    <div class="ui-footer__icon-box">
-                        <span class="material-symbols-outlined ui-footer__brand-icon">
-                            grid_view
-                        </span>
+            <div class="ui-layout__content">
+                <div class="ui-main">
+                    <div class="ui-main__header-row">
+                        <h3 class="ui-main__heading">Latest Stories</h3>
+                        <div class="ui-main__filters">
+                            <button class="ui-main__filter-button">All</button>
+                            <button class="ui-main__filter-button">Desing</button>
+                            <button class="ui-main__filter-button">Tech</button>
+                            <button class="ui-main__filter-button">Culture</button>
+                        </div>
                     </div>
-                    <h2 class="ui-footer__title">Editorial</h2>
+
+                    <div class="ui-main__grid">
+                        <article class="ui-post-card">
+                            <div class="ui-post-card__image-wrapper">
+                                <img src="img/Hanekawa Tsubasa.jpg" alt="" class="ui-post-card__image">
+                            </div>
+                            <div class="ui-post-card__content">
+                                <span class="ui-post-card__eyebrow">Color Theory</span>
+                                <h4 class="ui-post-card__title">Mastering Red: The Power of Single Color Branding
+                                </h4>
+                                <p class="ui-post-card__description">Exploring why the boldest primary color remains
+                                    the most
+                                    effective tool.</p>
+                                <div class="ui-post-card__meta">Mar 24, 2024 • 5 min read</div>
+                            </div>
+                        </article>
+
+                        <article class="ui-post-card">
+                            <div class="ui-post-card__image-wrapper">
+                                <img src="img/Hanekawa Tsubasa.jpg" alt="" class="ui-post-card__image">
+                            </div>
+                            <div class="ui-post-card__content">
+                                <span class="ui-post-card__eyebrow">Color Theory</span>
+                                <h4 class="ui-post-card__title">Mastering Red: The Power of Single Color Branding
+                                </h4>
+                                <p class="ui-post-card__description">Exploring why the boldest primary color remains
+                                    the most
+                                    effective tool.</p>
+                                <div class="ui-post-card__meta">Mar 24, 2024 • 5 min read</div>
+                            </div>
+                        </article>
+
+                        <article class="ui-post-card">
+                            <div class="ui-post-card__image-wrapper">
+                                <img src="img/Hanekawa Tsubasa.jpg" alt="" class="ui-post-card__image">
+                            </div>
+                            <div class="ui-post-card__content">
+                                <span class="ui-post-card__eyebrow">Color Theory</span>
+                                <h4 class="ui-post-card__title">Mastering Red: The Power of Single Color Branding
+                                </h4>
+                                <p class="ui-post-card__description">Exploring why the boldest primary color remains
+                                    the most
+                                    effective tool.</p>
+                                <div class="ui-post-card__meta">Mar 24, 2024 • 5 min read</div>
+                            </div>
+                        </article>
+
+                        <article class="ui-post-card">
+                            <div class="ui-post-card__image-wrapper">
+                                <img src="img/unnamed.png" alt="" class="ui-post-card__image">
+                            </div>
+                            <div class="ui-post-card__content">
+                                <span class="ui-post-card__eyebrow">Color Theory</span>
+                                <h4 class="ui-post-card__title">Mastering Red: The Power of Single Color Branding
+                                </h4>
+                                <p class="ui-post-card__description">Exploring why the boldest primary color remains
+                                    the most
+                                    effective tool.</p>
+                                <div class="ui-post-card__meta">Mar 24, 2024 • 5 min read</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="ui-main__more">
+                        <button class="ui-main__more-button">
+                            More
+                        </button>
+                    </div>
                 </div>
-                <div class="ui-footer__socials">
-                    <a href="" class="ui-footer__social-link">
-                        <span class="material-symbols-outlined ui-footer__social-icon">
-                            brand_family
-                        </span></a>
-                    <a href="" class="ui-footer__social-link">
-                        <span class="material-symbols-outlined ui-footer__social-icon">
-                            share
+
+                <aside class="ui-sidebar">
+                    <section>
+                        <h4 class="ui-sidebar__section-title">Trending Now </h4>
+                        <div class="ui-sidebar__trending-list">
+                            <a href="" class="ui-sidebar__trending-item">
+                                <div class="ui-sidebar__thumb-wrapper">
+                                    <img src="img/Hanekawa Tsubasa.jpg" alt="" class="ui-sidebar__thumb">
+                                </div>
+                                <div>
+                                    <h5 class="ui-sidebar__item-title">10 Grid Systems Every Designer Should Master
+                                    </h5>
+                                    <span class="ui-sidebar__item-meta">48k Views</span>
+                                </div>
+                            </a>
+
+                            <a href="" class="ui-sidebar__trending-item">
+                                <div class="ui-sidebar__thumb-wrapper">
+                                    <img src="img/Hanekawa Tsubasa.jpg" alt="" class="ui-sidebar__thumb">
+                                </div>
+                                <div>
+                                    <h5 class="ui-sidebar__item-title">10 Grid Systems Every Designer Should Master
+                                    </h5>
+                                    <span class="ui-sidebar__item-meta">48k Views</span>
+                                </div>
+                            </a>
+
+                            <a href="" class="ui-sidebar__trending-item">
+                                <div class="ui-sidebar__thumb-wrapper">
+                                    <img src="img/Hanekawa Tsubasa.jpg" alt="" class="ui-sidebar__thumb">
+                                </div>
+                                <div>
+                                    <h5 class="ui-sidebar__item-title">10 Grid Systems Every Designer Should Master
+                                    </h5>
+                                    <span class="ui-sidebar__item-meta">48k Views</span>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h4 class="ui-sidebar__section-title">Categories</h4>
+                        <div class="ui-sidebar__categories">
+                            <a href="" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Architecture</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">12</span>
+                                </span>
+                            </a>
+
+                            <a href="" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Editorial Design</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">45</span>
+                                </span>
+                            </a>
+
+                            <a href="" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Typography</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">31</span>
+                                </span>
+                            </a>
+
+                            <a href="" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Lifestyle</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">18</span>
+                                </span>
+                            </a>
+
+                            <a href="" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Technology</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">56</span>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="ui-sidebar__newsletter">
+                        <span class="material-symbols-outlined ui-sidebar__newsletter-icon">
+                            mail
                         </span>
-                    </a>
-                    <a href="" class="ui-footer__social-link">
-                        <span class="material-symbols-outlined ui-footer__social-icon">
-                            rss_feed
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="ui-footer__grid">
-                <div class="ui-footer__column">
-                    <p class="ui-footer__column-title">Company</p>
-                    <a href="#" class="ui-footer__link">About us</a>
-                    <a href="#" class="ui-footer__link">Careers</a>
-                    <a href="#" class="ui-footer__link">Contact</a>
-                </div>
-                <div class="ui-footer__column">
-                    <p class="ui-footer__column-title">Resources</p>
-                    <a href="#" class="ui-footer__link">About us</a>
-                    <a href="#" class="ui-footer__link">Careers</a>
-                    <a href="#" class="ui-footer__link">Contact</a>
-                </div>
-                <div class="ui-footer__column">
-                    <p class="ui-footer__column-title">Legal</p>
-                    <a href="#" class="ui-footer__link">About us</a>
-                    <a href="#" class="ui-footer__link">Careers</a>
-                    <a href="#" class="ui-footer__link">Contact</a>
-                </div>
-                <div class="ui-footer__column">
-                    <p class="ui-footer__column-title">Follow</p>
-                    <a href="#" class="ui-footer__link">About us</a>
-                    <a href="#" class="ui-footer__link">Careers</a>
-                    <a href="#" class="ui-footer__link">Contact</a>
-                </div>
-            </div>
-            <div class="ui-footer__legend">
-                © 2024 Editorial Magazine. Designed for the minimalists. Built with purpose.
+                        <h4 class="ui-sidebar__newsletter-title">The Weekly Digest</h4>
+                        <p class="ui-sidebar__newsletter-text">Join 20,000+ designers and get our best stories
+                            delivered
+                            directly to your inbox every Sunday morning.</p>
+                        <form class="ui-sidebar__form">
+                            <input placeholder="Your email address" type="mail" class="ui-sidebar__input">
+                            <button class="ui-sidebar__submit"> Subscribe Now</button>
+                            <p class="ui-sidebar__form-note">No spam, ever. Unsubscribe anytime.</p>
+                        </form>
+                    </section>
+                </aside>
             </div>
         </div>
-    </footer>
+        <footer class="ui-footer">
+            <div class="ui-footer__inner">
+                <div class="ui-footer__header">
+                    <div class="ui-footer__brand">
+                        <div class="ui-footer__icon-box">
+                            <span class="material-symbols-outlined ui-footer__brand-icon">
+                                grid_view
+                            </span>
+                        </div>
+                        <h2 class="ui-footer__title">Editorial</h2>
+                    </div>
+                    <div class="ui-footer__socials">
+                        <a href="" class="ui-footer__social-link">
+                            <span class="material-symbols-outlined ui-footer__social-icon">
+                                brand_family
+                            </span></a>
+                        <a href="" class="ui-footer__social-link">
+                            <span class="material-symbols-outlined ui-footer__social-icon">
+                                share
+                            </span>
+                        </a>
+                        <a href="" class="ui-footer__social-link">
+                            <span class="material-symbols-outlined ui-footer__social-icon">
+                                rss_feed
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="ui-footer__grid">
+                    <div class="ui-footer__column">
+                        <p class="ui-footer__column-title">Company</p>
+                        <a href="#" class="ui-footer__link">About us</a>
+                        <a href="#" class="ui-footer__link">Careers</a>
+                        <a href="#" class="ui-footer__link">Contact</a>
+                    </div>
+                    <div class="ui-footer__column">
+                        <p class="ui-footer__column-title">Resources</p>
+                        <a href="#" class="ui-footer__link">About us</a>
+                        <a href="#" class="ui-footer__link">Careers</a>
+                        <a href="#" class="ui-footer__link">Contact</a>
+                    </div>
+                    <div class="ui-footer__column">
+                        <p class="ui-footer__column-title">Legal</p>
+                        <a href="#" class="ui-footer__link">About us</a>
+                        <a href="#" class="ui-footer__link">Careers</a>
+                        <a href="#" class="ui-footer__link">Contact</a>
+                    </div>
+                    <div class="ui-footer__column">
+                        <p class="ui-footer__column-title">Follow</p>
+                        <a href="#" class="ui-footer__link">About us</a>
+                        <a href="#" class="ui-footer__link">Careers</a>
+                        <a href="#" class="ui-footer__link">Contact</a>
+                    </div>
+                </div>
+                <div class="ui-footer__legend">
+                    © 2024 Editorial Magazine. Designed for the minimalists. Built with purpose.
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

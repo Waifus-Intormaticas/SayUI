@@ -7,10 +7,36 @@
     border-color: var(--border-light);
 }
 
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
+}
+
 body {
+    line-height: 1.5;
+
+    display: block;
     margin: 0;
-    padding: 0;
     font-family: Manrope, sans-serif;
+    line-height: inherit;
 }
 
 a {
@@ -29,20 +55,4 @@ button {
     cursor: pointer;
 }
 
-.contianerDemo {
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    min-height: 100vh;
-    position: relative;
-}
 
-.demoContainer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-}

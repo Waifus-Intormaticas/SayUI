@@ -1,4 +1,13 @@
+@use '../styles/foundations/variables';
+
+@use '../layouts/ui-page/ui-page.scss';
+@use '../layouts/ui-layout/ui-layout.scss';
+@use '../layouts/ui-main/ui-main.scss';
+
+@use '../components/ui-topbar/ui-topbar.scss';
 @use '../components/banner/banner.scss';
+@use '../components/ui-main-header/ui-main-header.scss';
+@use '../components/ui-post-grid/ui-post-grid.scss';
+@use '../components/ui-post-card/ui-post-card.scss';
+@use '../components/ui-sidebar/ui-sidebar.scss';
 @use '../components/footer/footer.scss';
-@use'../components/topBar/topBar.scss';
-@use '../styles/foundations/variables'
