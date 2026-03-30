@@ -1,0 +1,26 @@
+# node modules
+node_modules/
+
+dist/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# sistema (Windows)
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# variables de entorno
+.env
+
+# sass cache (si aparece)
+.sass-cache/
+
+# archivos temporales
+*.tmp
+*.log
