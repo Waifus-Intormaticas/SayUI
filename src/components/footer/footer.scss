@@ -1,10 +1,10 @@
 @use '../../styles/foundations/variables' as *;
 
 .ui-footer {
-    background-color: $footer-bg;
+    background-color: var(--footer-bg);
     padding-top: 3rem;
     padding-bottom: 3rem;
-    border-color: $footer-border;
+    border-color: var(--footer-border);
     border-top-width: 1px;
     margin-top: 5rem;
 
@@ -30,9 +30,9 @@
 
                 .ui-footer__icon-box {
                     border-radius: 0.125rem;
-                    color: $white;
+                    color: var(--white);
                     padding: 0.375rem;
-                    background-color: $primary;
+                    background-color: var(--primary);
 
                     .ui-footer__brand-icon {
                         font-size: 1.25rem;
@@ -56,11 +56,11 @@
                 gap: 2rem;
 
                 .ui-footer__social-link {
-                    color: $muted;
+                    color: var(--muted);
                     transition-duration: 150ms;
 
                     &:hover {
-                        color: $primary;
+                        color: var(--primary);
                     }
                 }
             }
@@ -70,7 +70,7 @@
             display: grid;
             margin-bottom: 3rem;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            border-color: $footer-divider;
+            border-color: var(--footer-divider);
             padding-top: 3rem;
             border-top-width: 1px;
             gap: 2rem;
@@ -90,12 +90,12 @@
                 }
 
                 .ui-footer__link {
-                    color: $slate;
+                    color: var(--slate);
                     font-size: 0.875rem;
                     line-height: 1.25rem;
 
                     &:hover {
-                        color: $primary;
+                        color: var(--primary);
                         transition-duration: 150ms;
                     }
                 }
@@ -104,11 +104,11 @@
 
         .ui-footer__legend {
             text-align: center;
-            color: $muted;
+            color: var(--muted);
             font-size: 0.75rem;
             line-height: 1rem;
             padding-top: 2rem;
-            border-color: $footer-divider;
+            border-color: var(--footer-divider);
             border-top-width: 1px;
         }
     }
