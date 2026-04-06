@@ -2,6 +2,7 @@
 
 @use '../layouts/ui-page/ui-page.scss';
 @use '../layouts/ui-layout/ui-layout.scss';
+@use'../layouts/ui-editorial-page/ui-editorial-page.scss';
 @use '../layouts/ui-main/ui-main.scss';
 
 @use '../components/ui-topbar/ui-topbar.scss';
@@ -11,3 +12,5 @@
 @use '../components/ui-post-card/ui-post-card.scss';
 @use '../components/ui-sidebar/ui-sidebar.scss';
 @use '../components/footer/footer.scss';
+@use'../components/editorial-topbar/ui-editorial-topbar.scss';
+@use'../components/ui-article-hero/ui-article-hero.scss';
