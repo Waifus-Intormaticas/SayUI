@@ -55,11 +55,76 @@ Include the compiled CSS file:
 ```html
 <link rel="stylesheet" href="dist/css/sayui.css">
 ```
+---
 
+## ⚠️ Global Styles
+
+> [!IMPORTANT]  
+> SayUI components rely on a minimal global stylesheet.  
+> You must include these base styles before using any component. Otherwise, layout and spacing may break.  
+> They behave similarly to a lightweight CSS reset.  
+>  
+> These styles ensure visual consistency across all components.
+
+### Base Styles (required)
+
+```css
+* {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--border-light);
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    font-family: Manrope, sans-serif;
+    line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    -webkit-appearance: button;
+    appearance: button;
+    background-color: transparent;
+    font-family: inherit;
+    font-variation-settings: inherit;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+```
 ---
 
 ##  Project Structure
-
 ```
 src/
   components/
