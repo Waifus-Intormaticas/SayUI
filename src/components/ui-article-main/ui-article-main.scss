@@ -1,0 +1,148 @@
+ @use'../../styles/foundations/variables' as *;
+
+ .ui-article-main {
+     padding-bottom: 5rem;
+
+     &__prose {
+         max-width: none;
+     }
+
+     &__lead {
+         color: var(--dark);
+         line-height: 1.625;
+         font-size: 1.25rem;
+
+         &::first-letter {
+             font-size: 4.5rem;
+             font-weight: 800;
+             color: var(--primary);
+             margin-right: 0.75rem;
+             float: left;
+             line-height: 1;
+         }
+
+     }
+
+     &__paragraph {
+         color: var(--slate-medium);
+         line-height: 1.625;
+         font-size: 1.125rem;
+     }
+
+     &__title {
+         display: inline-block;
+         color: var(--dark);
+         letter-spacing: -0.025em;
+         font-weight: 800;
+         font-size: 1.875rem;
+         line-height: 2.25rem;
+         padding-top: 1.5rem;
+         margin-top: 3rem;
+         margin-bottom: 1.5rem;
+     }
+
+     &__quote {
+         position: relative;
+         background-color: var(--sidebar-bg);
+         border-color: var(--primary);
+         border-left-width: 4px;
+         padding-top: 2rem;
+         padding-bottom: 2rem;
+         padding-left: 2.5rem;
+         padding-right: 2.5rem;
+         margin-top: 3rem;
+         margin-bottom: 3rem;
+
+     }
+
+     &__quote-icon {
+         position: absolute;
+         color: var(--primary-medium);
+         font-size: 3.75rem !important;
+         line-height: 1 !important;
+         top: -1rem;
+         left: -0.5rem;
+     }
+
+     &__quote-content {
+         font-style: italic;
+         font-weight: 800;
+         color: var(--dark);
+         letter-spacing: -0.025em;
+         font-size: 1.875rem;
+         margin-bottom: 1rem;
+         line-height: 1.25;
+     }
+
+     &__quote-cite {
+         color: var(--slate-medium);
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+         font-weight: 900;
+         font-size: 10px;
+     }
+
+     &__section-title {
+         color: var(--dark);
+         font-weight: 700;
+         font-size: 1.5rem;
+         line-height: 2rem;
+         margin-bottom: 1rem;
+     }
+
+     &__principles {
+         padding: 0px;
+         list-style-type: none;
+         margin: 0;
+     }
+
+     &__principle {
+         display: flex;
+         align-items: flex-start;
+         box-shadow: 0 10px 30px var(--black-3);
+         padding: 1rem;
+         background-color: var(--white);
+         border-color: var(--footer-border);
+         border-bottom-width: 1px;
+         gap: 1rem;
+     }
+
+     &__principle--margin {
+         margin-top: 1rem;
+     }
+
+     &__item-number {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+         width: 1.5rem;
+         height: 1.5rem;
+         color: var(--white);
+         font-weight: 700;
+         font-size: 0.75rem;
+         line-height: 1rem;
+         background-color: var(--primary);
+         border-radius: 0.75rem;
+
+     }
+
+     &__item-title {
+         display: block;
+         font-weight: bolder;
+         color: var(--dark);
+     }
+
+     &__item-text {
+         color: var(--slate-medium);
+         font-size: 0.875rem;
+         line-height: 1.25rem;
+     }
+ }
+
+
+ @media (min-width: 1024px) {
+     .ui-article-main {
+         grid-column: span 8 / span 8;
+     }
+ }
