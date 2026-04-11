@@ -1,4 +1,6 @@
  @use'../../styles/foundations/variables' as *;
+ @use'../../styles/foundations/mixins' as *;
+ @use'../../styles/foundations/typography' as *;
 
  .ui-article-main {
      padding-bottom: 5rem;
@@ -8,34 +10,29 @@
      }
 
      &__lead {
+         @include text($size: $font-size-xl, $line-height: $line-height-relaxed);
          color: var(--dark);
-         line-height: 1.625;
-         font-size: 1.25rem;
+
 
          &::first-letter {
-             font-size: 4.5rem;
-             font-weight: 800;
+             @include text($size: $font-size-7xl, $line-height: $line-height-none, $weight: $font-weight-extrabold);
              color: var(--primary);
              margin-right: 0.75rem;
              float: left;
-             line-height: 1;
          }
 
      }
 
      &__paragraph {
+         @include text($size: $font-size-lg, $line-height: $line-height-relaxed);
          color: var(--slate-medium);
-         line-height: 1.625;
-         font-size: 1.125rem;
      }
 
      &__title {
+         @include text($size: $font-size-3xl, $line-height: $leading-9, $weight: $font-weight-extrabold);
          display: inline-block;
          color: var(--dark);
          letter-spacing: -0.025em;
-         font-weight: 800;
-         font-size: 1.875rem;
-         line-height: 2.25rem;
          padding-top: 1.5rem;
          margin-top: 3rem;
          margin-bottom: 1.5rem;
@@ -46,6 +43,7 @@
          background-color: var(--sidebar-bg);
          border-color: var(--primary);
          border-left-width: 4px;
+         margin: 0;
          padding-top: 2rem;
          padding-bottom: 2rem;
          padding-left: 2.5rem;
@@ -56,42 +54,36 @@
      }
 
      &__quote-icon {
+         @include text($size: $font-size-6xl !important, $line-height: $line-height-none !important);
          position: absolute;
          color: var(--primary-medium);
-         font-size: 3.75rem !important;
-         line-height: 1 !important;
          top: -1rem;
          left: -0.5rem;
      }
 
      &__quote-content {
+         @include text($size: $font-size-3xl, $line-height: $line-height-tight, $weight: $font-weight-extrabold);
          font-style: italic;
-         font-weight: 800;
          color: var(--dark);
          letter-spacing: -0.025em;
-         font-size: 1.875rem;
          margin-bottom: 1rem;
-         line-height: 1.25;
      }
 
      &__quote-cite {
+         @include text($size: $font-size-2xs, $weight: $font-weight-black);
          color: var(--slate-medium);
          letter-spacing: 0.1em;
          text-transform: uppercase;
-         font-weight: 900;
-         font-size: 10px;
      }
 
      &__section-title {
+         @include text($size: $font-size-2xl, $line-height: $leading-8, $weight: $font-weight-bold);
          color: var(--dark);
-         font-weight: 700;
-         font-size: 1.5rem;
-         line-height: 2rem;
          margin-bottom: 1rem;
      }
 
      &__principles {
-         padding: 0px;
+         padding: 0;
          list-style-type: none;
          margin: 0;
      }
@@ -112,6 +104,8 @@
      }
 
      &__item-number {
+         @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-bold);
+
          display: flex;
          align-items: center;
          justify-content: center;
@@ -119,9 +113,6 @@
          width: 1.5rem;
          height: 1.5rem;
          color: var(--white);
-         font-weight: 700;
-         font-size: 0.75rem;
-         line-height: 1rem;
          background-color: var(--primary);
          border-radius: 0.75rem;
 
@@ -134,9 +125,226 @@
      }
 
      &__item-text {
+         @include text($size: $font-size-sm, $line-height: $leading-5);
          color: var(--slate-medium);
-         font-size: 0.875rem;
-         line-height: 1.25rem;
+
+     }
+
+     &__figure {
+         margin: 0;
+         margin-top: 3rem;
+         margin-bottom: 3rem;
+     }
+
+     &__figure-image {
+         display: block;
+         box-shadow: 0 25px 50px -12px var(--black-25);
+         border-radius: 0.125rem;
+         width: 100%;
+         max-width: 100%;
+         height: auto;
+     }
+
+     &__figure-caption {
+         @include text($size: $font-size-2xs, $weight: $font-weight-black);
+         text-align: center;
+         letter-spacing: 0.1em;
+         margin-top: 1rem;
+         text-transform: uppercase;
+         color: var(--slate-light);
+     }
+
+     &__caption-text {
+         @include text($size: $font-size-lg, $line-height: $line-height-relaxed);
+         color: var(--slate-medium);
+         margin: 0;
+     }
+
+     &__tags {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 0.5rem;
+         color: var(--footer-border);
+         border-top-width: 1px;
+         padding-top: 2rem;
+         margin-top: 2rem;
+         margin-bottom: 2rem;
+     }
+
+     &__tag {
+         @include text($size: $font-size-2xs, $weight: $font-weight-black);
+
+         padding-top: 0.25rem;
+         padding-bottom: 0.25rem;
+         padding-left: 0.75rem;
+         padding-right: 0.75rem;
+         color: var(--slate);
+         background-color: var(--white-lite);
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+     }
+
+     &__comments-section {
+         margin-top: 2rem;
+         margin-bottom: 2rem;
+         padding-top: 4rem;
+         border-color: var(--dark);
+     }
+
+     &__discourse {
+         @include text($size: $font-size-2xl, $line-height: $leading-8, $weight: $font-weight-extrabold);
+
+         letter-spacing: -0.05em;
+         text-transform: uppercase;
+         border-color: var(--dark);
+         margin-bottom: 2rem;
+     }
+
+     &__comment {
+         display: flex;
+         gap: 1rem;
+     }
+
+     &__avatar-container {
+         flex-shrink: 0;
+         width: 3rem;
+         height: 3rem;
+         border-width: 2px;
+         border-radius: 0.75rem;
+         overflow: hidden;
+         border-color: var(--white);
+         background-color: var(--border-orange);
+         box-shadow: 0 1px 2px 0 var(--black-10);
+
+
+     }
+
+     &__avatar {
+         max-width: 100%;
+         height: 100%;
+         display: block;
+     }
+
+     &__meta {
+         display: flex;
+         align-items: center;
+         gap: 0.75rem;
+         margin-bottom: 0.25rem;
+     }
+
+     &__author {
+         @include text($weight: $font-weight-bold);
+
+         color: var(--dark);
+
+     }
+
+     &__time {
+         @include text($size: $font-size-2xs, $weight: $font-weight-black);
+
+         text-transform: uppercase;
+         letter-spacing: 0.1em;
+         color: var(--slate-light);
+     }
+
+     &__text {
+         color: var(--slate);
+
+     }
+
+     &__reply-button {
+         @include text($size: $font-size-2xs, $weight: $font-weight-black);
+         margin-top: 0.5rem;
+         color: var(--primary);
+         cursor: pointer;
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+     }
+
+     &__comment--reply {
+         display: flex;
+         --tw-space-y-reverse: 0;
+         margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+         margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+         padding-left: 4rem;
+         border-color: var(--gray-light);
+         border-left-width: 2px;
+         gap: 1rem;
+     }
+
+     &__avatar-container--reply {
+         width: 2.5rem;
+         height: 2.5rem;
+     }
+
+     &__badge {
+         @include text($size: $font-size-3xs, $weight: $font-weight-black);
+
+         color: var(--white);
+         letter-spacing: -0.05em;
+         text-transform: uppercase;
+         padding-left: 0.25rem;
+         padding-right: 0.25rem;
+         background-color: var(--primary);
+
+     }
+
+     &__comment-form {
+         padding: 1.5rem;
+         margin-top: 3rem;
+         background-color: var(--sidebar-bg);
+     }
+
+     &__form-title {
+         @include text($size: $font-size-2xs, $weight: $font-weight-black);
+
+         margin-bottom: 1rem;
+         text-transform: uppercase;
+         letter-spacing: 0.1em;
+         color: var(--dark);
+     }
+
+     &__textarea {
+         @include text($size: $font-size-sm, $line-height: $line-height-base);
+
+         width: 100%;
+         height: 8rem;
+         padding: 1rem;
+         background-color: var(--white);
+         color: var(--slate-strong);
+         border-width: 1px;
+         border-style: solid;
+         border-color: var(--footer-border);
+         font-family: inherit;
+         resize: none;
+         appearance: none;
+         transition: border-color 150ms ease;
+
+         &:focus {
+             outline: none;
+             border-color: var(--primary);
+         }
+     }
+
+     &__submit {
+         @include text($size: $font-size-2xs, $weight: $font-weight-black);
+
+         color: var(--white);
+         background-color: var(--dark);
+         transition-duration: 150ms ease;
+         letter-spacing: 0.1em;
+         text-transform: uppercase;
+         padding-top: 0.75rem;
+         padding-bottom: 0.75rem;
+         padding-left: 2rem;
+         padding-right: 2rem;
+         margin-top: 1rem;
+         cursor: pointer;
+
+         &:active {
+             transform: scale(0.95);
+         }
+
      }
  }
 

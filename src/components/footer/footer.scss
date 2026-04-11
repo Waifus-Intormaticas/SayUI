@@ -96,7 +96,7 @@
 
                     &:hover {
                         color: var(--primary);
-                        transition-duration: 150ms;
+                        transition: 150ms ease;
                     }
                 }
             }

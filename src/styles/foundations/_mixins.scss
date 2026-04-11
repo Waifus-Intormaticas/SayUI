@@ -1,0 +1,16 @@
+@use './typography' as *;
+
+@mixin text($size: null, $weight: null, $line-height: null) {
+
+    @if $size !=null {
+        font-size: $size;
+    }
+
+    @if $line-height !=null {
+        line-height: $line-height;
+    }
+
+    @if $weight !=null {
+        font-weight: $weight;
+    }
+}

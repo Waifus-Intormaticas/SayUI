@@ -1,4 +1,6 @@
 @use '../styles/foundations/variables';
+@forward 'foundations/typography';
+@forward 'foundations/mixins';
 
 @use '../layouts/ui-page/ui-page.scss';
 @use '../layouts/ui-layout/ui-layout.scss';
@@ -15,3 +17,5 @@
 @use'../components/editorial-topbar/ui-editorial-topbar.scss';
 @use'../components/ui-article-hero/ui-article-hero.scss';
 @use'../components/ui-article-main/ui-article-main.scss';
+@use'../components/ui-article-sidebar/ui-article-sidebar.scss';
+@use'../components/ui-article-related/ui-article-related.scss';

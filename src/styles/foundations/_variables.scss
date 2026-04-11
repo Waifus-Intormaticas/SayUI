@@ -1,8 +1,9 @@
 :root {
     /* BASE COLORS*/
     --black: rgba(0, 0, 0);
-    --dark: rgb(15, 23, 42);
+    --dark: rgb(15 23 42 / 1);
     --white: rgb(255 255 255 / 1);
+    --white-lite: rgb(244 240 232 / 1);
     --muted: rgb(148 163 184 / 1);
     --slate: rgb(100 116 139 / 1);
     --slate-light: rgb(148 163 184 / 1);
@@ -11,29 +12,33 @@
     --gray-light: rgb(203 213 225 /1);
     --primary-medium: rgb(230 57 70 / 0.2);
 
-
     --primary: rgb(230 57 70 / 1);
     --primary-dark: rgb(214, 40, 57);
-
     --border-light: rgb(229, 231, 235);
     --border-soft: rgb(241 245 249 / 1);
+    --border-orange: rgb(235 230 222 / 1);
 
+
+    
     /*  COLOR VARIANTS / EFFECTS */
     --dark-3: rgb(15 23 42 / 0.3);
+    --dark-5: rgb(15 23 42 / 0.5);
     --dark-6: rgb(15 23 42 / 0.6);
 
     --black-0: rgba(0, 0, 0, 0);
+    --black-1: rgba(0 0 0 / 0.1);
     --black-3: rgba(0, 0, 0, 0.03);
     --black-10: rgb(0, 0, 0, 0.05);
-    --black-15: rgb(0, 0, 0, 0.25);
+    --black-25: rgb(0, 0, 0, 0.25);
 
-    
+
     --primary-10: rgb(230, 57, 70, 0.1);
     --primary-soft: rgb(230 57 70 / 0.05);
     --primary-border-soft: rgba(230, 57, 71, 0.223);
     --primary-hover-soft: rgb(230 57 70 / 0.05);
     --primary-hover-strong: rgba(230, 57, 70, 0.12);
     --primary-shadow-soft: rgb(230 57 70 / 0.2);
+
 
 
     --white-soft: rgb(255 255 255 / 0.9);
@@ -46,7 +51,9 @@
 
     /* CONTEXT / UI AREAS*/
     --sidebar-bg: rgb(248 245 240 / 1);
-    --mobile-menu-bg: #e1e2e5;
+    --mobile-menu-bg: rgb(225, 226, 229);
+
+
 
     --footer-bg: rgb(248 245 240 / 1);
     --footer-border: rgb(226 232 240 / 1);
