@@ -1,58 +1,381 @@
-<main class="ui-page">
-    <header class="ui-editorial-topbar">
-        <div class="ui-editorial-topbar__inner">
-            <div class="ui-editorial-topbar__left">
-                <a class="ui-editorial-topbar__brand">
-                    Crimson Courier
-                </a>
-                <nav class="ui-editorial-topbar__nav">
-                    <a href="" class="ui-editorial-topbar__link">Latest</a>
-                    <a href="" class="ui-editorial-topbar__link">Politics</a>
-                    <a href="" class="ui-editorial-topbar__link">Culture</a>
-                    <a href="" class="ui-editorial-topbar__link">Tech</a>
-                    <a href="" class="ui-editorial-topbar__link">Opinion</a>
-                </nav>
+<header class="ui-editorial-topbar">
+    <div class="ui-editorial-topbar__inner">
+        <div class="ui-editorial-topbar__left">
+            <a class="ui-editorial-topbar__brand">
+                Crimson Courier
+            </a>
+            <nav class="ui-editorial-topbar__nav">
+                <a href="" class="ui-editorial-topbar__link">Latest</a>
+                <a href="" class="ui-editorial-topbar__link">Politics</a>
+                <a href="" class="ui-editorial-topbar__link">Culture</a>
+                <a href="" class="ui-editorial-topbar__link">Tech</a>
+                <a href="" class="ui-editorial-topbar__link">Opinion</a>
+            </nav>
+        </div>
+
+        <div class="ui-editorial-topbar__actions">
+            <button class="material-symbols-outlined ui-editorial-topbar__search-button">
+                search
+            </button>
+
+            <button class="ui-editorial-topbar__subscribe-button">subscribe</button>
+        </div>
+    </div>
+</header>
+<main class="ui-editorial-page">
+    <section class="ui-article-hero">
+        <div class="ui-article-hero__body">
+            <div class="ui-article-hero__intro">
+                <div class="ui-article-hero__header">
+                    <span class="ui-article-hero__eyebrow">Design</span>
+                </div>
+
+                <h1 class="ui-article-hero__title">
+                    The Intersection of Minimalism and Motion in UI
+                </h1>
+
+                <p class="ui-article-hero__subtitle">
+                    How intentional animation elevates the minimalist experience beyond static simplicity.
+                </p>
             </div>
 
-            <div class="ui-editorial-topbar__actions">
-                <button class="material-symbols-outlined ui-editorial-topbar__search-button">
-                    search
-                </button>
-
-                <button class="ui-editorial-topbar__subscribe-button">subscribe</button>
+            <div class="ui-article-hero__meta-group">
+                <p class="ui-article-hero__author-label">Written By</p>
+                <p class="ui-article-hero__author-name">Alx Debil</p>
+                <p class="ui-article-hero__published-label">Published</p>
+                <p class="ui-article-hero__date">October 15, 2024</p>
             </div>
         </div>
-    </header>
-    <div class="ui-editorial-page">
-        <section class="ui-article-hero">
-            <div class="ui-article-hero__body">
-                <div class="ui-article-hero__intro">
-                    <div class="ui-article-hero__header">
-                        <span class="ui-article-hero__eyebrow">Design</span>
+
+        <div class="ui-article-hero__image-wrapper">
+            <img src="../demo/img/unnamed(3).png" class="ui-article-hero__image" alt="">
+            <div class="ui-article-hero__overlay"></div>
+        </div>
+    </section>
+    <div class="ui-editorial-page__layout">
+        <article class="ui-article-main">
+            <div class="ui-article-main__prose">
+                <p class="ui-article-main__lead">
+                    In the landscape of modern digital interfaces, minimalism has long been the gold standard.
+                    However, the void left by removing visual noise is often filled with a new kind of friction:
+                    sterility. This is where motion enters as a functional bridge, turning static screens into
+                    living, breathing environments.
+                </p>
+                <p class="ui-article-main__paragraph">
+                    Animation in UI design is frequently misunderstood as a purely aesthetic addition—a
+                    "nice-to-have" layer applied at the end of the development cycle. In reality, motion is a
+                    vital part of the communication hierarchy. When we strip away borders, shadows, and heavy
+                    textures, we lose the affordances that tell users where they are and where they are going.
+                </p>
+                <h2 class="ui-article-main__title">
+                    The Functional Role of Motion
+                </h2>
+                <p class="ui-article-main__paragraph">
+                    Meaningful motion acts as the glue that maintains a user's mental model during transitions.
+                    It provides spatial awareness in a 2D environment. When an element expands to fill the
+                    screen, motion explains that the new view is a child of the element just clicked.
+                </p>
+                <blockquote class="ui-article-main__quote">
+                    <span class="material-symbols-outlined ui-article-main__quote-icon">
+                        format_quote
+                    </span>
+                    <p class="ui-article-main__quote-content">
+                        "Minimalism is not the absence of something. It is the perfect amount of something."
+                    </p>
+                    <cite class="ui-article-main__quote-cite">
+                        — Editorial Design Principles, 2024
+                    </cite>
+                </blockquote>
+                <h3 class="ui-article-main__section-title">Core Principles of Minimalist Motion</h3>
+                <ul class="ui-article-main__principles">
+                    <li class="ui-article-main__principle">
+                        <span class="ui-article-main__item-number">1</span>
+                        <div class="ui-article-main__item-content">
+                            <strong class="ui-article-main__item-title">Intentionality</strong>
+                            <span class="ui-article-main__item-text">Every movement must have a
+                                purpose—directing focus or confirming an action.</span>
+                        </div>
+                    </li>
+                    <li class="ui-article-main__principle ui-article-main__principle--margin">
+                        <span class="ui-article-main__item-number">2</span>
+                        <div class="ui-article-main__item-content">
+                            <strong class="ui-article-main__item-title">Rhythmic Timing</strong>
+                            <span class="ui-article-main__item-text">Use easing curves that mimic physical
+                                inertia (cubic-bezier) rather than linear motion.</span>
+                        </div>
+                    </li>
+                    <li class="ui-article-main__principle ui-article-main__principle--margin">
+                        <span class="ui-article-main__item-number">3</span>
+                        <div class="ui-article-main__item-content">
+                            <strong class="ui-article-main__item-title">Performance over Ornament</strong>
+                            <span class="ui-article-main__item-text">Motion should never hinder the user's
+                                task or cause cognitive load.</span>
+                        </div>
+                    </li>
+                </ul>
+                <figure class="ui-article-main__figure">
+                    <img src="../demo/img/unnamed (4).png" class="ui-article-main__figure-image" alt="">
+                    <figcaption class="ui-article-main__figure-caption">Fig 1.1: Spatial hierarchy through
+                        high-contrast typography and negative space.
+                    </figcaption>
+                </figure>
+                <p class="ui-article-main__caption-text">
+                    As we move toward a future of increasingly immersive digital experiences, the designer’s job
+                    is to ensure that minimalism remains a tool for clarity, not an excuse for emptiness. By
+                    injecting thoughtful motion into our minimalist frames, we create a sensory experience that
+                    feels both human and hyper-efficient.
+                </p>
+            </div>
+            <div class="ui-article-main__tags">
+                <span class="ui-article-main__tag">User Experience</span>
+                <span class="ui-article-main__tag">Minimalism</span>
+                <span class="ui-article-main__tag">Animation</span>
+                <span class="ui-article-main__tag">Future Tech</span>
+            </div>
+            <section class="ui-article-main__comments-section">
+                <h3 class="ui-article-main__discourse">The Discourse (3)</h3>
+
+                <div class="ui-article-main__comments-content">
+
+                    <!-- Comment -->
+                    <div class="ui-article-main__comment">
+                        <div class="ui-article-main__avatar-container">
+                            <img alt="" src="../demo/img/Hanekawa Tsubasa.jpg" class="ui-article-main__avatar" />
+                        </div>
+
+                        <div>
+                            <div class="ui-article-main__meta">
+                                <span class="ui-article-main__author">Julian Moss</span>
+                                <span class="ui-article-main__time">2h ago</span>
+                            </div>
+
+                            <p class="ui-article-main__text">
+                                The point about motion as spatial awareness is critical. I've seen too
+                                many minimalist apps where I get lost because views just "pop" in without
+                                context.
+                            </p>
+
+                            <button class="ui-article-main__reply-button">Reply</button>
+                        </div>
                     </div>
 
-                    <h1 class="ui-article-hero__title">
-                        The Intersection of Minimalism and Motion in UI
-                    </h1>
+                    <!-- Reply -->
+                    <div class="ui-article-main__comment ui-article-main__comment--reply">
+                        <div class="ui-article-main__avatar-container ui-article-main__avatar-container--reply">
+                            <img alt="" src="../demo/img/e392d05893d73ba1a9da81d3f3752daf.jpg"
+                                class="ui-article-main__avatar" />
+                        </div>
+                        <div>
+                            <div class="ui-article-main__meta">
+                                <span class="ui-article-main__author">Elena Valery</span>
+                                <span class="ui-article-main__badge">Author</span>
+                                <span class="ui-article-main__time">1h ago</span>
+                            </div>
 
-                    <p class="ui-article-hero__subtitle">
-                        How intentional animation elevates the minimalist experience beyond static simplicity.
-                    </p>
+                            <p class="ui-article-main__text">
+                                Exactly Julian. Motion is the 'Why' and 'Where' of the interface.
+                            </p>
+
+                            <button class="ui-article-main__reply-button">Reply</button>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="ui-article-hero__meta-group">
-                    <p class="ui-article-hero__author-label">Written By</p>
-                    <p class="ui-article-hero__author-name">Alx Debil</p>
-                    <p class="ui-article-hero__published-label">Published</p>
-                    <p class="ui-article-hero__date">October 15, 2024</p>
+                <!-- Form -->
+                <div class="ui-article-main__comment-form">
+                    <h4 class="ui-article-main__form-title">Add to the Conversation</h4>
+
+                    <textarea class="ui-article-main__textarea" placeholder="Share your thoughts..."></textarea>
+
+                    <button class="ui-article-main__submit">Post Comment</button>
                 </div>
+            </section>
+        </article>
+        <aside class="ui-article-sidebar">
+            <div class="ui-article-sidebar__card">
+
+                <div class="ui-article-sidebar__author">
+                    <div class="ui-article-sidebar__avatar-container">
+                        <img alt="Elena Valery" class="ui-article-sidebar__avatar" src="../demo/img/unnamed (1).png" />
+                    </div>
+
+                    <div class="ui-article-sidebar__author-info">
+                        <h4 class="ui-article-sidebar__author-name">Elena Valery</h4>
+                        <p class="ui-article-sidebar__author-role">Senior Design Editor</p>
+                    </div>
+                </div>
+
+                <p class="ui-article-sidebar__description">
+                    Elena explores the intersection of cognitive psychology and digital craftsmanship. Based in
+                    Berlin, she has been documenting the evolution of interfaces for over a decade.
+                </p>
+
+                <div class="ui-article-sidebar__social">
+                    <a class="ui-article-sidebar__social-link" href="#">
+                        <span class="material-symbols-outlined">alternate_email</span>
+                    </a>
+                    <a class="ui-article-sidebar__social-link" href="#">
+                        <span class="material-symbols-outlined">public</span>
+                    </a>
+                </div>
+
+                <div class="ui-article-sidebar__section">
+                    <h5 class="ui-article-sidebar__section-title">Related Stories</h5>
+
+                    <ul class="ui-article-sidebar__list">
+                        <li class="ui-article-sidebar__item">
+                            <a class="ui-article-sidebar__link" href="#">
+                                <span class="ui-article-sidebar__category">Politics</span>
+                                <p class="ui-article-sidebar__item-title">
+                                    Digital Sovereignty in the Age of AI
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="ui-article-sidebar__item ui-article-sidebar__item-space">
+                            <a class="ui-article-sidebar__link" href="#">
+                                <span class="ui-article-sidebar__category">Culture</span>
+                                <p class="ui-article-sidebar__item-title">
+                                    The Return of Neumorphism: A Post-Flat Review
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="ui-article-sidebar__item ui-article-sidebar__item-space">
+                            <a class="ui-article-sidebar__link" href="#">
+                                <span class="ui-article-sidebar__category">Tech</span>
+                                <p class="ui-article-sidebar__item-title">
+                                    Hardware for the Distracted: The Light Phone III
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ui-article-sidebar__section-teme">
+                    <h5 class="ui-article-sidebar__section-title">Category Cloud</h5>
+
+                    <div class="ui-article-sidebar__tags">
+                        <a class="ui-article-sidebar__tag" href="#">Architecture</a>
+                        <a class="ui-article-sidebar__tag" href="#">Crypto</a>
+                        <a class="ui-article-sidebar__tag" href="#">Fashion</a>
+                        <a class="ui-article-sidebar__tag" href="#">Sustainability</a>
+                        <a class="ui-article-sidebar__tag" href="#">Future</a>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+    </div>
+    <section class="ui-article-related">
+        <div class="ui-article-related__container">
+
+            <h3 class="ui-article-related__header">
+                Read Next
+                <div class="ui-article-related__divider"></div>
+            </h3>
+
+            <div class="ui-article-related__grid">
+
+                <!-- Card -->
+                <article class="ui-article-related__card">
+                    <div class="ui-article-related__image-wrapper">
+                        <img class="ui-article-related__image" src="../demo/img/unnamed (6).png" alt="">
+                    </div>
+
+                    <div class="ui-article-related__content">
+                        <span class="ui-article-related__category">Development</span>
+
+                        <h4 class="ui-article-related__title">
+                            The Syntax of Sustainability: Greener Code
+                        </h4>
+
+                        <p class="ui-article-related__description">
+                            How server-side efficiency is becoming the new front-line of environmental activism.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card -->
+                <article class="ui-article-related__card">
+                    <div class="ui-article-related__image-wrapper">
+                        <img class="ui-article-related__image" src="../demo/img/unnamed (5).png" alt="">
+                    </div>
+
+                    <div class="ui-article-related__content">
+                        <span class="ui-article-related__category">Urbanism</span>
+
+                        <h4 class="ui-article-related__title">
+                            The 15-Minute City Paradox
+                        </h4>
+
+                        <p class="ui-article-related__description">
+                            Re-evaluating the hyper-local dream amidst global economic shifts.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card -->
+                <article class="ui-article-related__card">
+                    <div class="ui-article-related__image-wrapper">
+                        <img class="ui-article-related__image" src="../demo/img/unnamed (3).png" alt="">
+                    </div>
+
+                    <div class="ui-article-related__content">
+                        <span class="ui-article-related__category">Science</span>
+
+                        <h4 class="ui-article-related__title">
+                            Synthetic Biology's New Dawn
+                        </h4>
+
+                        <p class="ui-article-related__description">
+                            The ethical implications of designer enzymes in everyday household products.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="ui-footer-editorial">
+    <div class="ui-footer-editorial__container">
+
+        <div class="ui-footer-editorial__top">
+            <div class="ui-footer-editorial__brand">
+                <span class="ui-footer-editorial__logo">Crimson Courier</span>
+                <p class="ui-footer-editorial__tagline">The Modern Broadside Edition</p>
             </div>
 
-            <div class="ui-article-hero__image-wrapper">
-                <img src="../demo/img/unnamed(3).png" class="ui-article-hero__image" alt="">
-                <div class="ui-article-hero__overlay"></div>
+            <nav class="ui-footer-editorial__nav">
+                <a class="ui-footer-editorial__link" href="#">About Us</a>
+                <a class="ui-footer-editorial__link" href="#">Privacy Policy</a>
+                <a class="ui-footer-editorial__link" href="#">Terms of Service</a>
+                <a class="ui-footer-editorial__link" href="#">Contact</a>
+                <a class="ui-footer-editorial__link" href="#">Advertise</a>
+            </nav>
+        </div>
+
+        <div class="ui-footer-editorial__bottom">
+            <p class="ui-footer-editorial__copyright">
+                © 2024 Crimson Courier. Built for the Modern Broadside.
+            </p>
+
+            <div class="ui-footer-editorial__social">
+                <span class="ui-footer-editorial__social-item">
+                    <span class="material-symbols-outlined ui-footer-editorial__icon">share</span>
+                </span>
+
+                <span class="ui-footer-editorial__social-item">
+                    <span class="material-symbols-outlined ui-footer-editorial__icon">mail</span>
+                </span>
+
+                <span class="ui-footer-editorial__social-item">
+                    <span class="material-symbols-outlined ui-footer-editorial__icon">rss_feed</span>
+                </span>
             </div>
-        </section>
+        </div>
 
     </div>
-</main>
+</footer>

@@ -15,7 +15,9 @@
 @use '../components/ui-sidebar/ui-sidebar.scss';
 @use '../components/footer/footer.scss';
 @use'../components/editorial-topbar/ui-editorial-topbar.scss';
-@use'../components/ui-article-hero/ui-article-hero.scss';
-@use'../components/ui-article-main/ui-article-main.scss';
-@use'../components/ui-article-sidebar/ui-article-sidebar.scss';
-@use'../components/ui-article-related/ui-article-related.scss';
+@use'../components/article/ui-article-hero/ui-article-hero.scss';
+@use'../components/article/ui-article-main/ui-article-main.scss';
+@use'../components/article/ui-article-sidebar/ui-article-sidebar.scss';
+@use'../components/article/ui-article-related/ui-article-related.scss';
+@use'../components/ui-footer/ui-footer.scss';
+@use'../layouts/ui-editorial-grid/ui-editorial-grid.scss';
