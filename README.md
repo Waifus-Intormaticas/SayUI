@@ -59,10 +59,10 @@ Built for scalability, readability and modern frontend workflows.
 ```
 index.html (demo shell)
    │
-   ├── Main Layout (ui-page)
+   ├── ui-page Layout (ui-page)
    │      └── Components (banner, sidebar, cards)
    │
-   └── Editorial Layout (ui-editorial-page)
+   └── ui-editorial Layout (ui-editorial-page)
           └── Components (article, comments, related)
 
 Shared:
@@ -74,8 +74,8 @@ Shared:
 
 SayUI provides two layout structures:
 
-- **Main Layout** → General UI page
-- **Editorial Layout** → Article-focused page
+- **ui-page Layout** → General UI page
+- **ui-ditorial Layout** → Article-focused page
 
 These are layout templates, not standalone pages.
 
@@ -90,12 +90,12 @@ Only one layout should be used at a time.
 ```html
 <body>
 
-  <!-- Main layout -->
+  <!-- ui-page layout -->
   <div class="ui-page">
     <!-- includes topbar, layout, sidebar, footer -->
   </div>
 
-  <!-- Editorial layout -->
+  <!-- ui-editorial layout -->
   <header class="ui-editorial-topbar"></header>
   <main class="ui-editorial-page"></main>
   <footer class="ui-footer-editorial"></footer>
@@ -201,7 +201,7 @@ src/
       ui-article-hero/
       ui-article-main/
       ui-article-related/
-      ui-article-comments/
+      ui-article-sidebar/
 
   layouts/
     ui-page/
@@ -226,8 +226,8 @@ dist/
 demo/
   img/
   index.html
-  editorial.html
-  main.html
+  ui-editorial.html
+  ui-page.html
   demo.css
 
 docs/
