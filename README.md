@@ -14,7 +14,7 @@ SayUI is a lightweight UI library designed with a **clean architecture** based o
 
 * Layouts (structure)
 * Components (reusability)
-* Foundations (design tokens)
+* Foundations (Design Tokens)
 
 Built for scalability, readability and modern frontend workflows.
 
@@ -33,17 +33,74 @@ Built for scalability, readability and modern frontend workflows.
 ##  Preview
 
 <p align="center">
-  <img src="src/docs/images/brave_screenshot.png" width="45%">
-  <img src="src/docs/images/brave_screenshot (1).png" width="45%">
+  <img src="src/docs/images/brave_screenshot.png" width="30%">
+  <img src="src/docs/images/brave_screenshot (1).png" width="30%">
+  <img src="src/docs/images/brave_screenshot (2).png" width="30%">
 </p>
 
 <p align="center">
-  <img src="src/docs/images/brave_screenshot (2).png" width="45%">
-  <img src="src/docs/images/brave_screenshot (3).png" width="45%">
+  <img src="src/docs/images/brave_screenshot (3).png" width="30%">
+  <img src="src/docs/images/brave_screenshot (4).png" width="30%">
+  <img src="src/docs/images/brave_screenshot (5).png" width="30%">
+</p>
+<p align="center">
+  <img src="src/docs/images/brave_screenshot (6).png" width="30%">
+  <img src="src/docs/images/brave_screenshot (7).png" width="30%">
+  <img src="src/docs/images/brave_screenshot (8).png" width="30%">
+</p>
+<p align="center">
+  <img src="src/docs/images/brave_screenshot (9).png" width="45%">
+  <img src="src/docs/images/brave_screenshot (10).png" width="45%">
 </p>
 
+---
+
+## Architecture
 ```
-demo/index.html
+index.html (demo shell)
+   │
+   ├── ui-page Layout (ui-page)
+   │      └── Components (banner, sidebar, cards)
+   │
+   └── ui-editorial Layout (ui-editorial-page)
+          └── Components (article, comments, related)
+
+Shared:
+→ Foundations (Design Tokens, Typography, Mixins)
+```   
+---
+
+## Run Demo
+
+SayUI provides two layout structures:
+
+- **ui-page Layout** → General UI page
+- **ui-ditorial Layout** → Article-focused page
+
+These are layout templates, not standalone pages.
+
+To preview them, open: demo/index.html
+
+Then insert the desired layout inside the `<body>`.
+
+Only one layout should be used at a time.
+
+### Example
+
+```html
+<body>
+
+  <!-- ui-page layout -->
+  <div class="ui-page">
+    <!-- includes topbar, layout, sidebar, footer -->
+  </div>
+
+  <!-- ui-editorial layout -->
+  <header class="ui-editorial-topbar"></header>
+  <main class="ui-editorial-page"></main>
+  <footer class="ui-footer-editorial"></footer>
+
+</body>
 ```
 
 ---
@@ -55,37 +112,127 @@ Include the compiled CSS file:
 ```html
 <link rel="stylesheet" href="dist/css/sayui.css">
 ```
+---
 
+## ⚠️ Global Styles
+
+> [!IMPORTANT]  
+> SayUI components rely on a minimal global stylesheet.  
+> You must include these base styles before using any component. Otherwise, layout and spacing may break.  
+> They behave similarly to a lightweight CSS reset.  
+>  
+> These styles ensure visual consistency across all components.
+
+### Base Styles (required)
+
+```css
+* {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    --border-light: #e5e7eb;
+    border-color: var(--border-light);
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    display: block;
+    margin: 0;
+    font-family: Manrope, sans-serif;
+    line-height: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    -webkit-appearance: button;
+    appearance: button;
+    background-color: transparent;
+    font-family: inherit;
+    font-variation-settings: inherit;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+```
 ---
 
 ##  Project Structure
-
 ```
 src/
   components/
     banner/
-    footer/
-    topbar/
+    ui-footer/
+    ui-footer-editorial/
+    ui-topbar/
     ui-sidebar/
-    ui-post-card/
     ui-main-header/
+    ui-post-card/
     ui-post-grid/
+    ui-editorial-topbar/
+
+    article/
+      ui-article-hero/
+      ui-article-main/
+      ui-article-related/
+      ui-article-sidebar/
 
   layouts/
     ui-page/
     ui-layout/
     ui-main/
+    ui-editorial-page/
+    ui-editorial-grid/
 
   styles/
+    base/
     foundations/
       _variables.scss
+      _typography.scss
+      _mixins.scss
+
+    main.scss
 
 dist/
   css/
     sayui.css
 
 demo/
+  img/
   index.html
+  ui-editorial.html
+  ui-page.html
+  demo.css
+
+docs/
+  img/
+  
 ```
 
 ---

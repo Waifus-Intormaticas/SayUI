@@ -1,0 +1,24 @@
+.ui-editorial-page {
+
+    &__layout {
+        display: grid;
+        max-width: 1440px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .ui-editorial-page {
+
+        &__layout {
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+
+        }
+    }
+}

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    background-color: $sidebar-bg;
+    background-color: var(--sidebar-bg);
     border-radius: 0.5rem;
     gap: 3rem;
 
@@ -15,7 +15,7 @@
         font-size: 0.875rem;
         line-height: 1.25rem;
         padding-left: 1rem;
-        border-color: $primary;
+        border-color: var(--primary);
         border-left-width: 4px;
         margin: 0;
         margin-bottom: 1.5rem;
@@ -35,7 +35,7 @@
             }
 
             &:hover .ui-sidebar__item-title {
-                color: $primary;
+                color: var(--primary);
             }
 
             .ui-sidebar__thumb-wrapper {
@@ -61,7 +61,7 @@
             }
 
             .ui-sidebar__item-meta {
-                color: $slate-light;
+                color: var(--slate-light);
                 letter-spacing: -0.05em;
                 text-transform: uppercase;
                 font-weight: 700;
@@ -72,7 +72,7 @@
 
     .ui-sidebar__categories {
         display: flex;
-        border-color: $border-soft;
+        border-color: var(--border-soft);
         border-top-width: 1px;
         flex-direction: column;
 
@@ -81,12 +81,12 @@
             justify-content: space-between;
             padding-top: 0.75rem;
             padding-bottom: 0.75rem;
-            border-color: $border-soft;
+            border-color: var(--border-soft);
             border-bottom-width: 1px;
 
             &:hover {
-                color: $primary;
-                background-color: $primary-soft;
+                color: var(--primary);
+                background-color: var(--primary-soft);
                 transition-property: all;
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
                 transition-duration: 150ms;
@@ -101,20 +101,20 @@
             }
 
             .ui-sidebar__count-badge {
-                color: $slate-light;
+                color: var(--slate-light);
                 font-weight: 700;
                 font-size: 0.75rem;
                 line-height: 1rem;
 
                 .ui-sidebar__count-text {
-                    color: $white;
+                    color: var(--white);
                     font-weight: 700;
                     font-size: 10px;
                     padding-top: 0.125rem;
                     padding-bottom: 0.125rem;
                     padding-left: 0.5rem;
                     padding-right: 0.5rem;
-                    background-color: $primary;
+                    background-color: var(--primary);
                     border-radius: 9999px;
                 }
             }
@@ -122,8 +122,8 @@
     }
 
     .ui-sidebar__newsletter {
-        background-color: rgba($dark, 1);
-        color: rgba($white, 1);
+        background-color: var(--dark);
+        color: var(--white);
         padding: 2rem;
         border-radius: 0.5rem;
         text-align: center;
@@ -131,7 +131,7 @@
         .ui-sidebar__newsletter-icon {
             font-size: 2.25rem;
             line-height: 2.5rem;
-            color: rgba($primary, 1);
+            color: var(--primary);
             margin-bottom: 1rem;
         }
 
@@ -145,7 +145,7 @@
         }
 
         .ui-sidebar__newsletter-text {
-            color: rgba($slate-light, 1);
+            color: var(--slate-light);
             line-height: 1.625;
             font-size: 0.875rem;
             margin: 0;
@@ -160,19 +160,19 @@
             .ui-sidebar__input {
                 width: 100%;
                 border-radius: 0.25rem;
-                background-color: rgba($white, 1);
+                background-color: var(--white);
                 padding-top: 0.75rem;
                 padding-bottom: 0.75rem;
                 padding-left: 1rem;
                 padding-right: 1rem;
-                color: rgba($black, 1);
+                color: var(--black);
                 outline: none;
-                
+
             }
 
             .ui-sidebar__submit {
                 width: 100%;
-                background-color: rgba($primary, 1);
+                background-color: var(--primary);
                 padding-top: 0.75rem;
                 padding-bottom: 0.75rem;
                 padding-left: 1rem;
@@ -182,17 +182,17 @@
                 font-weight: 700;
                 font-size: 0.875rem;
                 line-height: 1.25rem;
-                color: rgba($white, 1);
+                color: var(--white);
                 transition-duration: 150ms;
 
                 &:hover {
-                    background-color: rgba($white, 1);
-                    color: rgba($dark, 1);
+                    background-color: var(--white);
+                    color: var(--dark);
                 }
             }
 
             .ui-sidebar__form-note {
-                color: rgba($slate-light, 1);
+                color: var(--slate-light);
                 font-size: 0.75rem;
                 line-height: 1rem;
                 margin: 0;

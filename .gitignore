@@ -2,6 +2,7 @@
 node_modules/
 
 dist/
+ejemplo.html
 
 # logs
 npm-debug.log*
