@@ -4,6 +4,7 @@
 @forward 'foundations/spacing';
 @forward 'foundations/radius';
 @forward 'foundations/breakpoints';
+@forward 'foundations/shadows';
 
 @use '../layouts/ui-page/ui-page.scss';
 @use '../layouts/ui-layout/ui-layout.scss';

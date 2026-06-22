@@ -4,6 +4,7 @@
 @use '../../styles/foundations/spacing' as *;
 @use '../../styles/foundations/radius' as *;
 @use '../../styles/foundations/breakpoints' as *;
+@use '../../styles/foundations/shadows' as *;
 
 .ui-callout {
     --ui-callout-accent: var(--primary);
@@ -23,7 +24,7 @@
     border-radius: $radius-sm;
     background-color: var(--ui-callout-bg);
     color: var(--ui-callout-text);
-    box-shadow: inset 0 0 0 1px var(--black-3);
+    box-shadow: $shadow-inner-subtle;
 }
 
 .ui-callout__icon {
@@ -163,7 +164,7 @@
 
     padding: $space-6;
     border-left-width: 6px;
-    box-shadow: 0 10px 30px var(--black-10);
+    box-shadow: $shadow-md;
 }
 
 .ui-callout--strong .ui-callout__icon {

@@ -78,10 +78,11 @@ SayUI also exposes foundational Sass tokens for new components:
 - `src/styles/foundations/_spacing.scss`
 - `src/styles/foundations/_radius.scss`
 - `src/styles/foundations/_breakpoints.scss`
+- `src/styles/foundations/_shadows.scss`
 
 These tokens are intended for component authors inside SayUI. Consumer projects should continue using the compiled CSS and public `ui-*` classes.
 
-Current P1 token adoption is intentionally limited to new components such as `ui-tag-list` and `ui-callout`. Older components have not been migrated yet to avoid visual churn.
+Current P1 token adoption is intentionally limited to new components and low-risk migrations such as `ui-tag-list` and `ui-callout`. Older components have not been migrated yet to avoid visual churn.
 
 ## Breakpoints Used
 
