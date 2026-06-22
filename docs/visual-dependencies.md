@@ -71,10 +71,21 @@ Consumers can override CSS custom properties if they need theme changes:
 }
 ```
 
+## Sass Design Tokens
+
+SayUI also exposes foundational Sass tokens for new components:
+
+- `src/styles/foundations/_spacing.scss`
+- `src/styles/foundations/_radius.scss`
+- `src/styles/foundations/_breakpoints.scss`
+
+These tokens are intended for component authors inside SayUI. Consumer projects should continue using the compiled CSS and public `ui-*` classes.
+
+Current P1 token adoption is intentionally limited to new components such as `ui-tag-list` and `ui-callout`. Older components have not been migrated yet to avoid visual churn.
+
 ## Breakpoints Used
 
 Current component breakpoints include:
 
 - `768px`: editorial topbar nav, article related grid, editorial footer rows.
 - `1024px`: main layout columns, sidebar width, article grid columns, banner split layout.
-

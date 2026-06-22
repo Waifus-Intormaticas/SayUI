@@ -1,6 +1,9 @@
 @use 'foundations/variables';
 @forward 'foundations/typography';
 @forward 'foundations/mixins';
+@forward 'foundations/spacing';
+@forward 'foundations/radius';
+@forward 'foundations/breakpoints';
 
 @use '../layouts/ui-page/ui-page.scss';
 @use '../layouts/ui-layout/ui-layout.scss';

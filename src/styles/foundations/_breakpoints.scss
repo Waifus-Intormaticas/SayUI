@@ -1,0 +1,21 @@
+$breakpoint-xs: 480px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 1024px !default;
+
+@mixin respond-xs {
+    @media (min-width: $breakpoint-xs) {
+        @content;
+    }
+}
+
+@mixin respond-md {
+    @media (min-width: $breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin respond-lg {
+    @media (min-width: $breakpoint-lg) {
+        @content;
+    }
+}
