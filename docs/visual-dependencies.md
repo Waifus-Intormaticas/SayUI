@@ -86,7 +86,18 @@ Current P1 token adoption is intentionally limited to new components and low-ris
 
 ## Breakpoints Used
 
-Current component breakpoints include:
+Official SayUI breakpoints are defined in `src/styles/foundations/_breakpoints.scss`:
 
-- `768px`: editorial topbar nav, article related grid, editorial footer rows.
+- `480px`: extra-small adjustments through `$breakpoint-xs` or `respond-xs`.
+- `768px`: medium layout changes through `$breakpoint-md` or `respond-md`.
+- `1024px`: large layout changes through `$breakpoint-lg` or `respond-lg`.
+
+Current component breakpoint usage includes:
+
+- `480px`: callout mobile stacking.
+- `768px`: editorial topbar nav, article related grid, editorial footer rows, standard footer columns.
 - `1024px`: main layout columns, sidebar width, article grid columns, banner split layout.
+
+Breakpoint migration is gradual. Low-risk components may use the official mixins, while older layout-heavy components can still contain raw values until they are reviewed visually.
+
+`ui-topbar` currently keeps its legacy `770px` and `1020px` breakpoints as a special case pending visual review. Do not normalize those values without checking the topbar mobile behavior.
