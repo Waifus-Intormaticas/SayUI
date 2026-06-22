@@ -1,0 +1,100 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+@use '../../styles/foundations/radius' as *;
+
+.ui-table__wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--footer-border);
+    border-radius: $radius-sm;
+    background-color: var(--white);
+}
+
+.ui-table__wrapper:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.ui-table {
+    @include text($size: $font-size-sm, $line-height: $line-height-base);
+
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--slate-medium);
+    background-color: var(--white);
+}
+
+.ui-table__caption {
+    @include text($size: $font-size-xs, $weight: $font-weight-black);
+
+    caption-side: top;
+    padding: $space-4;
+    color: var(--dark);
+    letter-spacing: 0.1em;
+    text-align: left;
+    text-transform: uppercase;
+    background-color: var(--sidebar-bg);
+    border-bottom: 1px solid var(--footer-border);
+}
+
+.ui-table th,
+.ui-table td {
+    padding: $space-3 $space-4;
+    border-bottom: 1px solid var(--footer-border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.ui-table thead th {
+    @include text($size: $font-size-2xs, $weight: $font-weight-black);
+
+    color: var(--dark);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: var(--border-soft);
+}
+
+.ui-table tbody th {
+    color: var(--dark);
+    font-weight: $font-weight-bold;
+}
+
+.ui-table tbody tr:last-child th,
+.ui-table tbody tr:last-child td,
+.ui-table tfoot tr:last-child th,
+.ui-table tfoot tr:last-child td {
+    border-bottom: 0;
+}
+
+.ui-table tfoot th,
+.ui-table tfoot td {
+    color: var(--dark);
+    font-weight: $font-weight-bold;
+    background-color: var(--sidebar-bg);
+}
+
+.ui-table--compact th,
+.ui-table--compact td {
+    padding: $space-2 $space-3;
+}
+
+.ui-table--striped tbody tr:nth-child(even) {
+    background-color: var(--primary-soft);
+}
+
+.ui-table--bordered th,
+.ui-table--bordered td {
+    border-right: 1px solid var(--footer-border);
+}
+
+.ui-table--bordered th:last-child,
+.ui-table--bordered td:last-child {
+    border-right: 0;
+}
+
+.ui-table--responsive {
+    min-width: 40rem;
+}
