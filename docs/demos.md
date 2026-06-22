@@ -73,6 +73,26 @@ When to use:
 - Testing article + sidebar layout.
 - Testing the editorial footer.
 
+## P1 Components Demo
+
+File: `src/demo/ui-components.html`
+
+Purpose: visual gallery for the reusable P1 components.
+
+Includes:
+
+- `ui-tag-list`
+- `ui-callout`
+- `ui-table`
+- `ui-code-block`
+- `ui-toc`
+
+When to use:
+
+- Checking reusable technical/editorial components in isolation.
+- Reviewing accessibility-oriented markup examples.
+- Copying small component snippets without opening full page demos.
+
 ## Demo Rules
 
 - Demos can contain complete compositions.
@@ -80,4 +100,3 @@ When to use:
 - Demos are allowed to be broader than isolated component snippets.
 - Do not treat demo files as production routes.
 - Do not remove demos unless there is a proven technical issue.
-

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="styles/demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayUI P1 Components Demo</title>
+</head>
+
+<body>
+    <main class="demo-components">
+        <header class="demo-components__header">
+            <span class="demo-components__eyebrow">SayUI demo</span>
+            <h1 class="demo-components__title">P1 reusable components</h1>
+            <p class="demo-components__intro">
+                A visual gallery for framework-agnostic SayUI components intended for technical and editorial
+                content. This page is a demo, not a production route.
+            </p>
+        </header>
+
+        <div class="demo-components__grid">
+            <section class="demo-components__section" id="components" aria-labelledby="demo-tag-list-title">
+                <h2 class="demo-components__section-title" id="demo-tag-list-title">ui-tag-list</h2>
+
+                <div class="demo-components__stack">
+                    <ul class="ui-tag-list" aria-label="Article tags">
+                        <li class="ui-tag-list__item">
+                            <span class="ui-tag-list__tag">Accessibility</span>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <span class="ui-tag-list__tag">Design Systems</span>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <span class="ui-tag-list__tag">SCSS</span>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-tag-list ui-tag-list--interactive" aria-label="Filter by topic">
+                        <li class="ui-tag-list__item">
+                            <button class="ui-tag-list__tag ui-tag-list__tag--active" type="button" aria-pressed="true">
+                                Components
+                            </button>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <button class="ui-tag-list__tag" type="button" aria-pressed="false">
+                                Tokens
+                            </button>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <button class="ui-tag-list__tag" type="button" aria-pressed="false">
+                                Layouts
+                            </button>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-tag-list ui-tag-list--with-count ui-tag-list--stacked" aria-label="Categories">
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="#components">
+                                <span class="ui-tag-list__label">Components</span>
+                                <span class="ui-tag-list__count" aria-label="5 components">5</span>
+                            </a>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="#demo-toc-title">
+                                <span class="ui-tag-list__label">Guides</span>
+                                <span class="ui-tag-list__count" aria-label="1 guide section">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-callout-title">
+                <h2 class="demo-components__section-title" id="demo-callout-title">ui-callout</h2>
+
+                <div class="demo-components__stack">
+                    <aside class="ui-callout" aria-labelledby="callout-note-title">
+                        <div class="ui-callout__body">
+                            <h3 class="ui-callout__title" id="callout-note-title">Before using SayUI</h3>
+                            <p class="ui-callout__content">
+                                Import the compiled CSS bundle before applying component classes.
+                            </p>
+                        </div>
+                    </aside>
+
+                    <aside class="ui-callout ui-callout--warning" aria-labelledby="callout-warning-title">
+                        <span class="ui-callout__icon" aria-hidden="true">!</span>
+                        <div class="ui-callout__body">
+                            <h3 class="ui-callout__title" id="callout-warning-title">Contract first</h3>
+                            <p class="ui-callout__content">
+                                Keep semantic HTML intact when copying component examples.
+                            </p>
+                        </div>
+                    </aside>
+
+                    <aside class="ui-callout ui-callout--strong ui-callout--success"
+                        aria-labelledby="callout-success-title">
+                        <div class="ui-callout__body">
+                            <h3 class="ui-callout__title" id="callout-success-title">Framework agnostic</h3>
+                            <p class="ui-callout__content">
+                                This component works without JavaScript or a framework runtime.
+                            </p>
+                            <div class="ui-callout__actions">
+                                <a class="ui-callout__link" href="../../docs/components.md">Read contract</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-table-title">
+                <h2 class="demo-components__section-title" id="demo-table-title">ui-table</h2>
+
+                <div class="ui-table__wrapper">
+                    <table class="ui-table ui-table--responsive ui-table--striped">
+                        <caption class="ui-table__caption">
+                            Component support matrix
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Component</th>
+                                <th scope="col">JavaScript</th>
+                                <th scope="col">Primary use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">ui-callout</th>
+                                <td>Not required</td>
+                                <td>Editorial and technical notes</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ui-table</th>
+                                <td>Not required</td>
+                                <td>Tabular data</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ui-toc</th>
+                                <td>Not required</td>
+                                <td>Static in-page navigation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-code-title">
+                <h2 class="demo-components__section-title" id="demo-code-title">ui-code-block</h2>
+
+                <div class="demo-components__stack">
+                    <pre class="ui-code-block"><code>npm run build</code></pre>
+
+                    <figure class="ui-code-block">
+                        <figcaption class="ui-code-block__caption">
+                            Component markup
+                        </figcaption>
+
+                        <div class="ui-code-block__header">
+                            <span class="ui-code-block__filename">example.html</span>
+                            <span class="ui-code-block__language">html</span>
+                            <button class="ui-code-block__copy" type="button">Copy</button>
+                        </div>
+
+                        <pre class="ui-code-block__pre"><code class="ui-code-block__code">&lt;article class="ui-callout"&gt;
+  &lt;p class="ui-callout__content"&gt;Accessible by default.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-toc-title">
+                <h2 class="demo-components__section-title" id="demo-toc-title">ui-toc</h2>
+
+                <div class="demo-components__split">
+                    <article class="demo-components__stack">
+                        <section id="overview">
+                            <h3>Overview</h3>
+                            <p>
+                                The TOC links point to real headings on the page. Active state is manual and does not
+                                require scrollspy.
+                            </p>
+                        </section>
+
+                        <section id="installation">
+                            <h3>Installation</h3>
+                            <p>
+                                Consumer projects import the compiled CSS bundle and use documented classes.
+                            </p>
+                        </section>
+
+                        <section id="requirements">
+                            <h3>Requirements</h3>
+                            <p>
+                                SayUI components rely on semantic HTML, Sass-generated CSS, and accessible contracts.
+                            </p>
+                        </section>
+                    </article>
+
+                    <nav class="ui-toc ui-toc--boxed ui-toc--sticky" aria-labelledby="component-toc-title">
+                        <h3 class="ui-toc__title" id="component-toc-title">On this page</h3>
+
+                        <ol class="ui-toc__list">
+                            <li class="ui-toc__item ui-toc__item--active">
+                                <a class="ui-toc__link ui-toc__link--active" href="#overview"
+                                    aria-current="location">Overview</a>
+                            </li>
+                            <li class="ui-toc__item">
+                                <a class="ui-toc__link" href="#installation">Installation</a>
+
+                                <ol class="ui-toc__list ui-toc__list--nested">
+                                    <li class="ui-toc__item">
+                                        <a class="ui-toc__link" href="#requirements">Requirements</a>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
