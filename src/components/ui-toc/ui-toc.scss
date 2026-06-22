@@ -1,0 +1,102 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+@use '../../styles/foundations/radius' as *;
+@use '../../styles/foundations/breakpoints' as *;
+@use '../../styles/foundations/shadows' as *;
+
+.ui-toc {
+    width: 100%;
+    color: var(--slate-medium);
+}
+
+.ui-toc__title {
+    @include text($size: $font-size-2xs, $weight: $font-weight-black);
+
+    margin: $space-0 $space-0 $space-4;
+    color: var(--dark);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ui-toc__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    list-style: none;
+    margin: $space-0;
+    padding: $space-0;
+}
+
+.ui-toc__list--nested {
+    gap: $space-0-5;
+    margin-top: $space-1;
+    padding-left: $space-4;
+    border-left: 1px solid var(--footer-border);
+}
+
+.ui-toc__item {
+    min-width: $space-0;
+}
+
+.ui-toc__link {
+    @include text($size: $font-size-sm, $line-height: $leading-5, $weight: $font-weight-semibold);
+
+    display: block;
+    padding: $space-2 $space-3;
+    border-left: 3px solid transparent;
+    border-radius: $radius-xs;
+    color: var(--slate-medium);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.ui-toc__link:hover,
+.ui-toc__link--active,
+.ui-toc__link[aria-current="location"] {
+    color: var(--primary);
+    background-color: var(--primary-soft);
+    border-left-color: var(--primary);
+}
+
+.ui-toc__item--active > .ui-toc__link {
+    color: var(--primary);
+    background-color: var(--primary-soft);
+    border-left-color: var(--primary);
+}
+
+.ui-toc__link:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.ui-toc--compact .ui-toc__title {
+    margin-bottom: $space-2;
+}
+
+.ui-toc--compact .ui-toc__list {
+    gap: $space-0-5;
+}
+
+.ui-toc--compact .ui-toc__link {
+    @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-bold);
+
+    padding: $space-1 $space-2;
+}
+
+.ui-toc--boxed {
+    padding: $space-4;
+    border: 1px solid var(--footer-border);
+    border-radius: $radius-sm;
+    background-color: var(--sidebar-bg);
+    box-shadow: $shadow-inner-subtle;
+}
+
+@include respond-md {
+    .ui-toc--sticky {
+        position: sticky;
+        top: $space-20;
+    }
+}
