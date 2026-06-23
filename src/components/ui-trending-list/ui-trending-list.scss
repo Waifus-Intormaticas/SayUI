@@ -1,0 +1,113 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+@use '../../styles/foundations/radius' as *;
+
+.ui-trending-list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+    width: 100%;
+    margin: $space-0;
+    padding: $space-0;
+    list-style: none;
+}
+
+.ui-trending-list__item {
+    min-width: $space-0;
+}
+
+.ui-trending-list__link {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-4;
+    color: var(--dark);
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.ui-trending-list__link:hover {
+    color: var(--primary);
+}
+
+.ui-trending-list__link:hover .ui-trending-list__image {
+    transform: scale(1.08);
+}
+
+.ui-trending-list__link:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.ui-trending-list__media {
+    display: block;
+    flex-shrink: 0;
+    width: $space-20;
+    height: $space-20;
+    overflow: hidden;
+    border-radius: $radius-xs;
+    background-color: var(--avatar-bg);
+}
+
+.ui-trending-list__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+
+.ui-trending-list__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    min-width: $space-0;
+}
+
+.ui-trending-list__title {
+    @include text($size: $font-size-sm, $line-height: $leading-5, $weight: $font-weight-bold);
+
+    display: block;
+    color: inherit;
+}
+
+.ui-trending-list__meta {
+    @include text($size: $font-size-2xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    display: block;
+    color: var(--slate-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ui-trending-list--compact {
+    gap: $space-3;
+}
+
+.ui-trending-list--compact .ui-trending-list__link {
+    gap: $space-3;
+}
+
+.ui-trending-list--compact .ui-trending-list__media {
+    width: $space-16;
+    height: $space-16;
+}
+
+.ui-trending-list--compact .ui-trending-list__title {
+    @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-bold);
+}
+
+.ui-trending-list--compact .ui-trending-list__meta {
+    @include text($size: $font-size-3xs, $line-height: $leading-4, $weight: $font-weight-black);
+}
+
+.ui-trending-list--divided {
+    gap: $space-0;
+    border-top: 1px solid var(--border-soft);
+}
+
+.ui-trending-list--divided .ui-trending-list__item {
+    padding: $space-4 $space-0;
+    border-bottom: 1px solid var(--border-soft);
+}

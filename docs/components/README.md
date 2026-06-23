@@ -24,6 +24,7 @@ Original components are not obsolete. They are first-class public parts of SayUI
 | `ui-byline` | [ui-byline.md](ui-byline.md) |
 | `ui-comment` | [ui-comment.md](ui-comment.md) |
 | `ui-related-list` | [ui-related-list.md](ui-related-list.md) |
+| `ui-trending-list` | [ui-trending-list.md](ui-trending-list.md) |
 | `ui-topbar` | [ui-topbar.md](ui-topbar.md) |
 | `ui-editorial-topbar` | [ui-editorial-topbar.md](ui-editorial-topbar.md) |
 | `ui-banner` | [ui-banner.md](ui-banner.md) |
