@@ -77,8 +77,55 @@ body {
     width: min(100%, 28rem);
 }
 
+.demo-comparison {
+    width: 100%;
+}
+
+.demo-comparison__title {
+    margin: 0 0 1rem;
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.demo-comparison__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+}
+
+.demo-comparison__panel {
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid var(--footer-border);
+    border-radius: 0.25rem;
+    background: var(--sidebar-bg);
+}
+
+.demo-comparison__label {
+    margin: 0 0 0.75rem;
+    color: var(--slate-medium);
+    font-size: 0.75rem;
+    font-weight: 900;
+    line-height: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.demo-comparison__placeholder {
+    margin: 0;
+    color: var(--slate);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
 @media (min-width: 768px) {
     .demo-components__split {
         grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
+    }
+
+    .demo-comparison__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
