@@ -157,15 +157,28 @@ Article components are intentionally scoped to editorial article pages. They sho
 SayUI also includes reusable primitive and technical/editorial components that are not article-specific:
 
 - `ui-tag-list`: tags, categories, topic lists, and simple filters.
+- `ui-meta-list`: compact metadata and simple label/value metadata.
+- `ui-section-header`: reusable section headings.
+- `ui-eyebrow`: small editorial labels and individual category markers.
 - `ui-callout`: editorial or technical notes, tips, warnings, and contextual messages.
+- `ui-pullquote`: highlighted editorial quotations.
+- `ui-newsletter`: independent newsletter signup blocks.
+- `ui-author-card`: complete author presentation blocks.
+- `ui-byline`: compact authorship and publication metadata.
+- `ui-comment`: individual comments and simple replies.
+- `ui-comment-form`: accessible forms specifically for writing comments.
+- `ui-related-list`: compact related-content lists without media.
+- `ui-trending-list`: compact editorial lists with optional media and metadata.
+- `ui-social-links`: semantic social and contact link groups.
 - `ui-table`: semantic tabular data with responsive overflow support.
 - `ui-code-block`: code, commands, configuration, and terminal-style snippets without JavaScript or syntax highlighting.
 - `ui-toc`: static table of contents for internal page sections, without scrollspy.
-- `ui-meta-list`: compact metadata and simple label/value metadata.
 
 These components are designed to work in articles, documentation, guides, demos, or consumer projects without depending on a framework or a specific page layout.
 
 They should not be treated as automatic replacements for existing internals. For example, `ui-tag-list` can coexist with older article tags, and `ui-meta-list` can coexist with existing card or hero metadata until a migration contract is approved.
+
+SayUI does not include `ui-category-list` or `ui-comment-list` in v1 because their current use cases are covered by documented compositions. It also does not include a general form system: `ui-comment-form` and `ui-newsletter` remain purpose-specific components.
 
 ## Demos
 
@@ -267,4 +280,12 @@ The project has:
 - reusable P1 technical/editorial components
 - documentation for component and layout contracts
 
-Before treating SayUI as a public beta, the next consolidation work should focus on demos for the P1 components, documentation organization, and gradual token migration in older components.
+Before treating SayUI as a public beta, the next consolidation work should focus on comparative demos, visual validation, controlled adoption experiments, and continued documentation maintenance.
+
+### P4 Closure
+
+P4 is closed for implementation and component contracts. The modern primitives completed through P4 are implemented, documented, included in the complete bundle, and represented in the reusable-components demo.
+
+Original components remain first-class public compositions rather than legacy code. Any real adoption inside an original component still requires a comparative demo, visual approval, and a specific migration contract.
+
+The recommended next phase is P5: comparative demos, visual validation across representative contexts, and controlled adoption experiments. It should not begin with more automatic extraction or mass migration.
