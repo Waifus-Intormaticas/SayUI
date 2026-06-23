@@ -23,6 +23,7 @@ Current categories in this file:
 | `ui-sidebar` | Composed component | Public | Trending links, categories, and newsletter. | Do not split without approved contracts. |
 | `ui-footer` | Composed component | Public | Main footer. | Keep. |
 | `ui-footer-editorial` | Composed component | Public | Editorial footer. | Keep. |
+| `ui-article-main` | Editorial component | Public | Long-form article body with prose, quote, figure, tags, and comments. | Keep public; extract smaller patterns only with approved contracts. |
 
 ## ui-topbar
 
@@ -139,15 +140,56 @@ Example:
 
 ## ui-banner
 
-Purpose: featured story or hero block for the main page.
+Purpose: featured editorial block for highlighting one primary story, resource, or announcement with media, text, author context, and a call to action.
 
-When to use: use near the top of `ui-layout`.
+When to use: use when one item should receive more visual weight than a post card, usually near the top of a page, section, or editorial listing.
+
+When not to use: do not use for generic page heroes, multi-card grids, compact post previews, alerts, or newsletter signups.
 
 HTML minimum:
 
 ```html
 <section class="ui-banner">
-  <div class="ui-banner__wrapper"></div>
+  <div class="ui-banner__wrapper">
+    <div class="ui-banner__content">
+      <h2 class="ui-banner__title">Featured title</h2>
+    </div>
+  </div>
+</section>
+```
+
+Recommended complete structure:
+
+```html
+<section class="ui-banner" aria-labelledby="featured-story-title">
+  <div class="ui-banner__wrapper">
+    <div class="ui-banner__media">
+      <img class="ui-banner__image" src="feature.jpg" alt="Featured story image">
+    </div>
+
+    <div class="ui-banner__content">
+      <span class="ui-banner__eyebrow">Featured Story</span>
+      <h2 class="ui-banner__title" id="featured-story-title">
+        The Future of Minimalist Design
+      </h2>
+      <p class="ui-banner__description">
+        A short description that explains why this story matters.
+      </p>
+
+      <div class="ui-banner__author">
+        <img class="ui-banner__author-image" src="author.jpg" alt="Alex Debil">
+        <div class="ui-banner__author-info">
+          <p class="ui-banner__author-name">Alex Debil</p>
+          <p class="ui-banner__meta">Editorial Design - 8 min read</p>
+        </div>
+      </div>
+
+      <a class="ui-banner__link" href="#">
+        Read full article
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+      </a>
+    </div>
+  </div>
 </section>
 ```
 
@@ -155,6 +197,8 @@ Required classes:
 
 - `ui-banner`
 - `ui-banner__wrapper`
+- `ui-banner__content`
+- `ui-banner__title`
 
 Optional classes:
 
@@ -171,23 +215,45 @@ Optional classes:
 - `ui-banner__meta`
 - `ui-banner__link`
 
+Internal or composition-dependent classes:
+
+- `ui-banner__author-info` depends on `ui-banner__author`.
+- `ui-banner__author-image`, `ui-banner__author-name`, and `ui-banner__meta` are meaningful as part of the author/meta row.
+- The icon inside `ui-banner__link` is not required and should remain decorative when used.
+
 Dependencies:
 
 - An image if using media.
 - Material Symbols if using the arrow icon.
+- `src/components/banner/banner.scss`
 
 Responsive:
 
 - Stacked by default.
 - Media and content sit side by side from 1024px.
+- Works as an isolated block or inside a larger layout container.
 
 Accessibility:
 
 - Use descriptive `alt` text when the image is meaningful.
 - If the image is decorative, use empty `alt`.
 - `ui-banner__link` needs a real destination in consumer projects.
+- Prefer `aria-labelledby` when the banner has a visible title.
+- If the arrow icon is decorative, use `aria-hidden="true"`.
 
-Example:
+Relationship with newer primitives:
+
+- `ui-meta-list` could eventually replace `ui-banner__meta`, but do not migrate without a contract update.
+- `ui-tag-list` can be used near a banner, but should not replace `ui-banner__eyebrow`.
+- `ui-callout`, `ui-code-block`, `ui-table`, and `ui-toc` are separate content components and should not be nested into the banner by default.
+
+Future extraction candidates:
+
+- `ui-eyebrow` for repeated eyebrow labels.
+- `ui-byline` or `ui-author-card` for author image/name/meta patterns.
+- `ui-meta-list` adoption for simple metadata after visual review.
+
+Isolated example:
 
 ```html
 <section class="ui-banner">
@@ -198,6 +264,21 @@ Example:
     </div>
   </div>
 </section>
+```
+
+Composition example:
+
+```html
+<main class="ui-layout">
+  <section class="ui-banner">
+    <div class="ui-banner__wrapper">
+      <div class="ui-banner__content">
+        <span class="ui-banner__eyebrow">Featured</span>
+        <h2 class="ui-banner__title">Featured title</h2>
+      </div>
+    </div>
+  </section>
+</main>
 ```
 
 ## ui-main-header
@@ -249,15 +330,38 @@ Example:
 
 ## ui-post-card
 
-Purpose: article or post preview card.
+Purpose: reusable preview card for an article, post, resource, or editorial entry.
 
-When to use: use inside `ui-main__grid`, `ui-article-related__grid`, or another listing context.
+When to use: use in post grids, related-content areas, landing sections, archive listings, or any context where one content item needs image, category, title, description, and metadata.
+
+When not to use: do not use for full articles, feature banners, navigation links, simple metadata rows, or purely tabular content.
 
 HTML minimum:
 
 ```html
 <article class="ui-post-card">
-  <div class="ui-post-card__content"></div>
+  <div class="ui-post-card__content">
+    <h4 class="ui-post-card__title">Post title</h4>
+  </div>
+</article>
+```
+
+Recommended complete structure:
+
+```html
+<article class="ui-post-card">
+  <div class="ui-post-card__image-wrapper">
+    <img class="ui-post-card__image" src="thumbnail.jpg" alt="Article thumbnail">
+  </div>
+
+  <div class="ui-post-card__content">
+    <span class="ui-post-card__eyebrow">Color Theory</span>
+    <h4 class="ui-post-card__title">Mastering Red in Editorial Interfaces</h4>
+    <p class="ui-post-card__description">
+      Exploring why a focused color system can hold a full editorial identity.
+    </p>
+    <div class="ui-post-card__meta">Mar 24, 2024 - 5 min read</div>
+  </div>
 </article>
 ```
 
@@ -265,6 +369,7 @@ Required classes:
 
 - `ui-post-card`
 - `ui-post-card__content`
+- `ui-post-card__title`
 
 Optional classes:
 
@@ -275,20 +380,44 @@ Optional classes:
 - `ui-post-card__description`
 - `ui-post-card__meta`
 
+Internal or composition-dependent classes:
+
+- `ui-post-card__image` should live inside `ui-post-card__image-wrapper`.
+- `ui-post-card__eyebrow` and `ui-post-card__meta` are card-specific text treatments, not standalone primitives yet.
+- The card width and column behavior are usually controlled by the parent grid.
+
 Dependencies:
 
 - Image only if media is used.
+- Parent layout such as `ui-main__grid` or another consumer-defined grid.
+- `src/components/ui-post-card/ui-post-card.scss`
 
 Responsive:
 
 - Card sizing depends on its parent grid.
+- Internal spacing and media treatment are component-owned.
+- In `ui-main__grid`, cards follow the grid breakpoint behavior rather than defining their own columns.
 
 Accessibility:
 
 - If the card is clickable, document whether the title link or full card link is used.
 - Images need useful `alt` text when meaningful.
+- Avoid nesting a full-card link around other interactive controls.
+- Use semantic heading levels that fit the surrounding page, even if the class remains `ui-post-card__title`.
 
-Example:
+Relationship with newer primitives:
+
+- `ui-meta-list` may be a future replacement for `ui-post-card__meta`, but the current card contract keeps `ui-post-card__meta`.
+- `ui-tag-list` should not replace `ui-post-card__eyebrow`; category chips can be placed outside the card if needed.
+- `ui-callout`, `ui-code-block`, `ui-table`, and `ui-toc` are not card internals.
+
+Future extraction candidates:
+
+- `ui-eyebrow` for category/label text.
+- `ui-meta-list` migration for metadata after card visual review.
+- A future generic `ui-card` should not be introduced until several card families are compared.
+
+Isolated example:
 
 ```html
 <article class="ui-post-card">
@@ -297,6 +426,19 @@ Example:
     <h4 class="ui-post-card__title">Post title</h4>
   </div>
 </article>
+```
+
+Composition example:
+
+```html
+<div class="ui-main__grid">
+  <article class="ui-post-card">
+    <div class="ui-post-card__content">
+      <span class="ui-post-card__eyebrow">Design</span>
+      <h4 class="ui-post-card__title">Post title</h4>
+    </div>
+  </article>
+</div>
 ```
 
 ## ui-post-grid
@@ -975,14 +1117,66 @@ Example:
 
 ## ui-sidebar
 
-Purpose: sidebar for trending links, categories, and newsletter.
+Purpose: composed sidebar for secondary editorial content: trending links, category links with counts, and a newsletter signup block.
 
-When to use: use beside `ui-main` in `ui-layout__content`.
+When to use: use beside `ui-main`, inside editorial layouts, or in any consumer page that needs a complete secondary column.
+
+When not to use: do not use for primary navigation, table of contents, article author bio, related-card grids, or a single newsletter block unless the complete sidebar composition is wanted.
 
 HTML minimum:
 
 ```html
-<aside class="ui-sidebar"></aside>
+<aside class="ui-sidebar">
+  <section>
+    <h4 class="ui-sidebar__section-title">Categories</h4>
+  </section>
+</aside>
+```
+
+Recommended complete structure:
+
+```html
+<aside class="ui-sidebar">
+  <section>
+    <h4 class="ui-sidebar__section-title">Trending Now</h4>
+    <div class="ui-sidebar__trending-list">
+      <a href="#" class="ui-sidebar__trending-item">
+        <div class="ui-sidebar__thumb-wrapper">
+          <img src="thumb.jpg" alt="Article thumbnail" class="ui-sidebar__thumb">
+        </div>
+        <div>
+          <h5 class="ui-sidebar__item-title">10 Grid Systems Every Designer Should Master</h5>
+          <span class="ui-sidebar__item-meta">48k Views</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h4 class="ui-sidebar__section-title">Categories</h4>
+    <div class="ui-sidebar__categories">
+      <a href="#" class="ui-sidebar__category-link">
+        <span class="ui-sidebar__category-title">Architecture</span>
+        <span class="ui-sidebar__count-badge">
+          <span class="ui-sidebar__count-text">12</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <section class="ui-sidebar__newsletter" aria-labelledby="sidebar-newsletter-title">
+    <span class="material-symbols-outlined ui-sidebar__newsletter-icon" aria-hidden="true">mail</span>
+    <h4 class="ui-sidebar__newsletter-title" id="sidebar-newsletter-title">The Weekly Digest</h4>
+    <p class="ui-sidebar__newsletter-text">
+      Get selected stories delivered to your inbox.
+    </p>
+    <form class="ui-sidebar__form">
+      <input class="ui-sidebar__input" type="email" aria-label="Email address" placeholder="Your email address">
+      <button class="ui-sidebar__submit" type="submit">Subscribe Now</button>
+      <p class="ui-sidebar__form-note">No spam, ever. Unsubscribe anytime.</p>
+    </form>
+  </section>
+</aside>
 ```
 
 Required classes:
@@ -1012,21 +1206,49 @@ Optional classes:
 - `ui-sidebar__submit`
 - `ui-sidebar__form-note`
 
+Internal or composition-dependent classes:
+
+- `ui-sidebar__trending-item`, `ui-sidebar__thumb-wrapper`, `ui-sidebar__thumb`, `ui-sidebar__item-title`, and `ui-sidebar__item-meta` belong to the trending-list pattern.
+- `ui-sidebar__category-link`, `ui-sidebar__category-title`, `ui-sidebar__count-badge`, and `ui-sidebar__count-text` belong to the categories pattern.
+- `ui-sidebar__newsletter-*` classes belong to the newsletter composition and should not be treated as a standalone public primitive yet.
+
 Dependencies:
 
 - Material Symbols if using the newsletter icon.
+- `src/components/ui-sidebar/ui-sidebar.scss`
+- Works best inside a layout that gives it an appropriate column width.
 
 Responsive:
 
 - Full width by default.
 - 33.333333% width from 1024px.
+- Can be shown in a narrow demo wrapper when presented as an isolated component.
 
 Accessibility:
 
 - Newsletter input should have a label or accessible name.
 - Links need valid destinations.
+- Use `aside` when the content is complementary to the main page.
+- Use meaningful `alt` text for thumbnails when they add information, or empty `alt` if the linked text already describes the destination.
+- Icon-only or icon-led elements need hidden decorative icons or accessible names, depending on whether they are interactive.
+- Forms should use `type="email"` for email inputs and a real submit button.
 
-Example:
+Relationship with newer primitives:
+
+- `ui-tag-list` could eventually replace the category cloud/count pattern, but the current sidebar contract keeps `ui-sidebar__categories`.
+- `ui-meta-list` could eventually replace `ui-sidebar__item-meta`.
+- `ui-callout` should not replace the newsletter block; newsletter has a distinct form contract.
+- `ui-toc` may live near a sidebar or inside the same column in a consumer layout, but it should not depend on `ui-sidebar`.
+- `ui-code-block` and `ui-table` are content components and should not be sidebar internals by default.
+
+Future extraction candidates:
+
+- `ui-newsletter` for the newsletter block.
+- `ui-related-list` or `ui-trending-list` for compact linked stories.
+- `ui-tag-list` adoption for categories with counts.
+- `ui-meta-list` adoption for compact item metadata.
+
+Isolated example:
 
 ```html
 <aside class="ui-sidebar">
@@ -1034,6 +1256,232 @@ Example:
     <h4 class="ui-sidebar__section-title">Categories</h4>
   </section>
 </aside>
+```
+
+Composition example:
+
+```html
+<div class="ui-layout__content">
+  <main class="ui-main"></main>
+
+  <aside class="ui-sidebar">
+    <section>
+      <h4 class="ui-sidebar__section-title">Trending Now</h4>
+    </section>
+  </aside>
+</div>
+```
+
+## ui-article-main
+
+Purpose: public editorial component for the main body of a long-form article, including prose, pull quote, principle list, figure, tags, and comments.
+
+When to use: use for article pages, long-form essays, editorial features, or documentation-like narratives that need SayUI's article rhythm.
+
+When not to use: do not use for a generic Markdown prose wrapper, compact cards, standalone comments, standalone quote blocks, or technical reference pages that only need tables/code/callouts.
+
+HTML minimum:
+
+```html
+<article class="ui-article-main">
+  <div class="ui-article-main__prose">
+    <p class="ui-article-main__lead">
+      Introductory article text.
+    </p>
+  </div>
+</article>
+```
+
+Recommended complete structure:
+
+```html
+<article class="ui-article-main">
+  <div class="ui-article-main__prose">
+    <p class="ui-article-main__lead">
+      Opening paragraph for the article.
+    </p>
+    <p class="ui-article-main__paragraph">
+      Supporting article paragraph.
+    </p>
+
+    <h2 class="ui-article-main__title">The Functional Role of Motion</h2>
+
+    <blockquote class="ui-article-main__quote">
+      <span class="material-symbols-outlined ui-article-main__quote-icon" aria-hidden="true">format_quote</span>
+      <p class="ui-article-main__quote-content">
+        Minimalism is not absence. It is the right amount of signal.
+      </p>
+      <cite class="ui-article-main__quote-cite">Editorial Design Principles</cite>
+    </blockquote>
+
+    <h3 class="ui-article-main__section-title">Core Principles</h3>
+    <ul class="ui-article-main__principles">
+      <li class="ui-article-main__principle">
+        <span class="ui-article-main__item-number">1</span>
+        <div class="ui-article-main__item-content">
+          <strong class="ui-article-main__item-title">Intentionality</strong>
+          <span class="ui-article-main__item-text">Every decision should carry meaning.</span>
+        </div>
+      </li>
+      <li class="ui-article-main__principle ui-article-main__principle--margin">
+        <span class="ui-article-main__item-number">2</span>
+        <div class="ui-article-main__item-content">
+          <strong class="ui-article-main__item-title">Rhythm</strong>
+          <span class="ui-article-main__item-text">Spacing should support comfortable reading.</span>
+        </div>
+      </li>
+    </ul>
+
+    <figure class="ui-article-main__figure">
+      <img class="ui-article-main__figure-image" src="figure.jpg" alt="Article figure">
+      <figcaption class="ui-article-main__figure-caption">
+        Fig 1.1: Supporting visual context.
+      </figcaption>
+    </figure>
+
+    <p class="ui-article-main__caption-text">
+      Closing or explanatory paragraph after the figure.
+    </p>
+  </div>
+
+  <div class="ui-article-main__tags">
+    <span class="ui-article-main__tag">User Experience</span>
+    <span class="ui-article-main__tag">Minimalism</span>
+  </div>
+
+  <section class="ui-article-main__comments-section">
+    <h3 class="ui-article-main__discourse">The Discourse (3)</h3>
+  </section>
+</article>
+```
+
+Required classes:
+
+- `ui-article-main`
+- `ui-article-main__prose`
+
+Optional classes:
+
+- `ui-article-main__lead`
+- `ui-article-main__paragraph`
+- `ui-article-main__title`
+- `ui-article-main__section-title`
+- `ui-article-main__quote`
+- `ui-article-main__quote-icon`
+- `ui-article-main__quote-content`
+- `ui-article-main__quote-cite`
+- `ui-article-main__principles`
+- `ui-article-main__principle`
+- `ui-article-main__principle--margin`
+- `ui-article-main__item-number`
+- `ui-article-main__item-content`
+- `ui-article-main__item-title`
+- `ui-article-main__item-text`
+- `ui-article-main__figure`
+- `ui-article-main__figure-image`
+- `ui-article-main__figure-caption`
+- `ui-article-main__caption-text`
+- `ui-article-main__tags`
+- `ui-article-main__tag`
+- `ui-article-main__comments-section`
+- `ui-article-main__discourse`
+- `ui-article-main__comments-content`
+- `ui-article-main__comment`
+- `ui-article-main__comment--reply`
+- `ui-article-main__avatar-container`
+- `ui-article-main__avatar-container--reply`
+- `ui-article-main__avatar`
+- `ui-article-main__meta`
+- `ui-article-main__author`
+- `ui-article-main__badge`
+- `ui-article-main__time`
+- `ui-article-main__text`
+- `ui-article-main__reply-button`
+- `ui-article-main__comment-form`
+- `ui-article-main__form-title`
+- `ui-article-main__textarea`
+- `ui-article-main__submit`
+
+Internal or composition-dependent classes:
+
+- Quote classes depend on `ui-article-main__quote` and should not be documented as a standalone callout.
+- Principle item classes depend on `ui-article-main__principles`.
+- Comment classes form an internal comments pattern and should not become standalone public comments without a separate contract.
+- `ui-article-main__tag` is article-specific today, even though `ui-tag-list` exists.
+- `ui-article-main__meta` is comment metadata today, not the same contract as `ui-meta-list`.
+
+Dependencies:
+
+- Material Symbols if using `ui-article-main__quote-icon`.
+- Images for figures and avatars when those zones are used.
+- `src/components/article/ui-article-main/ui-article-main.scss`
+- Usually composed with `ui-article-hero`, `ui-article-sidebar`, and `ui-article-related`, but it can be displayed alone.
+
+Responsive:
+
+- The component is fluid and should receive its reading width from the parent layout.
+- Figures and comments stack naturally within the article flow.
+- Reply comments and dense metadata should be checked on narrow viewports.
+
+Accessibility:
+
+- Use semantic `article`.
+- Preserve heading order according to the surrounding page.
+- Use `blockquote` and `cite` for quoted material.
+- Use real `figure` and `figcaption` for figures.
+- Figure and avatar images need appropriate `alt` text.
+- Comment reply controls should be real buttons with `type="button"` when they act in-page.
+- Textarea controls need a visible label or accessible name.
+
+Relationship with newer primitives:
+
+- `ui-tag-list` could eventually replace `ui-article-main__tags`, but only after a visual and contract migration.
+- `ui-meta-list` should not replace `ui-article-main__meta` yet because that class currently belongs to comments.
+- `ui-callout` can be used inside article prose for notes, but it does not replace `ui-article-main__quote` or principles.
+- `ui-code-block` and `ui-table` can be placed inside article content when the article includes technical material.
+- `ui-toc` can live beside `ui-article-main`, commonly inside a sidebar column, but should not be nested into the article body by default.
+
+Future extraction candidates:
+
+- `ui-prose` for generic article text rhythm.
+- `ui-quote` for reusable pull quotes.
+- `ui-principle-list` or a more generic feature-list pattern.
+- `ui-figure` for images and captions.
+- `ui-comment` or `ui-comment-list` for the comments area.
+- `ui-tag-list` adoption for article tags.
+
+Isolated example:
+
+```html
+<article class="ui-article-main">
+  <div class="ui-article-main__prose">
+    <p class="ui-article-main__lead">
+      A long-form article can use the SayUI prose rhythm without the full editorial page.
+    </p>
+    <h2 class="ui-article-main__title">Section title</h2>
+    <p class="ui-article-main__paragraph">
+      Supporting text.
+    </p>
+  </div>
+</article>
+```
+
+Composition example:
+
+```html
+<main class="ui-editorial-page">
+  <section class="ui-article-hero"></section>
+
+  <div class="ui-editorial-page__layout">
+    <article class="ui-article-main">
+      <div class="ui-article-main__prose">
+        <p class="ui-article-main__lead">Article introduction.</p>
+      </div>
+    </article>
+
+    <aside class="ui-article-sidebar"></aside>
+  </div>
+</main>
 ```
 
 ## ui-footer
