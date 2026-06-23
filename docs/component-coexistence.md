@@ -107,3 +107,5 @@ Real migrations remain blocked until all of the following happen:
 4. A specific adoption contract defines compatibility and migration scope.
 
 The recommended next phase is P5: comparative demos, visual validation, and controlled adoption experiments. P5 should not continue automatic extraction or mass migration.
+
+The official P5.1 comparison inventory, evaluation criteria, allowed results, exclusions, and execution order are documented in [P5 Comparative Evaluation Plan](p5-comparison-plan.md).
