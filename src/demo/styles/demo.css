@@ -81,6 +81,10 @@ body {
     width: 100%;
 }
 
+.demo-comparison + .demo-comparison {
+    margin-top: 2rem;
+}
+
 .demo-comparison__title {
     margin: 0 0 1rem;
     color: var(--dark);

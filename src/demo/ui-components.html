@@ -26,33 +26,126 @@
         <div class="demo-components__grid">
             <section class="demo-components__section" aria-labelledby="demo-comparison-infrastructure-title">
                 <h2 class="demo-components__section-title" id="demo-comparison-infrastructure-title">
-                    P5 comparison infrastructure
+                    P5.1 comparison lot 1
                 </h2>
 
-                <section class="demo-comparison" aria-labelledby="demo-comparison-placeholder-title">
-                    <h3 class="demo-comparison__title" id="demo-comparison-placeholder-title">
-                        Example Comparison
+                <section class="demo-comparison" aria-labelledby="demo-comparison-byline-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-byline-title">
+                        Byline vs Banner Author
                     </h3>
 
                     <div class="demo-comparison__grid">
-                        <section class="demo-comparison__panel" aria-labelledby="demo-comparison-original-label">
-                            <h4 class="demo-comparison__label" id="demo-comparison-original-label">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-byline-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-byline-original-label">
                                 Original
                             </h4>
 
-                            <p class="demo-comparison__placeholder">
-                                Reserved for an original pattern.
-                            </p>
+                            <div class="ui-banner__author">
+                                <img class="ui-banner__author-image" src="img/unnamed (1).png" alt="Elena Valery">
+
+                                <div class="ui-banner__author-info">
+                                    <p class="ui-banner__author-name">Elena Valery</p>
+                                    <p class="ui-banner__meta">
+                                        <time datetime="2026-06-23">Jun 23, 2026</time>
+                                        &bull; 8 min read
+                                    </p>
+                                </div>
+                            </div>
                         </section>
 
-                        <section class="demo-comparison__panel" aria-labelledby="demo-comparison-primitive-label">
-                            <h4 class="demo-comparison__label" id="demo-comparison-primitive-label">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-byline-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-byline-primitive-label">
                                 Primitive
                             </h4>
 
-                            <p class="demo-comparison__placeholder">
-                                Reserved for a modern primitive.
-                            </p>
+                            <div class="ui-byline">
+                                <img class="ui-byline__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+
+                                <div class="ui-byline__body">
+                                    <a class="ui-byline__name" href="/authors/elena-valery">
+                                        Elena Valery
+                                    </a>
+
+                                    <span class="ui-byline__meta">
+                                        <span class="ui-byline__item">
+                                            <time datetime="2026-06-23">Jun 23, 2026</time>
+                                        </span>
+                                        <span class="ui-byline__item">8 min read</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-related-list-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-related-list-title">
+                        Related List vs Article Sidebar List
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-related-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-related-original-label">
+                                Original
+                            </h4>
+
+                            <ul class="ui-article-sidebar__list">
+                                <li class="ui-article-sidebar__item">
+                                    <a class="ui-article-sidebar__link" href="/articles/designing-with-time">
+                                        <span class="ui-article-sidebar__category">Design</span>
+                                        <p class="ui-article-sidebar__item-title">
+                                            Designing with Time as a Constraint
+                                        </p>
+                                        <time datetime="2026-06-23">Jun 23, 2026</time>
+                                    </a>
+                                </li>
+
+                                <li class="ui-article-sidebar__item ui-article-sidebar__item-space">
+                                    <a class="ui-article-sidebar__link" href="/articles/motion-as-spatial-context">
+                                        <span class="ui-article-sidebar__category">Interaction</span>
+                                        <p class="ui-article-sidebar__item-title">
+                                            Motion as Spatial Context
+                                        </p>
+                                        <time datetime="2026-06-18">Jun 18, 2026</time>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-related-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-related-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <ul class="ui-related-list" aria-label="Related articles">
+                                <li class="ui-related-list__item">
+                                    <a class="ui-related-list__link" href="/articles/designing-with-time">
+                                        <span class="ui-related-list__category">Design</span>
+                                        <span class="ui-related-list__title">
+                                            Designing with Time as a Constraint
+                                        </span>
+                                        <span class="ui-related-list__meta">
+                                            <time datetime="2026-06-23">Jun 23, 2026</time>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="ui-related-list__item">
+                                    <a class="ui-related-list__link" href="/articles/motion-as-spatial-context">
+                                        <span class="ui-related-list__category">Interaction</span>
+                                        <span class="ui-related-list__title">
+                                            Motion as Spatial Context
+                                        </span>
+                                        <span class="ui-related-list__meta">
+                                            <time datetime="2026-06-18">Jun 18, 2026</time>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
                         </section>
                     </div>
                 </section>
