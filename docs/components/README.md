@@ -21,6 +21,7 @@ Original components are not obsolete. They are first-class public parts of SayUI
 | `ui-pullquote` | [ui-pullquote.md](ui-pullquote.md) |
 | `ui-newsletter` | [ui-newsletter.md](ui-newsletter.md) |
 | `ui-author-card` | [ui-author-card.md](ui-author-card.md) |
+| `ui-related-list` | [ui-related-list.md](ui-related-list.md) |
 | `ui-topbar` | [ui-topbar.md](ui-topbar.md) |
 | `ui-editorial-topbar` | [ui-editorial-topbar.md](ui-editorial-topbar.md) |
 | `ui-banner` | [ui-banner.md](ui-banner.md) |
