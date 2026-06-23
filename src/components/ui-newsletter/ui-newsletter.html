@@ -1,0 +1,61 @@
+<section class="ui-newsletter" aria-labelledby="newsletter-title">
+    <h2 class="ui-newsletter__title" id="newsletter-title">The Weekly Digest</h2>
+
+    <form class="ui-newsletter__form" action="/subscribe" method="post">
+        <label class="ui-newsletter__label" for="newsletter-email">Email address</label>
+        <input class="ui-newsletter__input" id="newsletter-email" name="email" type="email" autocomplete="email"
+            placeholder="you@example.com">
+        <button class="ui-newsletter__submit" type="submit">Subscribe</button>
+    </form>
+</section>
+
+<section class="ui-newsletter" aria-labelledby="newsletter-recommended-title">
+    <span class="ui-newsletter__icon" aria-hidden="true">@</span>
+
+    <div class="ui-newsletter__body">
+        <h2 class="ui-newsletter__title" id="newsletter-recommended-title">The Weekly Digest</h2>
+
+        <p class="ui-newsletter__text">
+            Get selected stories delivered to your inbox every Sunday.
+        </p>
+
+        <form class="ui-newsletter__form" action="/subscribe" method="post">
+            <label class="ui-newsletter__label" for="newsletter-recommended-email">Email address</label>
+            <input class="ui-newsletter__input" id="newsletter-recommended-email" name="email" type="email"
+                autocomplete="email" placeholder="you@example.com">
+            <button class="ui-newsletter__submit" type="submit">Subscribe Now</button>
+            <p class="ui-newsletter__note">No spam, ever. Unsubscribe anytime.</p>
+        </form>
+    </div>
+</section>
+
+<section class="ui-newsletter ui-newsletter--strong" aria-labelledby="newsletter-strong-title">
+    <span class="ui-newsletter__icon" aria-hidden="true">@</span>
+
+    <div class="ui-newsletter__body">
+        <h2 class="ui-newsletter__title" id="newsletter-strong-title">The Weekly Digest</h2>
+
+        <p class="ui-newsletter__text">
+            Join 20,000+ designers and get our best stories delivered every Sunday.
+        </p>
+
+        <form class="ui-newsletter__form" action="/subscribe" method="post">
+            <label class="ui-newsletter__label" for="newsletter-strong-email">Email address</label>
+            <input class="ui-newsletter__input" id="newsletter-strong-email" name="email" type="email"
+                autocomplete="email" placeholder="Your email address">
+            <button class="ui-newsletter__submit" type="submit">Subscribe Now</button>
+            <p class="ui-newsletter__note">No spam, ever. Unsubscribe anytime.</p>
+        </form>
+    </div>
+</section>
+
+<aside class="ui-newsletter ui-newsletter--compact" aria-labelledby="newsletter-compact-title">
+    <h3 class="ui-newsletter__title" id="newsletter-compact-title">Weekly updates</h3>
+
+    <form class="ui-newsletter__form" action="/subscribe" method="post">
+        <label class="ui-newsletter__label" for="newsletter-compact-email">Email address</label>
+        <input class="ui-newsletter__input" id="newsletter-compact-email" name="email" type="email"
+            autocomplete="email" placeholder="you@example.com">
+        <button class="ui-newsletter__submit" type="submit">Subscribe</button>
+    </form>
+</aside>

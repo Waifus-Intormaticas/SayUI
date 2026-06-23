@@ -19,6 +19,7 @@ Original components are not obsolete. They are first-class public parts of SayUI
 | `ui-eyebrow` | [ui-eyebrow.md](ui-eyebrow.md) |
 | `ui-callout` | [ui-callout.md](ui-callout.md) |
 | `ui-pullquote` | [ui-pullquote.md](ui-pullquote.md) |
+| `ui-newsletter` | [ui-newsletter.md](ui-newsletter.md) |
 | `ui-topbar` | [ui-topbar.md](ui-topbar.md) |
 | `ui-editorial-topbar` | [ui-editorial-topbar.md](ui-editorial-topbar.md) |
 | `ui-banner` | [ui-banner.md](ui-banner.md) |

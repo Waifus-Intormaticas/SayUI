@@ -1,0 +1,169 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+@use '../../styles/foundations/radius' as *;
+@use '../../styles/foundations/shadows' as *;
+
+.ui-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-4;
+    width: 100%;
+    padding: $space-8;
+    border: 1px solid var(--border-soft);
+    border-radius: $radius-md;
+    background-color: var(--sidebar-bg);
+    color: var(--dark);
+    text-align: center;
+    box-shadow: $shadow-inner-subtle;
+}
+
+.ui-newsletter__icon {
+    @include text($size: $font-size-4xl, $line-height: $leading-10, $weight: $font-weight-extrabold);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.ui-newsletter__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-4;
+    width: 100%;
+}
+
+.ui-newsletter__title {
+    @include text($size: $font-size-xl, $line-height: $leading-7, $weight: $font-weight-extrabold);
+
+    margin: $space-0;
+    color: inherit;
+    letter-spacing: -0.025em;
+}
+
+.ui-newsletter__text {
+    @include text($size: $font-size-sm, $line-height: $line-height-relaxed);
+
+    max-width: 36rem;
+    margin: $space-0;
+    color: var(--slate-medium);
+}
+
+.ui-newsletter__form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    width: 100%;
+    margin: $space-0;
+}
+
+.ui-newsletter__label {
+    @include text($size: $font-size-2xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    color: var(--slate-medium);
+    letter-spacing: 0.1em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.ui-newsletter__input {
+    @include text($size: $font-size-sm, $line-height: $leading-5);
+
+    width: 100%;
+    min-height: $space-12;
+    padding: $space-3 $space-4;
+    border: 1px solid var(--border-soft);
+    border-radius: $radius-sm;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: inherit;
+    appearance: none;
+}
+
+.ui-newsletter__input::placeholder {
+    color: var(--slate-light);
+}
+
+.ui-newsletter__submit {
+    @include text($size: $font-size-sm, $line-height: $leading-5, $weight: $font-weight-bold);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: $space-12;
+    padding: $space-3 $space-4;
+    border: 1px solid var(--primary);
+    border-radius: $radius-sm;
+    background-color: var(--primary);
+    color: var(--white);
+    font-family: inherit;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.ui-newsletter__submit:hover {
+    border-color: var(--dark);
+    background-color: var(--dark);
+}
+
+.ui-newsletter__submit:active {
+    transform: scale(0.98);
+}
+
+.ui-newsletter__note {
+    @include text($size: $font-size-xs, $line-height: $leading-4);
+
+    margin: $space-0;
+    color: var(--slate-light);
+}
+
+.ui-newsletter--strong {
+    border-color: var(--dark);
+    background-color: var(--dark);
+    color: var(--white);
+    box-shadow: none;
+}
+
+.ui-newsletter--strong .ui-newsletter__text,
+.ui-newsletter--strong .ui-newsletter__label,
+.ui-newsletter--strong .ui-newsletter__note {
+    color: var(--slate-light);
+}
+
+.ui-newsletter--strong .ui-newsletter__input {
+    border-color: var(--white);
+}
+
+.ui-newsletter--strong .ui-newsletter__submit:hover {
+    border-color: var(--white);
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.ui-newsletter--compact {
+    gap: $space-3;
+    padding: $space-5;
+}
+
+.ui-newsletter--compact .ui-newsletter__body {
+    gap: $space-3;
+}
+
+.ui-newsletter--compact .ui-newsletter__title {
+    @include text($size: $font-size-base, $line-height: $leading-6, $weight: $font-weight-extrabold);
+}
+
+.ui-newsletter--compact .ui-newsletter__text {
+    @include text($size: $font-size-xs, $line-height: $leading-5);
+}
+
+.ui-newsletter--compact .ui-newsletter__form {
+    gap: $space-2;
+}
