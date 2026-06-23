@@ -1,0 +1,47 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+
+.ui-eyebrow {
+    @include text($size: $font-size-2xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    display: inline-block;
+    max-width: 100%;
+    color: var(--primary);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+}
+
+a.ui-eyebrow {
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+    transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+
+a.ui-eyebrow:hover {
+    color: var(--primary-dark);
+    text-decoration-line: underline;
+}
+
+a.ui-eyebrow:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.ui-eyebrow--compact {
+    @include text($size: $font-size-3xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    letter-spacing: 0.1em;
+}
+
+.ui-eyebrow--muted {
+    color: var(--slate-light);
+}
+
+.ui-eyebrow--accent {
+    padding-bottom: $space-0-5;
+    border-bottom: 2px solid currentColor;
+}
+

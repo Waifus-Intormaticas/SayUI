@@ -16,6 +16,7 @@ Original components are not obsolete. They are first-class public parts of SayUI
 | `ui-code-block` | [ui-code-block.md](ui-code-block.md) |
 | `ui-toc` | [ui-toc.md](ui-toc.md) |
 | `ui-section-header` | [ui-section-header.md](ui-section-header.md) |
+| `ui-eyebrow` | [ui-eyebrow.md](ui-eyebrow.md) |
 | `ui-callout` | [ui-callout.md](ui-callout.md) |
 | `ui-topbar` | [ui-topbar.md](ui-topbar.md) |
 | `ui-editorial-topbar` | [ui-editorial-topbar.md](ui-editorial-topbar.md) |
