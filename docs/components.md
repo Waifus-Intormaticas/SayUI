@@ -30,6 +30,7 @@ Do not migrate, rename, split, or remove a component without an approved contrac
 | [`ui-callout`](components/ui-callout.md) | Technical/content component | Public | Notes, tips, warnings, and contextual messages. | Do not use as quote, newsletter, or card replacement. |
 | [`ui-pullquote`](components/ui-pullquote.md) | Editorial component | Public | Standout editorial quotes and highlighted phrases. | Keep separate from callouts; do not auto-migrate article quotes. |
 | [`ui-newsletter`](components/ui-newsletter.md) | Technical/content component | Public | Newsletter signup blocks with an email form. | Keep independent; do not auto-migrate sidebar newsletter. |
+| [`ui-author-card`](components/ui-author-card.md) | Editorial component | Public | Author presentation card with optional avatar, bio, role, and links. | Keep independent; do not auto-migrate article sidebar or banner bylines. |
 | [`ui-topbar`](components/ui-topbar.md) | Composed component | Public | Main navigation. | Keep as a composed public component. |
 | [`ui-editorial-topbar`](components/ui-editorial-topbar.md) | Composed component | Public | Editorial navigation. | Keep as a composed public component. |
 | [`ui-banner`](components/ui-banner.md) | Composed component | Public | Featured story block. | Keep public; can adopt primitives later by contract. |

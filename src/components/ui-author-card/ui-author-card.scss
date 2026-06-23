@@ -1,0 +1,135 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+@use '../../styles/foundations/radius' as *;
+@use '../../styles/foundations/shadows' as *;
+
+.ui-author-card {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    width: 100%;
+    padding: $space-6;
+    border: 1px solid var(--border-soft);
+    border-radius: $radius-md;
+    background-color: var(--white);
+    color: var(--dark);
+    box-shadow: $shadow-inner-subtle;
+}
+
+.ui-author-card__header {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+}
+
+.ui-author-card__avatar-wrapper {
+    flex-shrink: 0;
+    width: $space-20;
+    height: $space-20;
+    overflow: hidden;
+    border: 4px solid var(--white);
+    border-radius: $radius-lg;
+    background-color: var(--avatar-bg);
+    box-shadow: $shadow-sm;
+}
+
+.ui-author-card__avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ui-author-card__identity {
+    min-width: $space-0;
+}
+
+.ui-author-card__name {
+    @include text($size: $font-size-xl, $line-height: $leading-7, $weight: $font-weight-extrabold);
+
+    margin: $space-0;
+    color: inherit;
+}
+
+.ui-author-card__role {
+    @include text($size: $font-size-2xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    margin: $space-1 $space-0 $space-0;
+    color: var(--primary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ui-author-card__bio {
+    @include text($size: $font-size-sm, $line-height: $line-height-relaxed);
+
+    margin: $space-0;
+    color: var(--slate-medium);
+}
+
+.ui-author-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3;
+}
+
+.ui-author-card__link {
+    @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: $space-8;
+    min-height: $space-8;
+    padding: $space-2;
+    border: 1px solid var(--border-soft);
+    border-radius: $radius-sm;
+    color: var(--muted);
+    text-decoration: none;
+    transition: border-color 150ms ease, color 150ms ease, background-color 150ms ease;
+}
+
+.ui-author-card__link:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background-color: var(--primary-soft);
+}
+
+.ui-author-card--compact {
+    gap: $space-3;
+    padding: $space-4;
+}
+
+.ui-author-card--compact .ui-author-card__header {
+    gap: $space-3;
+}
+
+.ui-author-card--compact .ui-author-card__avatar-wrapper {
+    width: $space-12;
+    height: $space-12;
+    border-radius: $radius-md;
+}
+
+.ui-author-card--compact .ui-author-card__name {
+    @include text($size: $font-size-base, $line-height: $leading-6, $weight: $font-weight-extrabold);
+}
+
+.ui-author-card--compact .ui-author-card__role {
+    @include text($size: $font-size-3xs, $line-height: $leading-4, $weight: $font-weight-black);
+}
+
+.ui-author-card--editorial {
+    padding: $space-8;
+    border: 0;
+    border-top: 4px solid var(--dark);
+    border-radius: $radius-none;
+    background-color: var(--sidebar-bg);
+    box-shadow: none;
+}
+
+.ui-author-card--editorial .ui-author-card__avatar-wrapper {
+    width: $space-20;
+    height: $space-20;
+}
