@@ -25,6 +25,7 @@ Do not migrate, rename, split, or remove a component without an approved contrac
 | [`ui-table`](components/ui-table.md) | Primitive | Public | Semantic tabular data. | Use for real tables only. |
 | [`ui-code-block`](components/ui-code-block.md) | Primitive | Public | Code, commands, and configuration snippets. | Use for code blocks, not inline code. |
 | [`ui-toc`](components/ui-toc.md) | Primitive | Public | Static in-page navigation. | Keep independent from sidebars. |
+| [`ui-section-header`](components/ui-section-header.md) | Primitive | Public | Reusable section headings for content groups and editorial blocks. | Keep independent; do not auto-migrate older headings. |
 | [`ui-callout`](components/ui-callout.md) | Technical/content component | Public | Notes, tips, warnings, and contextual messages. | Do not use as quote, newsletter, or card replacement. |
 | [`ui-topbar`](components/ui-topbar.md) | Composed component | Public | Main navigation. | Keep as a composed public component. |
 | [`ui-editorial-topbar`](components/ui-editorial-topbar.md) | Composed component | Public | Editorial navigation. | Keep as a composed public component. |
@@ -36,6 +37,7 @@ Do not migrate, rename, split, or remove a component without an approved contrac
 | [`ui-footer`](components/ui-footer.md) | Composed component | Public | Main footer. | Keep. |
 | [`ui-footer-editorial`](components/ui-footer-editorial.md) | Composed component | Public | Editorial footer. | Keep. |
 | [`ui-article-main`](components/ui-article-main.md) | Editorial component | Public | Long-form article body with prose, quote, figure, tags, and comments. | Keep public; extract smaller patterns only with approved contracts. |
+| [`ui-article-sidebar`](components/ui-article-sidebar.md) | Editorial composed component | Public | Article sidebar with author block, social links, related stories, and tag cloud. | Keep public; do not split without approved contracts. |
 
 ## Notes
 

@@ -1,0 +1,81 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+
+.ui-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-2;
+    width: 100%;
+    margin: $space-0 $space-0 $space-6;
+    color: var(--dark);
+}
+
+.ui-section-header__title {
+    @include text($size: $font-size-2xl, $line-height: $leading-8, $weight: $font-weight-extrabold);
+
+    margin: $space-0;
+    color: inherit;
+    letter-spacing: -0.025em;
+}
+
+.ui-section-header__description {
+    @include text($size: $font-size-sm, $line-height: $line-height-relaxed);
+
+    max-width: 42rem;
+    margin: $space-0;
+    color: var(--slate-medium);
+}
+
+.ui-section-header__divider {
+    display: block;
+    flex: 1 1 8rem;
+    min-width: $space-8;
+    height: 3px;
+    background-color: currentColor;
+}
+
+.ui-section-header--compact {
+    gap: $space-1;
+    margin-bottom: $space-4;
+}
+
+.ui-section-header--compact .ui-section-header__title {
+    @include text($size: $font-size-2xs, $weight: $font-weight-black);
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ui-section-header--compact .ui-section-header__description {
+    @include text($size: $font-size-xs, $line-height: $leading-5);
+}
+
+.ui-section-header--inline {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: $space-4;
+    row-gap: $space-2;
+}
+
+.ui-section-header--inline .ui-section-header__description {
+    flex-basis: 100%;
+}
+
+.ui-section-header--with-divider .ui-section-header__divider {
+    color: inherit;
+}
+
+.ui-section-header--accent {
+    padding-left: $space-4;
+    border-left: 4px solid var(--primary);
+}
+
+.ui-section-header--accent .ui-section-header__title {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+

@@ -15,6 +15,7 @@ Original components are not obsolete. They are first-class public parts of SayUI
 | `ui-table` | [ui-table.md](ui-table.md) |
 | `ui-code-block` | [ui-code-block.md](ui-code-block.md) |
 | `ui-toc` | [ui-toc.md](ui-toc.md) |
+| `ui-section-header` | [ui-section-header.md](ui-section-header.md) |
 | `ui-callout` | [ui-callout.md](ui-callout.md) |
 | `ui-topbar` | [ui-topbar.md](ui-topbar.md) |
 | `ui-editorial-topbar` | [ui-editorial-topbar.md](ui-editorial-topbar.md) |
@@ -26,3 +27,4 @@ Original components are not obsolete. They are first-class public parts of SayUI
 | `ui-footer` | [ui-footer.md](ui-footer.md) |
 | `ui-footer-editorial` | [ui-footer-editorial.md](ui-footer-editorial.md) |
 | `ui-article-main` | [ui-article-main.md](ui-article-main.md) |
+| `ui-article-sidebar` | [ui-article-sidebar.md](ui-article-sidebar.md) |
