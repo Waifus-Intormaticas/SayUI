@@ -34,6 +34,7 @@ Do not migrate, rename, split, or remove a component without an approved contrac
 | [`ui-byline`](components/ui-byline.md) | Editorial component | Public | Compact authorship and short publication metadata. | Keep independent; do not auto-migrate banner author patterns. |
 | [`ui-comment`](components/ui-comment.md) | Editorial component | Public | Individual comment with author, text, optional avatar, time, badge, and reply action. | Keep independent; do not auto-migrate article comments. |
 | [`ui-comment-form`](components/ui-comment-form.md) | Editorial component | Public | Semantic form for writing and submitting a comment. | Keep independent; consumers own submission and validation behavior. |
+| [`ui-social-links`](components/ui-social-links.md) | Primitive | Public | Small semantic list of social, contact, website, or editorial-channel links. | Use for new generic link groups; do not auto-migrate original social zones. |
 | [`ui-related-list`](components/ui-related-list.md) | Editorial component | Public | Compact list of links to related content. | Keep independent; do not auto-migrate article/sidebar related lists. |
 | [`ui-trending-list`](components/ui-trending-list.md) | Editorial component | Public | Compact linked content list with optional thumbnail and metadata. | Keep independent; do not auto-migrate sidebar trending lists. |
 | [`ui-topbar`](components/ui-topbar.md) | Composed component | Public | Main navigation. | Keep as a composed public component. |

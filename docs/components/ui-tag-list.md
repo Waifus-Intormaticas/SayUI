@@ -77,6 +77,55 @@ Responsive:
 - `ui-tag-list--stacked` creates a full-width vertical list suitable for sidebars.
 - `ui-tag-list--compact` reduces spacing for dense areas.
 
+## Official Vertical Category Composition
+
+SayUI does not include `ui-category-list` in v1. The current flat category-navigation case is covered by composing `ui-tag-list` with its stacked and counted options.
+
+```html
+<ul
+  class="ui-tag-list ui-tag-list--stacked ui-tag-list--with-count"
+  aria-label="Categories"
+>
+  <li class="ui-tag-list__item">
+    <a class="ui-tag-list__tag" href="/categories/architecture">
+      <span class="ui-tag-list__label">Architecture</span>
+      <span class="ui-tag-list__count" aria-label="12 articles">12</span>
+    </a>
+  </li>
+
+  <li class="ui-tag-list__item">
+    <a class="ui-tag-list__tag" href="/categories/editorial-design">
+      <span class="ui-tag-list__label">Editorial Design</span>
+      <span class="ui-tag-list__count" aria-label="45 articles">45</span>
+    </a>
+  </li>
+
+  <li class="ui-tag-list__item">
+    <a class="ui-tag-list__tag" href="/categories/typography">
+      <span class="ui-tag-list__label">Typography</span>
+      <span class="ui-tag-list__count" aria-label="31 articles">31</span>
+    </a>
+  </li>
+</ul>
+```
+
+Use this composition for:
+
+- Simple navigation by category.
+- Sidebar category groups.
+- Flat taxonomies.
+- Categories with article or resource counts.
+
+Do not use this composition for:
+
+- Hierarchical category trees.
+- Complex active-filter systems.
+- Primary navigation.
+- Expandable or collapsible categories.
+- Tags without counts when the base `ui-tag-list` already covers the requirement.
+
+`ui-sidebar__categories` remains part of the current public `ui-sidebar` contract. This composition documents the recommended approach for new generic category lists; it does not migrate or replace the existing sidebar pattern.
+
 Accessibility:
 
 - Use `ul > li > span` for informational tags.

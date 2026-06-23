@@ -1,0 +1,84 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+@use '../../styles/foundations/radius' as *;
+
+.ui-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-3;
+    margin: $space-0;
+    padding: $space-0;
+    list-style: none;
+}
+
+.ui-social-links__item {
+    display: flex;
+    min-width: $space-0;
+}
+
+.ui-social-links__link {
+    @include text($size: $font-size-sm, $line-height: $leading-5, $weight: $font-weight-bold);
+
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-2;
+    min-height: $space-8;
+    color: var(--slate-medium);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+
+.ui-social-links__link:hover {
+    color: var(--primary);
+}
+
+.ui-social-links__link:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.ui-social-links__icon {
+    @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ui-social-links__label {
+    min-width: $space-0;
+}
+
+.ui-social-links--compact {
+    gap: $space-2;
+}
+
+.ui-social-links--compact .ui-social-links__link {
+    @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-bold);
+
+    min-height: $space-6;
+    gap: $space-1-5;
+}
+
+.ui-social-links--boxed .ui-social-links__link {
+    min-width: $space-10;
+    min-height: $space-10;
+    padding: $space-2 $space-3;
+    border: 1px solid var(--border-soft);
+    border-radius: $radius-sm;
+    background-color: var(--white);
+    color: var(--slate-medium);
+}
+
+.ui-social-links--boxed .ui-social-links__link:hover {
+    border-color: var(--primary);
+    background-color: var(--primary-soft);
+    color: var(--primary);
+}
