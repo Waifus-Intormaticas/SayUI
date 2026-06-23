@@ -73,6 +73,7 @@ SayUI has different kinds of pieces. Not every `ui-*` selector has the same role
 | `src/demo/ui-page.html` | Demo / living documentation | Internal project asset | Complete main page composition. | Keep. |
 | `src/demo/ui-editorial.html` | Demo / living documentation | Internal project asset | Complete editorial page composition. | Keep. |
 | `src/demo/ui-components.html` | Demo / living documentation | Internal project asset | Gallery for reusable primitives and technical/content components. | Keep and update as new public primitives are added. |
+| `src/demo/ui-original-components.html` | Demo / living documentation | Internal project asset | Gallery for original public components. | Keep and update as original component contracts improve. |
 
 Taxonomy rules:
 
@@ -176,6 +177,7 @@ Current demo roles:
 - `ui-page.html`: complete main page composition.
 - `ui-editorial.html`: complete editorial/article page composition.
 - `ui-components.html`: reusable components gallery.
+- `ui-original-components.html`: original public components gallery.
 
 The demos are allowed to contain repeated markup because they are visual references and a practical way to inspect component compositions.
 
