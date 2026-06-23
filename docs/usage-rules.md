@@ -83,6 +83,8 @@ Original components are not obsolete by default. Many are reusable as they are, 
 
 Do not migrate, split, rename, remove, or replace a component just because a newer primitive overlaps with part of its visual language. Any migration needs an approved contract and a demo/documentation check.
 
+The official coexistence policy is documented in [Component Coexistence Matrix](component-coexistence.md). In short: test in demos first, document equivalence second, and only then consider a real migration.
+
 ## Component Contract Rule
 
 Each component should document:

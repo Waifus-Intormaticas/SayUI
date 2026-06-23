@@ -40,6 +40,8 @@ A future blog or documentation site can consume SayUI from another project, but 
 
 SayUI has different kinds of pieces. Not every `ui-*` selector has the same role, and original components are not obsolete just because newer primitives exist.
 
+The official relationship between original public components and newer primitives is documented in [Component Coexistence Matrix](component-coexistence.md). The short rule is: primitives can coexist with original compositions, but they do not make original components legacy and they do not trigger automatic migrations.
+
 ### Component Taxonomy
 
 | Piece | Category | Public/internal | Role | Recommendation |

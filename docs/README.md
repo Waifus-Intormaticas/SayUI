@@ -11,6 +11,7 @@ This documentation describes the current architecture, foundations, component co
 - [Layouts](layouts.md)
 - [Components](components.md) - index of component contracts
 - [Component contract files](components/README.md)
+- [Component Coexistence Matrix](component-coexistence.md)
 - [Article Components](article-components.md)
 - [Visual Dependencies](visual-dependencies.md)
 - [Usage Rules](usage-rules.md)
