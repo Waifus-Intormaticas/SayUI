@@ -548,6 +548,120 @@
                 </div>
             </section>
 
+            <section class="demo-components__section" aria-labelledby="demo-comment-form-title">
+                <h2 class="demo-components__section-title" id="demo-comment-form-title">ui-comment-form</h2>
+
+                <div class="demo-components__stack">
+                    <form class="ui-comment-form" aria-label="Add a comment">
+                        <div class="ui-comment-form__field">
+                            <label class="ui-comment-form__label" for="demo-comment-minimal">Comment</label>
+                            <textarea class="ui-comment-form__textarea" id="demo-comment-minimal"
+                                name="comment"></textarea>
+                        </div>
+
+                        <div class="ui-comment-form__actions">
+                            <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                        </div>
+                    </form>
+
+                    <form class="ui-comment-form" action="/comments" method="post"
+                        aria-labelledby="demo-comment-recommended-title">
+                        <h3 class="ui-comment-form__title" id="demo-comment-recommended-title">
+                            Add to the Conversation
+                        </h3>
+
+                        <div class="ui-comment-form__field">
+                            <label class="ui-comment-form__label" for="demo-comment-recommended">Comment</label>
+                            <textarea class="ui-comment-form__textarea" id="demo-comment-recommended" name="comment"
+                                rows="6"></textarea>
+                        </div>
+
+                        <div class="ui-comment-form__actions">
+                            <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                        </div>
+                    </form>
+
+                    <form class="ui-comment-form" action="/comments" method="post"
+                        aria-labelledby="demo-comment-help-title">
+                        <h3 class="ui-comment-form__title" id="demo-comment-help-title">Leave a Comment</h3>
+
+                        <div class="ui-comment-form__field">
+                            <label class="ui-comment-form__label" for="demo-comment-help">Comment</label>
+                            <textarea class="ui-comment-form__textarea" id="demo-comment-help" name="comment" rows="6"
+                                aria-describedby="demo-comment-note"></textarea>
+                            <p class="ui-comment-form__note" id="demo-comment-note">
+                                Keep your response relevant and respectful.
+                            </p>
+                        </div>
+
+                        <div class="ui-comment-form__actions">
+                            <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                        </div>
+                    </form>
+
+                    <form class="ui-comment-form" action="/comments" method="post" aria-label="Write a comment">
+                        <div class="ui-comment-form__field">
+                            <label class="ui-comment-form__label" for="demo-comment-untitled">Comment</label>
+                            <textarea class="ui-comment-form__textarea" id="demo-comment-untitled" name="comment"
+                                rows="6"></textarea>
+                        </div>
+
+                        <div class="ui-comment-form__actions">
+                            <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                        </div>
+                    </form>
+
+                    <section class="demo-components__stack" aria-labelledby="demo-comment-composition-title">
+                        <header class="ui-section-header ui-section-header--compact">
+                            <h3 class="ui-section-header__title" id="demo-comment-composition-title">
+                                Discussion
+                            </h3>
+                        </header>
+
+                        <article class="ui-comment">
+                            <div class="ui-comment__body">
+                                <header class="ui-comment__header">
+                                    <span class="ui-comment__author">Julian Moss</span>
+                                    <time class="ui-comment__time" datetime="2026-06-23T14:00:00">2h ago</time>
+                                </header>
+
+                                <p class="ui-comment__text">
+                                    Semantic forms make the discussion easier to use.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="ui-comment">
+                            <div class="ui-comment__body">
+                                <header class="ui-comment__header">
+                                    <span class="ui-comment__author">Nora Vale</span>
+                                    <time class="ui-comment__time" datetime="2026-06-23T14:30:00">90m ago</time>
+                                </header>
+
+                                <p class="ui-comment__text">
+                                    Keeping submission behavior outside the component makes the contract portable.
+                                </p>
+                            </div>
+                        </article>
+
+                        <form class="ui-comment-form" action="/comments" method="post"
+                            aria-labelledby="demo-composition-form-title">
+                            <h4 class="ui-comment-form__title" id="demo-composition-form-title">Add a Comment</h4>
+
+                            <div class="ui-comment-form__field">
+                                <label class="ui-comment-form__label" for="demo-composition-comment">Comment</label>
+                                <textarea class="ui-comment-form__textarea" id="demo-composition-comment"
+                                    name="comment" rows="6"></textarea>
+                            </div>
+
+                            <div class="ui-comment-form__actions">
+                                <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </section>
+
             <section class="demo-components__section" aria-labelledby="demo-related-list-title">
                 <h2 class="demo-components__section-title" id="demo-related-list-title">ui-related-list</h2>
 

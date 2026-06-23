@@ -108,6 +108,114 @@ When not to use: do not use for comment forms, full comment systems, moderation,
 </article>
 ```
 
+## Official Comment Composition
+
+SayUI does not include `ui-comment-list` in v1.
+
+For now, comment groups should be composed with a semantic `section`, an external heading, and multiple `article.ui-comment` elements.
+
+Basic composition:
+
+```html
+<section aria-labelledby="comments-title">
+  <h2 id="comments-title">The Discourse (3)</h2>
+
+  <article class="ui-comment">
+    <div class="ui-comment__body">
+      <header class="ui-comment__header">
+        <span class="ui-comment__author">Julian Moss</span>
+        <time class="ui-comment__time" datetime="2026-06-23T14:00:00">2h ago</time>
+      </header>
+
+      <p class="ui-comment__text">
+        Motion as spatial awareness is critical.
+      </p>
+    </div>
+  </article>
+
+  <article class="ui-comment">
+    <div class="ui-comment__body">
+      <header class="ui-comment__header">
+        <span class="ui-comment__author">Nora Vale</span>
+        <time class="ui-comment__time" datetime="2026-06-23T14:30:00">90m ago</time>
+      </header>
+
+      <p class="ui-comment__text">
+        The strongest systems make orientation feel effortless.
+      </p>
+    </div>
+  </article>
+</section>
+```
+
+Composition with `ui-section-header`:
+
+```html
+<section aria-labelledby="comments-heading">
+  <header class="ui-section-header ui-section-header--compact">
+    <h2 class="ui-section-header__title" id="comments-heading">
+      The Discourse (3)
+    </h2>
+  </header>
+
+  <article class="ui-comment">
+    <div class="ui-comment__body">
+      <header class="ui-comment__header">
+        <span class="ui-comment__author">Julian Moss</span>
+        <time class="ui-comment__time" datetime="2026-06-23T14:00:00">2h ago</time>
+      </header>
+
+      <p class="ui-comment__text">
+        Motion as spatial awareness is critical.
+      </p>
+    </div>
+  </article>
+</section>
+```
+
+Composition with a simple reply:
+
+```html
+<section aria-labelledby="comments-thread-title">
+  <h2 id="comments-thread-title">Comments</h2>
+
+  <article class="ui-comment">
+    <div class="ui-comment__body">
+      <header class="ui-comment__header">
+        <span class="ui-comment__author">Julian Moss</span>
+        <time class="ui-comment__time" datetime="2026-06-23T14:00:00">2h ago</time>
+      </header>
+
+      <p class="ui-comment__text">
+        Motion as spatial awareness is critical.
+      </p>
+
+      <button class="ui-comment__reply" type="button">Reply</button>
+    </div>
+  </article>
+
+  <article class="ui-comment ui-comment--reply">
+    <div class="ui-comment__body">
+      <header class="ui-comment__header">
+        <span class="ui-comment__author">Elena Valery</span>
+        <span class="ui-comment__badge">Author</span>
+        <time class="ui-comment__time" datetime="2026-06-23T15:00:00">1h ago</time>
+      </header>
+
+      <p class="ui-comment__text">
+        Exactly. Motion should explain where the interface is going.
+      </p>
+
+      <button class="ui-comment__reply" type="button">Reply</button>
+    </div>
+  </article>
+</section>
+```
+
+A future `ui-comment-list` would only make sense if SayUI needs an official contract for list spacing, empty states, a divided variant, or formal integration with a future `ui-comment-form`.
+
+The current composition does not include forms, pagination, sorting, realtime behavior, moderation, likes, votes, authentication, or login flows.
+
 ## Public Classes
 
 - `ui-comment`

@@ -1,0 +1,51 @@
+<form class="ui-comment-form" aria-label="Add a comment">
+    <div class="ui-comment-form__field">
+        <label class="ui-comment-form__label" for="comment-message">Comment</label>
+        <textarea class="ui-comment-form__textarea" id="comment-message" name="comment"></textarea>
+    </div>
+
+    <div class="ui-comment-form__actions">
+        <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+    </div>
+</form>
+
+<form class="ui-comment-form" action="/comments" method="post" aria-labelledby="comment-form-title">
+    <h3 class="ui-comment-form__title" id="comment-form-title">Add to the Conversation</h3>
+
+    <div class="ui-comment-form__field">
+        <label class="ui-comment-form__label" for="article-comment">Comment</label>
+        <textarea class="ui-comment-form__textarea" id="article-comment" name="comment" rows="6"></textarea>
+    </div>
+
+    <div class="ui-comment-form__actions">
+        <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+    </div>
+</form>
+
+<form class="ui-comment-form" action="/comments" method="post" aria-labelledby="comment-help-title">
+    <h3 class="ui-comment-form__title" id="comment-help-title">Leave a Comment</h3>
+
+    <div class="ui-comment-form__field">
+        <label class="ui-comment-form__label" for="comment-with-note">Comment</label>
+        <textarea class="ui-comment-form__textarea" id="comment-with-note" name="comment" rows="6"
+            aria-describedby="comment-note"></textarea>
+        <p class="ui-comment-form__note" id="comment-note">
+            Keep your response relevant and respectful.
+        </p>
+    </div>
+
+    <div class="ui-comment-form__actions">
+        <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+    </div>
+</form>
+
+<form class="ui-comment-form" action="/comments" method="post" aria-label="Write a comment">
+    <div class="ui-comment-form__field">
+        <label class="ui-comment-form__label" for="standalone-comment">Comment</label>
+        <textarea class="ui-comment-form__textarea" id="standalone-comment" name="comment" rows="6"></textarea>
+    </div>
+
+    <div class="ui-comment-form__actions">
+        <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+    </div>
+</form>

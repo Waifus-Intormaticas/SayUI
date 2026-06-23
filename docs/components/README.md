@@ -23,6 +23,7 @@ Original components are not obsolete. They are first-class public parts of SayUI
 | `ui-author-card` | [ui-author-card.md](ui-author-card.md) |
 | `ui-byline` | [ui-byline.md](ui-byline.md) |
 | `ui-comment` | [ui-comment.md](ui-comment.md) |
+| `ui-comment-form` | [ui-comment-form.md](ui-comment-form.md) |
 | `ui-related-list` | [ui-related-list.md](ui-related-list.md) |
 | `ui-trending-list` | [ui-trending-list.md](ui-trending-list.md) |
 | `ui-topbar` | [ui-topbar.md](ui-topbar.md) |
