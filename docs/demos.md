@@ -77,7 +77,7 @@ When to use:
 
 File: `src/demo/ui-components.html`
 
-Purpose: visual gallery for the reusable P1 components.
+Purpose: visual gallery for reusable technical/content components and primitives.
 
 Includes:
 
@@ -86,12 +86,41 @@ Includes:
 - `ui-table`
 - `ui-code-block`
 - `ui-toc`
+- `ui-meta-list`
 
 When to use:
 
 - Checking reusable technical/editorial components in isolation.
 - Reviewing accessibility-oriented markup examples.
 - Copying small component snippets without opening full page demos.
+
+## Original Components Demo
+
+File: `src/demo/ui-original-components.html`
+
+Purpose: visual gallery for SayUI's original components as reusable library pieces. These components are not legacy and should not only be understood through the complete page demos.
+
+Includes:
+
+- `ui-topbar`
+- `ui-editorial-topbar`
+- `ui-banner`
+- `ui-main-header`
+- `ui-post-grid`
+- `ui-post-card`
+- `ui-sidebar`
+- `ui-footer`
+- `ui-footer-editorial`
+- `ui-article-hero`
+- representative `ui-article-main` patterns
+- `ui-article-sidebar`
+- `ui-article-related`
+
+When to use:
+
+- Reviewing original components in isolation or minimal context.
+- Confirming that original editorial components remain first-class public components.
+- Copying focused examples without opening a complete page composition.
 
 ## Demo Rules
 

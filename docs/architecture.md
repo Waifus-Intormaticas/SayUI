@@ -38,6 +38,50 @@ A future blog or documentation site can consume SayUI from another project, but 
 
 ## Source Areas
 
+SayUI has different kinds of pieces. Not every `ui-*` selector has the same role, and original components are not obsolete just because newer primitives exist.
+
+### Component Taxonomy
+
+| Piece | Category | Public/internal | Role | Recommendation |
+| --- | --- | --- | --- | --- |
+| `src/styles/foundations/*` | Foundations | Internal authoring layer | Shared CSS variables, Sass tokens, typography, mixins, breakpoints, and shadows. | Keep as the design base for new and gradually migrated components. |
+| `ui-page` | Layout | Public | Root wrapper for the main page composition. | Keep as structural API. |
+| `ui-layout` | Layout | Public | Width and content/sidebar composition for the main page. | Keep as structural API. |
+| `ui-main` | Layout / composed area | Public | Main listing column and host for `ui-main-header` and `ui-post-grid`. | Keep; document as an ecosystem. |
+| `ui-editorial-page` | Layout | Public | Root wrapper for editorial/article pages. | Keep as structural API. |
+| `ui-editorial-grid` / `ui-editorial-page__layout` | Layout | Public | Article + sidebar grid. | Keep; naming is intentional but should stay documented. |
+| `ui-tag-list` | Primitive | Public | Reusable tags, categories, topics, and simple filters. | Keep independent; do not auto-migrate older tags. |
+| `ui-meta-list` | Primitive | Public | Reusable compact metadata and label/value metadata. | Keep independent; do not auto-migrate older metadata. |
+| `ui-table` | Primitive | Public | Semantic tabular data. | Keep independent. |
+| `ui-code-block` | Primitive | Public | Code snippets, commands, and configuration blocks. | Keep independent. |
+| `ui-toc` | Primitive | Public | Static table of contents. | Keep independent from sidebars. |
+| `ui-callout` | Technical/content component | Public | Notes, tips, warnings, and contextual messages. | Keep independent; do not replace quotes, newsletters, or principles automatically. |
+| `ui-topbar` | Composed component | Public | Main navigation with brand, nav, actions, and mobile behavior. | Keep; review responsive behavior before any migration. |
+| `ui-editorial-topbar` | Composed component | Public | Editorial navigation. | Keep. |
+| `ui-banner` | Composed component | Public | Featured story block with media, content, author, and metadata. | Keep public; candidate for future internal pattern adoption. |
+| `ui-main-header` | Subcomponent / composed-area part | Public within `ui-main` | Header row and filters for the main listing area. | Keep documented as part of the `ui-main` ecosystem. |
+| `ui-post-grid` | Subcomponent / layout helper | Public within `ui-main` | Grid and load-more area for post cards. | Keep. |
+| `ui-post-card` | Composed component | Public | Article/post preview card. | Keep public; candidate for improved documentation. |
+| `ui-sidebar` | Composed component | Public | Trending items, categories, and newsletter block. | Keep; do not split without approved contracts. |
+| `ui-footer` | Composed component | Public | Main page footer. | Keep. |
+| `ui-footer-editorial` | Composed component | Public | Editorial page footer. | Keep. |
+| `ui-article-hero` | Editorial component | Public editorial | Article title, subtitle, metadata, and hero media. | Keep; do not replace metadata automatically. |
+| `ui-article-main` | Editorial composed component | Public editorial | Article prose plus quote, principles, figure, tags, comments, and form patterns. | Keep; strong candidate for future contract design before splitting. |
+| `ui-article-sidebar` | Editorial composed component | Public editorial | Author card, related links, social links, and tag cloud. | Keep; split only after contract design. |
+| `ui-article-related` | Editorial composed component | Public editorial | Related story section. | Keep. |
+| `src/demo/index.html` | Demo / living documentation | Internal project asset | General component preview. | Keep. |
+| `src/demo/ui-page.html` | Demo / living documentation | Internal project asset | Complete main page composition. | Keep. |
+| `src/demo/ui-editorial.html` | Demo / living documentation | Internal project asset | Complete editorial page composition. | Keep. |
+| `src/demo/ui-components.html` | Demo / living documentation | Internal project asset | Gallery for reusable primitives and technical/content components. | Keep and update as new public primitives are added. |
+
+Taxonomy rules:
+
+- Original components are not legacy by default.
+- New primitives do not automatically replace older component internals.
+- Primitives and composed components are allowed to coexist.
+- Do not remove, migrate, or split a component without an approved public contract.
+- Demos are living documentation and can contain repeated markup.
+
 ### Foundations
 
 Path: `src/styles/foundations/`
@@ -105,17 +149,20 @@ Current article components:
 
 Article components are intentionally scoped to editorial article pages. They should not be treated as mistakes just because some patterns overlap with newer reusable components.
 
-## P1 Reusable Components
+## Reusable Primitives And Technical Components
 
-After the P1 phase, SayUI also includes reusable technical/editorial components that are not article-specific:
+SayUI also includes reusable primitive and technical/editorial components that are not article-specific:
 
 - `ui-tag-list`: tags, categories, topic lists, and simple filters.
 - `ui-callout`: editorial or technical notes, tips, warnings, and contextual messages.
 - `ui-table`: semantic tabular data with responsive overflow support.
 - `ui-code-block`: code, commands, configuration, and terminal-style snippets without JavaScript or syntax highlighting.
 - `ui-toc`: static table of contents for internal page sections, without scrollspy.
+- `ui-meta-list`: compact metadata and simple label/value metadata.
 
 These components are designed to work in articles, documentation, guides, demos, or consumer projects without depending on a framework or a specific page layout.
+
+They should not be treated as automatic replacements for existing internals. For example, `ui-tag-list` can coexist with older article tags, and `ui-meta-list` can coexist with existing card or hero metadata until a migration contract is approved.
 
 ## Demos
 
@@ -128,6 +175,7 @@ Current demo roles:
 - `index.html`: general component demo.
 - `ui-page.html`: complete main page composition.
 - `ui-editorial.html`: complete editorial/article page composition.
+- `ui-components.html`: reusable components gallery.
 
 The demos are allowed to contain repeated markup because they are visual references and a practical way to inspect component compositions.
 

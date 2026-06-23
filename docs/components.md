@@ -2,6 +2,28 @@
 
 This file documents non-article components in `src/components/`.
 
+SayUI components have different roles. Some are small primitives, some are technical/content components, and some are composed editorial components. Newer primitives do not automatically replace older composed components.
+
+Current categories in this file:
+
+| Piece | Category | Public/internal | Role | Recommendation |
+| --- | --- | --- | --- | --- |
+| `ui-tag-list` | Primitive | Public | Tags, topics, categories, and simple filters. | Use for new generic tag lists; do not auto-migrate older tags. |
+| `ui-meta-list` | Primitive | Public | Compact metadata and label/value metadata. | Use for new generic metadata; do not auto-migrate older metadata. |
+| `ui-table` | Primitive | Public | Semantic tabular data. | Use for real tables only. |
+| `ui-code-block` | Primitive | Public | Code, commands, and configuration snippets. | Use for code blocks, not inline code. |
+| `ui-toc` | Primitive | Public | Static in-page navigation. | Keep independent from sidebars. |
+| `ui-callout` | Technical/content component | Public | Notes, tips, warnings, and contextual messages. | Do not use as quote, newsletter, or card replacement. |
+| `ui-topbar` | Composed component | Public | Main navigation. | Keep as a composed public component. |
+| `ui-editorial-topbar` | Composed component | Public | Editorial navigation. | Keep as a composed public component. |
+| `ui-banner` | Composed component | Public | Featured story block. | Keep public; can adopt primitives later by contract. |
+| `ui-main-header` | Subcomponent / composed-area part | Public within `ui-main` | Header row and filters. | Document as part of the `ui-main` ecosystem. |
+| `ui-post-grid` | Subcomponent / layout helper | Public within `ui-main` | Post grid and load-more area. | Keep. |
+| `ui-post-card` | Composed component | Public | Article/post preview card. | Keep public. |
+| `ui-sidebar` | Composed component | Public | Trending links, categories, and newsletter. | Do not split without approved contracts. |
+| `ui-footer` | Composed component | Public | Main footer. | Keep. |
+| `ui-footer-editorial` | Composed component | Public | Editorial footer. | Keep. |
+
 ## ui-topbar
 
 Purpose: primary top navigation for the main page.

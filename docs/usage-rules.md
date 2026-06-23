@@ -65,6 +65,24 @@ Do not remove, merge, rename, or simplify layouts only because:
 
 Structural layouts are considered part of the architecture.
 
+## Component Taxonomy Rule
+
+SayUI contains several categories of pieces:
+
+* Foundations
+* Layouts
+* Primitives
+* Composed components
+* Editorial components
+* Technical/content components
+* Demos
+
+Do not treat all pieces as interchangeable. A primitive such as `ui-tag-list` or `ui-meta-list` can coexist with composed components such as `ui-post-card`, `ui-sidebar`, or `ui-article-main`.
+
+Original components are not obsolete by default. Many are reusable as they are, and some are intentionally composed from smaller internal patterns.
+
+Do not migrate, split, rename, remove, or replace a component just because a newer primitive overlaps with part of its visual language. Any migration needs an approved contract and a demo/documentation check.
+
 ## Component Contract Rule
 
 Each component should document:

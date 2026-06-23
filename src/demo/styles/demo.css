@@ -73,6 +73,10 @@ body {
     gap: 1.5rem;
 }
 
+.demo-components__narrow {
+    width: min(100%, 28rem);
+}
+
 @media (min-width: 768px) {
     .demo-components__split {
         grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
