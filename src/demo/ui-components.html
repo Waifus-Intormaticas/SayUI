@@ -9,14 +9,14 @@
         rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SayUI P1 Components Demo</title>
+    <title>SayUI Reusable Components Demo</title>
 </head>
 
 <body>
     <main class="demo-components">
         <header class="demo-components__header">
             <span class="demo-components__eyebrow">SayUI demo</span>
-            <h1 class="demo-components__title">P1 reusable components</h1>
+            <h1 class="demo-components__title">Reusable components</h1>
             <p class="demo-components__intro">
                 A visual gallery for framework-agnostic SayUI components intended for technical and editorial
                 content. This page is a demo, not a production route.
@@ -220,6 +220,44 @@
                             </li>
                         </ol>
                     </nav>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-meta-list-title">
+                <h2 class="demo-components__section-title" id="demo-meta-list-title">ui-meta-list</h2>
+
+                <div class="demo-components__stack">
+                    <ul class="ui-meta-list ui-meta-list--inline ui-meta-list--with-separators"
+                        aria-label="Article metadata">
+                        <li class="ui-meta-list__item">
+                            <time datetime="2024-03-24">Mar 24, 2024</time>
+                        </li>
+                        <li class="ui-meta-list__item">5 min read</li>
+                        <li class="ui-meta-list__item">48k views</li>
+                    </ul>
+
+                    <ul class="ui-meta-list ui-meta-list--compact ui-meta-list--with-separators"
+                        aria-label="Compact article metadata">
+                        <li class="ui-meta-list__item">By Elena Valery</li>
+                        <li class="ui-meta-list__item">
+                            <time datetime="2026-06-22">Jun 22, 2026</time>
+                        </li>
+                        <li class="ui-meta-list__item">Design</li>
+                    </ul>
+
+                    <dl class="ui-meta-list ui-meta-list--stacked" aria-label="Publication metadata">
+                        <div class="ui-meta-list__item">
+                            <dt class="ui-meta-list__label">Published</dt>
+                            <dd class="ui-meta-list__value">
+                                <time datetime="2024-10-15">October 15, 2024</time>
+                            </dd>
+                        </div>
+
+                        <div class="ui-meta-list__item">
+                            <dt class="ui-meta-list__label">Author</dt>
+                            <dd class="ui-meta-list__value">Elena Valery</dd>
+                        </div>
+                    </dl>
                 </div>
             </section>
         </div>

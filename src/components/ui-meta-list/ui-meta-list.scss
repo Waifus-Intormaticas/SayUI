@@ -1,0 +1,94 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+
+.ui-meta-list {
+    @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-bold);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-2 $space-3;
+    margin: $space-0;
+    padding: $space-0;
+    color: var(--slate-light);
+    letter-spacing: 0.02em;
+    list-style: none;
+}
+
+.ui-meta-list__item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: $space-1-5;
+    min-width: $space-0;
+}
+
+.ui-meta-list__label {
+    @include text($size: $font-size-2xs, $weight: $font-weight-black);
+
+    color: var(--slate-medium);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ui-meta-list__value {
+    margin: $space-0;
+    color: var(--slate);
+}
+
+.ui-meta-list :where(a) {
+    color: inherit;
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.ui-meta-list :where(a:hover) {
+    color: var(--primary);
+}
+
+.ui-meta-list :where(a:focus-visible) {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.ui-meta-list--inline {
+    flex-direction: row;
+}
+
+.ui-meta-list--stacked {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-3;
+}
+
+.ui-meta-list--stacked .ui-meta-list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-1;
+}
+
+.ui-meta-list--compact {
+    @include text($size: $font-size-2xs, $line-height: $leading-4, $weight: $font-weight-bold);
+
+    gap: $space-1 $space-2;
+}
+
+.ui-meta-list--compact .ui-meta-list__item {
+    gap: $space-1;
+}
+
+.ui-meta-list--compact .ui-meta-list__label {
+    @include text($size: $font-size-3xs, $weight: $font-weight-black);
+}
+
+.ui-meta-list--with-separators:not(.ui-meta-list--stacked) .ui-meta-list__item + .ui-meta-list__item::before {
+    content: "";
+    display: inline-block;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 9999px;
+    background-color: var(--slate-light);
+    opacity: 0.75;
+}
