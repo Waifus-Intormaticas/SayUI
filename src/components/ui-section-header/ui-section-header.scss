@@ -79,3 +79,36 @@
     text-transform: uppercase;
 }
 
+.ui-section-header--editorial {
+    padding-bottom: $space-4;
+    border-bottom: 3px solid var(--primary);
+    margin-bottom: $space-8;
+}
+
+.ui-section-header--editorial .ui-section-header__title {
+    @include text($size: $font-size-2xl, $line-height: $leading-8, $weight: $font-weight-extrabold);
+
+    font-style: italic;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+
+.ui-section-header--related {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $space-4;
+    margin-bottom: $space-12;
+}
+
+.ui-section-header--related .ui-section-header__title {
+    @include text($size: $font-size-3xl, $line-height: $leading-9, $weight: $font-weight-extrabold);
+
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+
+.ui-section-header--related .ui-section-header__divider {
+    height: 3px;
+    color: var(--dark);
+}

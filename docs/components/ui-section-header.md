@@ -45,6 +45,23 @@ Compact:
 </header>
 ```
 
+Editorial:
+
+```html
+<header class="ui-section-header ui-section-header--editorial">
+  <h2 class="ui-section-header__title">Latest Stories</h2>
+</header>
+```
+
+Related:
+
+```html
+<header class="ui-section-header ui-section-header--related ui-section-header--with-divider">
+  <h2 class="ui-section-header__title">Related Reads</h2>
+  <span class="ui-section-header__divider" aria-hidden="true"></span>
+</header>
+```
+
 Required classes:
 
 - `ui-section-header`
@@ -58,12 +75,16 @@ Optional classes:
 - `ui-section-header--inline`
 - `ui-section-header--with-divider`
 - `ui-section-header--accent`
+- `ui-section-header--editorial`
+- `ui-section-header--related`
 
 Rules:
 
 - `ui-section-header--with-divider` requires an explicit `ui-section-header__divider` element.
 - `ui-section-header--inline` can be used independently.
 - `ui-section-header--accent` uses a left border, not color alone.
+- `ui-section-header--editorial` preserves the italic uppercase heading with primary bottom rule used by original main section headers.
+- `ui-section-header--related` preserves the large uppercase heading and divider rhythm used by related-content sections.
 - Description is supported in v1.
 - Actions, centered layout, color variants, hero variants, and card variants are not part of v1.
 

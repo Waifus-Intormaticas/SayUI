@@ -45,3 +45,12 @@ a.ui-eyebrow:focus-visible {
     border-bottom: 2px solid currentColor;
 }
 
+.ui-eyebrow--editorial {
+    letter-spacing: 0.2em;
+}
+
+.ui-eyebrow--underline {
+    padding-bottom: $space-0-5;
+    border-bottom: 2px solid currentColor;
+    text-decoration: none;
+}

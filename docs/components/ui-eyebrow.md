@@ -44,6 +44,22 @@ Accent:
 </span>
 ```
 
+Editorial:
+
+```html
+<span class="ui-eyebrow ui-eyebrow--editorial">
+  Color Theory
+</span>
+```
+
+Underline:
+
+```html
+<a class="ui-eyebrow ui-eyebrow--underline" href="/categories/development">
+  Development
+</a>
+```
+
 Required classes:
 
 - `ui-eyebrow`
@@ -53,11 +69,15 @@ Optional classes:
 - `ui-eyebrow--compact`
 - `ui-eyebrow--muted`
 - `ui-eyebrow--accent`
+- `ui-eyebrow--editorial`
+- `ui-eyebrow--underline`
 
 Rules:
 
 - Base `ui-eyebrow` uses the primary/accent color by default.
 - `ui-eyebrow--accent` adds an extra visual signal with a border/underline treatment, not color alone.
+- `ui-eyebrow--editorial` preserves the wider tracking used by original banner and post-card labels.
+- `ui-eyebrow--underline` preserves the underlined editorial category treatment used by article hero and related content.
 - Use `a.ui-eyebrow` for category links.
 - There is no `ui-eyebrow--link` modifier.
 - Do not use `button` for this component.

@@ -28,6 +28,7 @@ Do not migrate, rename, split, or remove a component without an approved contrac
 | [`ui-section-header`](components/ui-section-header.md) | Primitive | Public | Reusable section headings for content groups and editorial blocks. | Keep independent; do not auto-migrate older headings. |
 | [`ui-eyebrow`](components/ui-eyebrow.md) | Primitive | Public | Single editorial label or category marker. | Keep independent; do not replace tags, metadata, or headings. |
 | [`ui-callout`](components/ui-callout.md) | Technical/content component | Public | Notes, tips, warnings, and contextual messages. | Do not use as quote, newsletter, or card replacement. |
+| [`ui-pullquote`](components/ui-pullquote.md) | Editorial component | Public | Standout editorial quotes and highlighted phrases. | Keep separate from callouts; do not auto-migrate article quotes. |
 | [`ui-topbar`](components/ui-topbar.md) | Composed component | Public | Main navigation. | Keep as a composed public component. |
 | [`ui-editorial-topbar`](components/ui-editorial-topbar.md) | Composed component | Public | Editorial navigation. | Keep as a composed public component. |
 | [`ui-banner`](components/ui-banner.md) | Composed component | Public | Featured story block. | Keep public; can adopt primitives later by contract. |
