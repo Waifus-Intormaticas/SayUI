@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="styles/demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | SayUI Journal</title>
+</head>
+
+<body class="blog-demo">
+    <header class="blog-demo-header">
+        <a class="blog-demo-header__brand" href="/blog">SayUI Journal</a>
+
+        <nav class="blog-demo-header__nav" aria-label="Primary navigation">
+            <a class="blog-demo-header__link" href="/blog">Stories</a>
+            <a class="blog-demo-header__link" href="/categories/design">Design</a>
+            <a class="blog-demo-header__link" href="/categories/development">Development</a>
+            <a class="blog-demo-header__link" href="/about">About</a>
+        </nav>
+    </header>
+
+    <main class="blog-demo-not-found">
+        <section class="blog-demo-not-found__message" aria-labelledby="not-found-title">
+            <p class="blog-demo-not-found__code" aria-hidden="true">404</p>
+
+            <header class="ui-section-header" aria-labelledby="not-found-title">
+                <h1 class="ui-section-header__title" id="not-found-title">This page wandered off</h1>
+                <p class="ui-section-header__description">
+                    The address may have changed, or the story may no longer be available.
+                </p>
+            </header>
+
+            <p class="blog-demo-not-found__guidance">
+                Start again from the journal, or choose one of these useful destinations.
+            </p>
+
+            <a class="blog-demo-not-found__primary-link" href="/blog">
+                Return to the journal
+            </a>
+        </section>
+
+        <section class="blog-demo-not-found__recovery" aria-labelledby="recovery-title">
+            <header class="ui-section-header ui-section-header--compact" aria-labelledby="recovery-title">
+                <h2 class="ui-section-header__title" id="recovery-title">Continue reading</h2>
+            </header>
+
+            <ul class="ui-related-list ui-related-list--divided">
+                <li class="ui-related-list__item">
+                    <a class="ui-related-list__link" href="/articles/designing-for-quiet-attention">
+                        <span class="ui-related-list__category">Featured essay</span>
+                        <span class="ui-related-list__title">Designing for quiet attention</span>
+                        <span class="ui-related-list__meta">9 min read</span>
+                    </a>
+                </li>
+                <li class="ui-related-list__item">
+                    <a class="ui-related-list__link" href="/categories/design-systems">
+                        <span class="ui-related-list__category">Category</span>
+                        <span class="ui-related-list__title">Browse design systems</span>
+                    </a>
+                </li>
+                <li class="ui-related-list__item">
+                    <a class="ui-related-list__link" href="/authors/elena-valery">
+                        <span class="ui-related-list__category">Author</span>
+                        <span class="ui-related-list__title">Read Elena Valery's latest essays</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="blog-demo-footer">
+        <p class="blog-demo-footer__text">
+            Need another route into the journal?
+        </p>
+
+        <ul class="ui-social-links ui-social-links--compact" aria-label="Editorial channels">
+            <li class="ui-social-links__item">
+                <a class="ui-social-links__link" href="/feed.xml">
+                    <span class="ui-social-links__label">RSS</span>
+                </a>
+            </li>
+            <li class="ui-social-links__item">
+                <a class="ui-social-links__link" href="/newsletter">
+                    <span class="ui-social-links__label">Newsletter</span>
+                </a>
+            </li>
+            <li class="ui-social-links__item">
+                <a class="ui-social-links__link" href="mailto:editorial@sayui.example">
+                    <span class="ui-social-links__label">Email</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

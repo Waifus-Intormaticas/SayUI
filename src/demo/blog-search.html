@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="styles/demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results for Design Systems | SayUI Journal</title>
+</head>
+
+<body class="blog-demo">
+    <header class="blog-demo-header">
+        <a class="blog-demo-header__brand" href="/blog">SayUI Journal</a>
+
+        <nav class="blog-demo-header__nav" aria-label="Primary navigation">
+            <a class="blog-demo-header__link" href="/blog">Stories</a>
+            <a class="blog-demo-header__link" href="/categories/design">Design</a>
+            <a class="blog-demo-header__link" href="/categories/development">Development</a>
+            <a class="blog-demo-header__link" href="/about">About</a>
+        </nav>
+    </header>
+
+    <main class="blog-demo-search">
+        <header class="blog-demo-search-header">
+            <span class="ui-eyebrow ui-eyebrow--editorial">Search</span>
+
+            <h1 class="blog-demo-search-header__title">
+                Find stories and field notes
+            </h1>
+
+            <p class="blog-demo-search-header__description">
+                Search the SayUI Journal archive by title, topic, or author.
+            </p>
+
+            <form class="blog-demo-search-form" action="/search" method="get" role="search">
+                <label class="blog-demo-search-form__label" for="journal-search">
+                    Search the journal
+                </label>
+
+                <div class="blog-demo-search-form__controls">
+                    <input class="blog-demo-search-form__input" id="journal-search" name="q" type="search"
+                        value="design systems">
+                    <button class="blog-demo-search-form__submit" type="submit">Search</button>
+                </div>
+            </form>
+        </header>
+
+        <div class="blog-demo-search-layout">
+            <section class="blog-demo-search-results" aria-labelledby="search-results-title">
+                <header class="ui-section-header ui-section-header--editorial"
+                    aria-labelledby="search-results-title">
+                    <h2 class="ui-section-header__title" id="search-results-title">
+                        Results for “design systems”
+                    </h2>
+                    <p class="ui-section-header__description">
+                        4 stories found in the editorial archive.
+                    </p>
+                </header>
+
+                <div class="blog-demo-search-result-list">
+                    <article class="blog-demo-search-result blog-demo-search-result--with-media">
+                        <a class="blog-demo-search-result__media" href="/articles/component-boundaries">
+                            <img class="blog-demo-search-result__image" src="img/unnamed (3).png"
+                                alt="A close view of colorful source code on a dark screen">
+                        </a>
+
+                        <div class="blog-demo-search-result__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="/categories/design-systems">
+                                Architecture
+                            </a>
+
+                            <h3 class="blog-demo-search-result__title">
+                                <a class="blog-demo-search-result__title-link"
+                                    href="/articles/component-boundaries">
+                                    Component boundaries are product decisions
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-search-result__summary">
+                                Reuse becomes durable when ownership is explicit and each contract solves one stable
+                                responsibility.
+                            </p>
+
+                            <div class="ui-byline ui-byline--compact">
+                                <a class="ui-byline__name" href="/authors/marcus-chen">Marcus Chen</a>
+                                <span class="ui-byline__meta">
+                                    <span class="ui-byline__item">
+                                        <time datetime="2026-06-21">June 21, 2026</time>
+                                    </span>
+                                    <span class="ui-byline__item">7 min read</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-demo-search-result blog-demo-search-result--with-media">
+                        <a class="blog-demo-search-result__media" href="/articles/design-tokens">
+                            <img class="blog-demo-search-result__image" src="img/unnamed (4).png"
+                                alt="A pale mobile interface mockup on a muted green background">
+                        </a>
+
+                        <div class="blog-demo-search-result__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="/categories/design-systems">
+                                Foundations
+                            </a>
+
+                            <h3 class="blog-demo-search-result__title">
+                                <a class="blog-demo-search-result__title-link" href="/articles/design-tokens">
+                                    Design tokens should describe decisions
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-search-result__summary">
+                                Token names become useful when they communicate visual intent instead of exposing
+                                isolated values.
+                            </p>
+
+                            <ul class="ui-meta-list ui-meta-list--inline ui-meta-list--with-separators"
+                                aria-label="Article metadata">
+                                <li class="ui-meta-list__item">
+                                    <time datetime="2026-06-17">June 17, 2026</time>
+                                </li>
+                                <li class="ui-meta-list__item">10 min read</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="blog-demo-search-result blog-demo-search-result--with-media">
+                        <a class="blog-demo-search-result__media" href="/articles/documentation-as-interface">
+                            <img class="blog-demo-search-result__image" src="img/unnamed(3).png"
+                                alt="Three pale interface mockups arranged on a warm background">
+                        </a>
+
+                        <div class="blog-demo-search-result__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="/categories/design-systems">
+                                Documentation
+                            </a>
+
+                            <h3 class="blog-demo-search-result__title">
+                                <a class="blog-demo-search-result__title-link"
+                                    href="/articles/documentation-as-interface">
+                                    Documentation is part of the component interface
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-search-result__summary">
+                                Examples and boundaries turn a collection of selectors into a public contract people
+                                can trust.
+                            </p>
+
+                            <div class="ui-byline ui-byline--compact">
+                                <a class="ui-byline__name" href="/authors/elena-valery">Elena Valery</a>
+                                <span class="ui-byline__meta">
+                                    <span class="ui-byline__item">
+                                        <time datetime="2026-06-11">June 11, 2026</time>
+                                    </span>
+                                    <span class="ui-byline__item">6 min read</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-demo-search-result">
+                        <div class="blog-demo-search-result__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="/categories/design-systems">
+                                Adoption
+                            </a>
+
+                            <h3 class="blog-demo-search-result__title">
+                                <a class="blog-demo-search-result__title-link"
+                                    href="/articles/coexistence-before-migration">
+                                    Prefer coexistence before migration
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-search-result__summary">
+                                New primitives can improve future composition without making established components
+                                obsolete.
+                            </p>
+
+                            <ul class="ui-meta-list ui-meta-list--inline ui-meta-list--with-separators"
+                                aria-label="Article metadata">
+                                <li class="ui-meta-list__item">
+                                    <time datetime="2026-05-30">May 30, 2026</time>
+                                </li>
+                                <li class="ui-meta-list__item">5 min read</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="blog-demo-search-sidebar" aria-label="Search suggestions">
+                <section class="blog-demo-search-sidebar__section" aria-labelledby="search-topics-title">
+                    <header class="ui-section-header ui-section-header--compact"
+                        aria-labelledby="search-topics-title">
+                        <h2 class="ui-section-header__title" id="search-topics-title">Explore topics</h2>
+                    </header>
+
+                    <ul class="ui-tag-list ui-tag-list--stacked" aria-label="Suggested categories">
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="/categories/design-systems">Design systems</a>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="/categories/accessibility">Accessibility</a>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="/categories/development">Development</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="blog-demo-search-sidebar__section" aria-labelledby="search-guides-title">
+                    <header class="ui-section-header ui-section-header--compact"
+                        aria-labelledby="search-guides-title">
+                        <h2 class="ui-section-header__title" id="search-guides-title">Useful guides</h2>
+                    </header>
+
+                    <ul class="ui-related-list ui-related-list--compact">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="/guides/component-audits">
+                                <span class="ui-related-list__title">How to audit a component contract</span>
+                            </a>
+                        </li>
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="/guides/responsive-context">
+                                <span class="ui-related-list__title">Responsive context checklist</span>
+                            </a>
+                        </li>
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="/guides/adoption-decisions">
+                                <span class="ui-related-list__title">Recording adoption decisions</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="ui-newsletter ui-newsletter--compact" aria-labelledby="search-newsletter-title">
+                    <h2 class="ui-newsletter__title" id="search-newsletter-title">Weekly field notes</h2>
+
+                    <p class="ui-newsletter__text">
+                        One considered essay about interfaces and editorial systems.
+                    </p>
+
+                    <form class="ui-newsletter__form" action="/newsletter/subscribe" method="post">
+                        <label class="ui-newsletter__label" for="search-newsletter-email">Email address</label>
+                        <input class="ui-newsletter__input" id="search-newsletter-email" name="email" type="email"
+                            autocomplete="email" placeholder="you@example.com">
+                        <button class="ui-newsletter__submit" type="submit">Subscribe</button>
+                        <p class="ui-newsletter__note">No spam. Unsubscribe anytime.</p>
+                    </form>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="blog-demo-footer">
+        <p class="blog-demo-footer__text">
+            SayUI Journal is a consumer-composition demo built from existing public primitives.
+        </p>
+        <a class="blog-demo-footer__link" href="/blog">Return to all stories</a>
+    </footer>
+</body>
+
+</html>
