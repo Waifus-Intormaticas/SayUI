@@ -4,8 +4,10 @@
 @use '../../styles/foundations/spacing' as *;
 @use '../../styles/foundations/radius' as *;
 @use '../../styles/foundations/shadows' as *;
+@use '../../styles/foundations/breakpoints' as *;
 
 .ui-author-card {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: $space-4;
@@ -25,6 +27,7 @@
 }
 
 .ui-author-card__avatar-wrapper {
+    box-sizing: border-box;
     flex-shrink: 0;
     width: $space-20;
     height: $space-20;
@@ -51,6 +54,7 @@
 
     margin: $space-0;
     color: inherit;
+    overflow-wrap: anywhere;
 }
 
 .ui-author-card__role {
@@ -60,6 +64,7 @@
     color: var(--primary);
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    overflow-wrap: anywhere;
 }
 
 .ui-author-card__bio {
@@ -67,6 +72,7 @@
 
     margin: $space-0;
     color: var(--slate-medium);
+    overflow-wrap: anywhere;
 }
 
 .ui-author-card__links {
@@ -78,6 +84,7 @@
 .ui-author-card__link {
     @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-black);
 
+    box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -132,4 +139,19 @@
 .ui-author-card--editorial .ui-author-card__avatar-wrapper {
     width: $space-20;
     height: $space-20;
+}
+
+@media (max-width: $breakpoint-xs) {
+    .ui-author-card--editorial {
+        padding: $space-6;
+    }
+
+    .ui-author-card--editorial .ui-author-card__header {
+        align-items: flex-start;
+    }
+
+    .ui-author-card--editorial .ui-author-card__avatar-wrapper {
+        width: $space-16;
+        height: $space-16;
+    }
 }

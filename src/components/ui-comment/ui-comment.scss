@@ -4,8 +4,10 @@
 @use '../../styles/foundations/spacing' as *;
 @use '../../styles/foundations/radius' as *;
 @use '../../styles/foundations/shadows' as *;
+@use '../../styles/foundations/breakpoints' as *;
 
 .ui-comment {
+    box-sizing: border-box;
     display: flex;
     align-items: flex-start;
     gap: $space-4;
@@ -47,6 +49,7 @@
     @include text($size: $font-size-base, $line-height: $leading-6, $weight: $font-weight-bold);
 
     color: var(--dark);
+    overflow-wrap: anywhere;
 }
 
 .ui-comment__badge {
@@ -67,6 +70,7 @@
     color: var(--slate-light);
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    overflow-wrap: anywhere;
 }
 
 .ui-comment__text {
@@ -74,6 +78,7 @@
 
     margin: $space-0;
     color: var(--slate);
+    overflow-wrap: anywhere;
 }
 
 .ui-comment__reply {
@@ -81,8 +86,9 @@
 
     display: inline-flex;
     align-items: center;
+    min-height: $space-10;
     margin-top: $space-3;
-    padding: $space-0;
+    padding: $space-0 $space-1;
     border: 0;
     background: transparent;
     color: var(--primary);
@@ -115,4 +121,10 @@
 .ui-comment--reply .ui-comment__avatar-wrapper {
     width: $space-10;
     height: $space-10;
+}
+
+@media (max-width: $breakpoint-xs) {
+    .ui-comment--reply {
+        padding-left: $space-8;
+    }
 }

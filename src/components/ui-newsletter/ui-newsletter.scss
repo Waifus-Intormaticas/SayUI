@@ -6,6 +6,7 @@
 @use '../../styles/foundations/shadows' as *;
 
 .ui-newsletter {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,6 +74,7 @@
 .ui-newsletter__input {
     @include text($size: $font-size-sm, $line-height: $leading-5);
 
+    box-sizing: border-box;
     width: 100%;
     min-height: $space-12;
     padding: $space-3 $space-4;
@@ -91,6 +93,7 @@
 .ui-newsletter__submit {
     @include text($size: $font-size-sm, $line-height: $leading-5, $weight: $font-weight-bold);
 
+    box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;

@@ -4,6 +4,7 @@
 @use '../../styles/foundations/spacing' as *;
 
 .ui-section-header {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

@@ -288,4 +288,16 @@ P4 is closed for implementation and component contracts. The modern primitives c
 
 Original components remain first-class public compositions rather than legacy code. Any real adoption inside an original component still requires a comparative demo, visual approval, and a specific migration contract.
 
-The recommended next phase is P5: comparative demos, visual validation across representative contexts, and controlled adoption experiments. It should not begin with more automatic extraction or mass migration.
+P5.1 is now complete. Its comparative evaluation produced 9 `Migrable` results, 1 `Experimental` result, and 0 `No migrar` results. These classifications represent future adoption viability only: no original component has been replaced and no migration has been executed.
+
+`ui-author-card` remains experimental against the author block inside `ui-article-sidebar`. Components without an official P5.1 comparison remain independent and unclassified for adoption. The complete results and limitations are recorded in the [P5 Comparative Evaluation Plan](p5-comparison-plan.md) and [Component Coexistence Matrix](component-coexistence.md).
+
+### P5.2 Closure
+
+P5.2 is technically complete for responsive and contextual review. The audited primitives have no general blocking defects after narrowly scoped box-sizing, wrapping, touch-target, and mobile-density corrections.
+
+`ui-byline`, `ui-related-list`, `ui-newsletter`, `ui-comment`, and `ui-comment-form` are ready for use in new compositions. `ui-trending-list`, `ui-social-links`, `ui-section-header`, and `ui-pullquote` are also usable with contextual validation for narrow columns, dark surfaces, or editorial treatments.
+
+`ui-author-card` remains Experimental. It can be used independently, but it must not be inserted directly into the existing `ui-article-sidebar__card` shell without resolving double padding, duplicate surfaces, and ownership of the editorial container.
+
+No original component was migrated or replaced during P5.2. Original components remain valid public compositions, and every future migration continues to require explicit approval and a specific adoption contract.

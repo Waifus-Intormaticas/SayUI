@@ -124,6 +124,14 @@ body {
     line-height: 1.5;
 }
 
+.demo-comparison__sidebar-context {
+    width: 100%;
+}
+
+.demo-comparison__sidebar-context > :only-child {
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .demo-components__split {
         grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
