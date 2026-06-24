@@ -46,7 +46,7 @@ Example:
 ```html
 <header class="ui-editorial-topbar">
   <div class="ui-editorial-topbar__inner">
-    <a class="ui-editorial-topbar__brand" href="#">Crimson Courier</a>
+    <a class="ui-editorial-topbar__brand" href="/editorial">Crimson Courier</a>
   </div>
 </header>
 ```

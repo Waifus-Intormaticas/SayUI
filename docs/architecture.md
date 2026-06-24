@@ -301,3 +301,21 @@ P5.2 is technically complete for responsive and contextual review. The audited p
 `ui-author-card` remains Experimental. It can be used independently, but it must not be inserted directly into the existing `ui-article-sidebar__card` shell without resolving double padding, duplicate surfaces, and ownership of the editorial container.
 
 No original component was migrated or replaced during P5.2. Original components remain valid public compositions, and every future migration continues to require explicit approval and a specific adoption contract.
+
+### Internal Adoption Matrix
+
+Before blog integration, SayUI classifies its modern primitives as follows:
+
+- Use freely in new compositions: `ui-byline`, `ui-related-list`, `ui-newsletter`, `ui-comment`, `ui-comment-form`, `ui-eyebrow`, `ui-meta-list`, `ui-tag-list`, `ui-callout`, `ui-table`, `ui-code-block`, and `ui-toc`.
+- Use with contextual validation: `ui-trending-list`, `ui-social-links`, `ui-section-header`, and `ui-pullquote`.
+- Experimental: `ui-author-card`.
+
+The blog can consume adoptable primitives directly. This does not authorize migration of original SayUI components, which remain valid public APIs. In particular, `ui-author-card` may be used independently but must not replace or be nested directly inside `ui-article-sidebar__card` without an explicitly approved adoption contract.
+
+Copyable documentation and the reusable-components demo use real or representative destinations instead of empty `href="#"` links. The value remains documented only as an antipattern.
+
+## Consumer Blog Architecture
+
+The initial page map and primitive-consumption plan for the blog are documented separately in [Blog Architecture](blog-architecture.md).
+
+That plan belongs to the consumer project. It does not add routing, page templates, search behavior, generic grids, generic cards, or application concerns to SayUI, and it does not authorize migration of original components.

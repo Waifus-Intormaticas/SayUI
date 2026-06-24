@@ -13,6 +13,7 @@ This documentation describes the current architecture, foundations, component co
 - [Component contract files](components/README.md)
 - [Component Coexistence Matrix](component-coexistence.md)
 - [P5 Comparative Evaluation Plan](p5-comparison-plan.md)
+- [Blog Architecture](blog-architecture.md)
 - [Article Components](article-components.md)
 - [Visual Dependencies](visual-dependencies.md)
 - [Usage Rules](usage-rules.md)

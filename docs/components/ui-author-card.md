@@ -38,10 +38,10 @@ Recommended structure:
   </p>
 
   <div class="ui-author-card__links" aria-label="Author links">
-    <a class="ui-author-card__link" href="#" aria-label="Email Elena Valery">
+    <a class="ui-author-card__link" href="mailto:elena@example.com" aria-label="Email Elena Valery">
       <span aria-hidden="true">@</span>
     </a>
-    <a class="ui-author-card__link" href="#" aria-label="Visit Elena Valery website">
+    <a class="ui-author-card__link" href="https://example.com/elena" aria-label="Visit Elena Valery website">
       <span aria-hidden="true">www</span>
     </a>
   </div>
@@ -106,10 +106,10 @@ Editorial:
   </p>
 
   <div class="ui-author-card__links" aria-label="Author links">
-    <a class="ui-author-card__link" href="#" aria-label="Email Elena Valery">
+    <a class="ui-author-card__link" href="mailto:elena@example.com" aria-label="Email Elena Valery">
       <span aria-hidden="true">@</span>
     </a>
-    <a class="ui-author-card__link" href="#" aria-label="Visit Elena Valery website">
+    <a class="ui-author-card__link" href="https://example.com/elena" aria-label="Visit Elena Valery website">
       <span aria-hidden="true">www</span>
     </a>
   </div>

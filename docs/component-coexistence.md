@@ -87,6 +87,40 @@ P5.2 is technically complete. It reviewed responsive behavior, narrow and wide c
 
 No migration occurred during P5.2. Original components remain current public compositions. Adoptable primitives may be used in new compositions, while any future migration of original markup still requires explicit approval.
 
+## Final Internal Adoption Matrix
+
+This is the official internal-consumption matrix before SayUI is used by the blog.
+
+### Use Freely In New Compositions
+
+- `ui-byline`
+- `ui-related-list`
+- `ui-newsletter`
+- `ui-comment`
+- `ui-comment-form`
+- `ui-eyebrow`
+- `ui-meta-list`
+- `ui-tag-list`
+- `ui-callout`
+- `ui-table`
+- `ui-code-block`
+- `ui-toc`
+
+### Use With Contextual Validation
+
+- `ui-trending-list`: validate width and density in narrow sidebars.
+- `ui-social-links`: validate contrast and touch targets in dark or compact contexts.
+- `ui-section-header`: validate inline, related, and divider treatments in the target container.
+- `ui-pullquote`: validate editorial spacing and the decorative mark in narrow articles.
+
+### Experimental
+
+- `ui-author-card`: it can be used as an independent block, but it is not a direct replacement for `ui-article-sidebar__card`.
+
+The blog may consume adoptable primitives directly in new compositions. This matrix does not authorize automatic migration of original components. Original components remain current public SayUI APIs, and any replacement of their internal patterns belongs to a later, explicitly approved migration.
+
+Copyable component examples and `src/demo/ui-components.html` no longer use empty `href="#"` destinations. The string remains only where documentation explicitly identifies it as an antipattern.
+
 ## Must Remain Independent
 
 These components should remain independent and should not be used as replacements for original editorial compositions:

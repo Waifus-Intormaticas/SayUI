@@ -53,7 +53,7 @@ Example:
 ```html
 <header class="ui-topbar">
   <div class="ui-topbar__inner">
-    <a class="ui-topbar__brand" href="#">Brand</a>
+    <a class="ui-topbar__brand" href="/">Brand</a>
   </div>
 </header>
 ```

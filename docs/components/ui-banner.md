@@ -44,7 +44,7 @@ Recommended complete structure:
         </div>
       </div>
 
-      <a class="ui-banner__link" href="#">
+      <a class="ui-banner__link" href="/articles/design-systems">
         Read full article
         <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
       </a>

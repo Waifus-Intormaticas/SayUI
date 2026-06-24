@@ -35,10 +35,10 @@ Recommended structure:
     </p>
 
     <div class="ui-article-sidebar__social" aria-label="Author links">
-      <a class="ui-article-sidebar__social-link" href="#" aria-label="Email Elena Valery">
+      <a class="ui-article-sidebar__social-link" href="mailto:elena@example.com" aria-label="Email Elena Valery">
         <span class="material-symbols-outlined" aria-hidden="true">alternate_email</span>
       </a>
-      <a class="ui-article-sidebar__social-link" href="#" aria-label="Visit Elena Valery website">
+      <a class="ui-article-sidebar__social-link" href="https://example.com/elena" aria-label="Visit Elena Valery website">
         <span class="material-symbols-outlined" aria-hidden="true">public</span>
       </a>
     </div>
@@ -48,14 +48,14 @@ Recommended structure:
 
       <ul class="ui-article-sidebar__list">
         <li class="ui-article-sidebar__item">
-          <a class="ui-article-sidebar__link" href="#">
+          <a class="ui-article-sidebar__link" href="/articles/light-phone">
             <span class="ui-article-sidebar__category">Tech</span>
             <p class="ui-article-sidebar__item-title">Hardware for the Distracted</p>
           </a>
         </li>
 
         <li class="ui-article-sidebar__item ui-article-sidebar__item-space">
-          <a class="ui-article-sidebar__link" href="#">
+          <a class="ui-article-sidebar__link" href="/articles/neumorphism">
             <span class="ui-article-sidebar__category">Culture</span>
             <p class="ui-article-sidebar__item-title">The Return of Neumorphism</p>
           </a>
@@ -67,8 +67,8 @@ Recommended structure:
       <h5 class="ui-article-sidebar__section-title">Category Cloud</h5>
 
       <div class="ui-article-sidebar__tags">
-        <a class="ui-article-sidebar__tag" href="#">Architecture</a>
-        <a class="ui-article-sidebar__tag" href="#">Sustainability</a>
+        <a class="ui-article-sidebar__tag" href="/categories/architecture">Architecture</a>
+        <a class="ui-article-sidebar__tag" href="/categories/sustainability">Sustainability</a>
       </div>
     </div>
   </div>

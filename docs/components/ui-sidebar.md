@@ -23,7 +23,7 @@ Recommended complete structure:
   <section>
     <h4 class="ui-sidebar__section-title">Trending Now</h4>
     <div class="ui-sidebar__trending-list">
-      <a href="#" class="ui-sidebar__trending-item">
+      <a href="/articles/grid-systems" class="ui-sidebar__trending-item">
         <div class="ui-sidebar__thumb-wrapper">
           <img src="thumb.jpg" alt="Article thumbnail" class="ui-sidebar__thumb">
         </div>
@@ -38,7 +38,7 @@ Recommended complete structure:
   <section>
     <h4 class="ui-sidebar__section-title">Categories</h4>
     <div class="ui-sidebar__categories">
-      <a href="#" class="ui-sidebar__category-link">
+      <a href="/categories/architecture" class="ui-sidebar__category-link">
         <span class="ui-sidebar__category-title">Architecture</span>
         <span class="ui-sidebar__count-badge">
           <span class="ui-sidebar__count-text">12</span>

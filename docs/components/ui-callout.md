@@ -49,7 +49,7 @@ Recommended structures:
       This component works without JavaScript.
     </p>
     <div class="ui-callout__actions">
-      <a class="ui-callout__link" href="#">Read the guidelines</a>
+      <a class="ui-callout__link" href="/guidelines">Read the guidelines</a>
     </div>
   </div>
 </aside>

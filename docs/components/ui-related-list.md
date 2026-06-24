@@ -11,7 +11,7 @@ HTML minimum:
 ```html
 <ul class="ui-related-list" aria-label="Related articles">
   <li class="ui-related-list__item">
-    <a class="ui-related-list__link" href="#">
+    <a class="ui-related-list__link" href="/articles/digital-sovereignty">
       <span class="ui-related-list__title">
         Digital Sovereignty in the Age of AI
       </span>
@@ -28,7 +28,7 @@ Recommended structure:
 
   <ul class="ui-related-list">
     <li class="ui-related-list__item">
-      <a class="ui-related-list__link" href="#">
+      <a class="ui-related-list__link" href="/articles/digital-sovereignty">
         <span class="ui-related-list__category">Politics</span>
         <span class="ui-related-list__title">
           Digital Sovereignty in the Age of AI
@@ -44,7 +44,7 @@ With category:
 ```html
 <ul class="ui-related-list" aria-label="Related stories">
   <li class="ui-related-list__item">
-    <a class="ui-related-list__link" href="#">
+    <a class="ui-related-list__link" href="/articles/light-phone">
       <span class="ui-related-list__category">Tech</span>
       <span class="ui-related-list__title">
         Hardware for the Distracted: The Light Phone III
@@ -59,7 +59,7 @@ With metadata:
 ```html
 <ul class="ui-related-list" aria-label="Trending stories">
   <li class="ui-related-list__item">
-    <a class="ui-related-list__link" href="#">
+    <a class="ui-related-list__link" href="/articles/grid-systems">
       <span class="ui-related-list__title">
         10 Grid Systems Every Designer Should Master
       </span>
@@ -68,7 +68,7 @@ With metadata:
   </li>
 
   <li class="ui-related-list__item">
-    <a class="ui-related-list__link" href="#">
+    <a class="ui-related-list__link" href="/articles/designing-with-time">
       <span class="ui-related-list__title">
         Designing with Time as a Constraint
       </span>
@@ -85,7 +85,7 @@ Compact:
 ```html
 <ul class="ui-related-list ui-related-list--compact" aria-label="Related resources">
   <li class="ui-related-list__item">
-    <a class="ui-related-list__link" href="#">
+    <a class="ui-related-list__link" href="/articles/motion-context">
       <span class="ui-related-list__title">Motion as spatial context</span>
     </a>
   </li>
@@ -97,7 +97,7 @@ Divided:
 ```html
 <ul class="ui-related-list ui-related-list--divided" aria-label="Related stories">
   <li class="ui-related-list__item">
-    <a class="ui-related-list__link" href="#">
+    <a class="ui-related-list__link" href="/articles/digital-sovereignty">
       <span class="ui-related-list__category">Politics</span>
       <span class="ui-related-list__title">
         Digital Sovereignty in the Age of AI
@@ -112,7 +112,7 @@ Ordered:
 ```html
 <ol class="ui-related-list" aria-label="Recommended reading order">
   <li class="ui-related-list__item">
-    <a class="ui-related-list__link" href="#">
+    <a class="ui-related-list__link" href="/guides/semantic-html">
       <span class="ui-related-list__title">Start with semantic HTML</span>
     </a>
   </li>
@@ -189,7 +189,7 @@ Example:
   <h2 id="docs-related-title">Related docs</h2>
   <ul class="ui-related-list ui-related-list--divided">
     <li class="ui-related-list__item">
-      <a class="ui-related-list__link" href="#">
+      <a class="ui-related-list__link" href="/guides/component-contracts">
         <span class="ui-related-list__category">Guide</span>
         <span class="ui-related-list__title">Component contract basics</span>
         <span class="ui-related-list__meta">

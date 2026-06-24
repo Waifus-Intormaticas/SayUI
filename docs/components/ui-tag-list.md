@@ -21,7 +21,7 @@ Recommended structures:
 ```html
 <ul class="ui-tag-list" aria-label="Categories">
   <li class="ui-tag-list__item">
-    <a class="ui-tag-list__tag" href="#">CSS</a>
+    <a class="ui-tag-list__tag" href="/categories/css">CSS</a>
   </li>
 </ul>
 ```
@@ -39,7 +39,7 @@ Recommended structures:
 ```html
 <ul class="ui-tag-list ui-tag-list--with-count" aria-label="Categories">
   <li class="ui-tag-list__item">
-    <a class="ui-tag-list__tag" href="#">
+    <a class="ui-tag-list__tag" href="/categories/design">
       <span class="ui-tag-list__label">Design</span>
       <span class="ui-tag-list__count" aria-label="12 articles">12</span>
     </a>
@@ -143,10 +143,10 @@ Example:
 ```html
 <ul class="ui-tag-list ui-tag-list--interactive" aria-label="Topics">
   <li class="ui-tag-list__item">
-    <a class="ui-tag-list__tag" href="#">Design</a>
+    <a class="ui-tag-list__tag" href="/categories/design">Design</a>
   </li>
   <li class="ui-tag-list__item">
-    <a class="ui-tag-list__tag" href="#">Accessibility</a>
+    <a class="ui-tag-list__tag" href="/categories/accessibility">Accessibility</a>
   </li>
 </ul>
 ```
