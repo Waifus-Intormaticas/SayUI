@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../../dist/css/sayui.css">
-    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="dist/css/sayui.css">
+    <link rel="stylesheet" href="src/demo/demo.css">
+    <link rel="stylesheet" href="src/demo/styles/demo.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -13,6 +14,11 @@
 </head>
 
 <body>
+    <nav class="demo-page-switcher" aria-label="SayUI demo pages">
+        <a class="demo-page-switcher__link" href="src/demo/blog-index.html">Blog demos</a>
+        <a class="demo-page-switcher__link" href="src/demo/ui-components.html">Reusable components</a>
+    </nav>
+
     <!-- Toggle layouts here -->
     <header class="ui-editorial-topbar">
         <div class="ui-editorial-topbar__inner">
@@ -21,11 +27,11 @@
                     Crimson Courier
                 </a>
                 <nav class="ui-editorial-topbar__nav">
-                    <a href="" class="ui-editorial-topbar__link">Latest</a>
-                    <a href="" class="ui-editorial-topbar__link">Politics</a>
-                    <a href="" class="ui-editorial-topbar__link">Culture</a>
-                    <a href="" class="ui-editorial-topbar__link">Tech</a>
-                    <a href="" class="ui-editorial-topbar__link">Opinion</a>
+                    <a href="src/demo/blog-home.html" class="ui-editorial-topbar__link">Latest</a>
+                    <a href="src/demo/blog-category.html" class="ui-editorial-topbar__link">Politics</a>
+                    <a href="src/demo/blog-category.html" class="ui-editorial-topbar__link">Culture</a>
+                    <a href="src/demo/blog-category.html" class="ui-editorial-topbar__link">Tech</a>
+                    <a href="src/demo/blog-author.html" class="ui-editorial-topbar__link">Opinion</a>
                 </nav>
             </div>
 
@@ -64,7 +70,7 @@
             </div>
 
             <div class="ui-article-hero__image-wrapper">
-                <img src="../demo/img/unnamed(3).png" class="ui-article-hero__image"
+                <img src="src/demo/img/unnamed(3).png" class="ui-article-hero__image"
                     alt="Minimalist UI design hero image">
                 <div class="ui-article-hero__overlay"></div>
             </div>
@@ -131,7 +137,7 @@
                         </li>
                     </ul>
                     <figure class="ui-article-main__figure">
-                        <img src="../demo/img/unnamed (4).png" class="ui-article-main__figure-image"
+                        <img src="src/demo/img/unnamed (4).png" class="ui-article-main__figure-image"
                             alt="Spatial hierarchy with high-contrast typography">
                         <figcaption class="ui-article-main__figure-caption">Fig 1.1: Spatial hierarchy through
                             high-contrast typography and negative space.
@@ -158,7 +164,7 @@
                         <!-- Comment -->
                         <div class="ui-article-main__comment">
                             <div class="ui-article-main__avatar-container">
-                                <img alt="Julian Moss" src="../demo/img/Hanekawa Tsubasa.jpg"
+                                <img alt="Julian Moss" src="src/demo/img/Hanekawa Tsubasa.jpg"
                                     class="ui-article-main__avatar" />
                             </div>
 
@@ -181,7 +187,7 @@
                         <!-- Reply -->
                         <div class="ui-article-main__comment ui-article-main__comment--reply">
                             <div class="ui-article-main__avatar-container ui-article-main__avatar-container--reply">
-                                <img alt="Elena Valery" src="../demo/img/e392d05893d73ba1a9da81d3f3752daf.jpg"
+                                <img alt="Elena Valery" src="src/demo/img/e392d05893d73ba1a9da81d3f3752daf.jpg"
                                     class="ui-article-main__avatar" />
                             </div>
                             <div>
@@ -217,7 +223,7 @@
                     <div class="ui-article-sidebar__author">
                         <div class="ui-article-sidebar__avatar-container">
                             <img alt="Elena Valery" class="ui-article-sidebar__avatar"
-                                src="../demo/img/unnamed (1).png" />
+                                src="src/demo/img/unnamed (1).png" />
                         </div>
 
                         <div class="ui-article-sidebar__author-info">
@@ -232,10 +238,12 @@
                     </p>
 
                     <div class="ui-article-sidebar__social">
-                        <a class="ui-article-sidebar__social-link" href="#">
+                        <a class="ui-article-sidebar__social-link" href="mailto:elena@sayui.example"
+                            aria-label="Email Elena Valery">
                             <span class="material-symbols-outlined">alternate_email</span>
                         </a>
-                        <a class="ui-article-sidebar__social-link" href="#">
+                        <a class="ui-article-sidebar__social-link" href="src/demo/blog-author.html"
+                            aria-label="View Elena Valery's author page">
                             <span class="material-symbols-outlined">public</span>
                         </a>
                     </div>
@@ -245,7 +253,7 @@
 
                         <ul class="ui-article-sidebar__list">
                             <li class="ui-article-sidebar__item">
-                                <a class="ui-article-sidebar__link" href="#">
+                                <a class="ui-article-sidebar__link" href="src/demo/blog-article.html">
                                     <span class="ui-article-sidebar__category">Politics</span>
                                     <p class="ui-article-sidebar__item-title">
                                         Digital Sovereignty in the Age of AI
@@ -254,7 +262,7 @@
                             </li>
 
                             <li class="ui-article-sidebar__item ui-article-sidebar__item-space">
-                                <a class="ui-article-sidebar__link" href="#">
+                                <a class="ui-article-sidebar__link" href="src/demo/blog-article.html">
                                     <span class="ui-article-sidebar__category">Culture</span>
                                     <p class="ui-article-sidebar__item-title">
                                         The Return of Neumorphism: A Post-Flat Review
@@ -263,7 +271,7 @@
                             </li>
 
                             <li class="ui-article-sidebar__item ui-article-sidebar__item-space">
-                                <a class="ui-article-sidebar__link" href="#">
+                                <a class="ui-article-sidebar__link" href="src/demo/blog-article.html">
                                     <span class="ui-article-sidebar__category">Tech</span>
                                     <p class="ui-article-sidebar__item-title">
                                         Hardware for the Distracted: The Light Phone III
@@ -277,11 +285,11 @@
                         <h5 class="ui-article-sidebar__section-title">Category Cloud</h5>
 
                         <div class="ui-article-sidebar__tags">
-                            <a class="ui-article-sidebar__tag" href="#">Architecture</a>
-                            <a class="ui-article-sidebar__tag" href="#">Crypto</a>
-                            <a class="ui-article-sidebar__tag" href="#">Fashion</a>
-                            <a class="ui-article-sidebar__tag" href="#">Sustainability</a>
-                            <a class="ui-article-sidebar__tag" href="#">Future</a>
+                            <a class="ui-article-sidebar__tag" href="src/demo/blog-category.html">Architecture</a>
+                            <a class="ui-article-sidebar__tag" href="src/demo/blog-category.html">Crypto</a>
+                            <a class="ui-article-sidebar__tag" href="src/demo/blog-category.html">Fashion</a>
+                            <a class="ui-article-sidebar__tag" href="src/demo/blog-category.html">Sustainability</a>
+                            <a class="ui-article-sidebar__tag" href="src/demo/blog-category.html">Future</a>
                         </div>
                     </div>
 
@@ -301,7 +309,7 @@
                     <!-- Card -->
                     <article class="ui-article-related__card">
                         <div class="ui-article-related__image-wrapper">
-                            <img class="ui-article-related__image" src="../demo/img/unnamed (6).png"
+                            <img class="ui-article-related__image" src="src/demo/img/unnamed (6).png"
                                 alt="Development article thumbnail">
                         </div>
 
@@ -321,7 +329,7 @@
                     <!-- Card -->
                     <article class="ui-article-related__card">
                         <div class="ui-article-related__image-wrapper">
-                            <img class="ui-article-related__image" src="../demo/img/unnamed (5).png"
+                            <img class="ui-article-related__image" src="src/demo/img/unnamed (5).png"
                                 alt="Urbanism article thumbnail">
                         </div>
 
@@ -341,7 +349,7 @@
                     <!-- Card -->
                     <article class="ui-article-related__card">
                         <div class="ui-article-related__image-wrapper">
-                            <img class="ui-article-related__image" src="../demo/img/unnamed (3).png"
+                            <img class="ui-article-related__image" src="src/demo/img/unnamed (3).png"
                                 alt="Science article thumbnail">
                         </div>
 
@@ -372,11 +380,11 @@
                 </div>
 
                 <nav class="ui-footer-editorial__nav">
-                    <a class="ui-footer-editorial__link" href="#">About Us</a>
-                    <a class="ui-footer-editorial__link" href="#">Privacy Policy</a>
-                    <a class="ui-footer-editorial__link" href="#">Terms of Service</a>
-                    <a class="ui-footer-editorial__link" href="#">Contact</a>
-                    <a class="ui-footer-editorial__link" href="#">Advertise</a>
+                    <a class="ui-footer-editorial__link" href="src/demo/blog-author.html">About Us</a>
+                    <a class="ui-footer-editorial__link" href="src/demo/blog-index.html">Privacy Policy</a>
+                    <a class="ui-footer-editorial__link" href="src/demo/blog-index.html">Terms of Service</a>
+                    <a class="ui-footer-editorial__link" href="mailto:editorial@sayui.example">Contact</a>
+                    <a class="ui-footer-editorial__link" href="src/demo/blog-index.html">Advertise</a>
                 </nav>
             </div>
 

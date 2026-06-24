@@ -132,6 +132,33 @@ body {
     width: 100%;
 }
 
+.demo-page-switcher {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--footer-border);
+    background: var(--white);
+}
+
+.demo-page-switcher__link {
+    color: var(--slate-medium);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.demo-page-switcher__link:hover {
+    color: var(--primary);
+}
+
+.demo-page-switcher__link:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
 @media (min-width: 768px) {
     .demo-components__split {
         grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
@@ -922,6 +949,80 @@ body {
     background: var(--sidebar-bg);
 }
 
+.blog-demo-index {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.blog-demo-index__intro {
+    max-width: 52rem;
+}
+
+.blog-demo-index__note {
+    max-width: 46rem;
+    margin: 1.5rem 0 0;
+    color: var(--slate-medium);
+    line-height: 1.7;
+}
+
+.blog-demo-index__pages {
+    margin-top: 4rem;
+}
+
+.blog-demo-index-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+}
+
+.blog-demo-index-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: 14rem;
+    padding: 1.5rem;
+    border: 1px solid var(--footer-border);
+    background: var(--white);
+}
+
+.blog-demo-index-card__title {
+    margin: 1rem 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.blog-demo-index-card__link {
+    color: inherit;
+}
+
+.blog-demo-index-card__link::after {
+    content: " >";
+    color: var(--primary);
+}
+
+.blog-demo-index-card__link:hover {
+    color: var(--primary);
+}
+
+.blog-demo-index-card__link:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+}
+
+.blog-demo-index-card__description {
+    margin: 0;
+    color: var(--slate-medium);
+    line-height: 1.7;
+}
+
+.blog-demo-index__resources {
+    max-width: 42rem;
+    margin-top: 4rem;
+}
+
 @media (min-width: 900px) {
     .blog-demo-layout {
         grid-template-columns: minmax(0, 2.15fr) minmax(17rem, 0.85fr);
@@ -990,6 +1091,10 @@ body {
 
     .blog-demo-search-result--with-media {
         grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr);
+    }
+
+    .blog-demo-index-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
