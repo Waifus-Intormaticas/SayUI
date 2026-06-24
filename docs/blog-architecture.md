@@ -6,6 +6,8 @@ The blog owns routing, data loading, page shells, global navigation, search beha
 
 This plan does not authorize migration of original SayUI components and does not introduce new components, generic grids, generic cards, category lists, comment lists, or a general form system.
 
+The actionable page structures, zones, ownership boundaries, and implementation order are defined in the [Blog Construction Blueprint](blog-blueprint.md).
+
 ## Page Map
 
 | Page | Purpose | Primary content | Secondary content | Required navigation |
@@ -181,4 +183,3 @@ No gap in this inventory demonstrates enough repeated, stable structure to add a
 - Do not use this plan to migrate or replace original SayUI component internals.
 - Do not turn page-specific consumer markup into a SayUI component without demonstrated repetition and a separate approved contract.
 - Keep navigation, routing, data, forms behavior, and search logic outside SayUI.
-
