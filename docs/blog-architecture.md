@@ -8,6 +8,36 @@ This plan does not authorize migration of original SayUI components and does not
 
 The actionable page structures, zones, ownership boundaries, and implementation order are defined in the [Blog Construction Blueprint](blog-blueprint.md).
 
+## Blog Demo Closure
+
+The initial blog architecture has been implemented and approved as six consumer demos:
+
+- [Home](../src/demo/blog-home.html)
+- [Article](../src/demo/blog-article.html)
+- [Category](../src/demo/blog-category.html)
+- [Author](../src/demo/blog-author.html)
+- [Search](../src/demo/blog-search.html)
+- [404](../src/demo/blog-404.html)
+
+The demos are available from the [Blog Demo Index](../src/demo/blog-index.html). They compose existing SayUI primitives with consumer-owned semantic HTML and local demo layout. No new SayUI primitive was created to build these pages.
+
+### Implemented Primitive Use
+
+| Demo | Primitives used |
+| --- | --- |
+| Home | `ui-section-header`, `ui-eyebrow`, `ui-meta-list`, `ui-tag-list`, `ui-newsletter`, `ui-related-list`, `ui-byline`, `ui-trending-list`, `ui-social-links` |
+| Article | `ui-eyebrow`, `ui-meta-list`, `ui-tag-list`, `ui-pullquote`, `ui-newsletter`, `ui-related-list`, `ui-byline`, `ui-comment`, `ui-comment-form`, `ui-table`, `ui-code-block`, `ui-toc` |
+| Category | `ui-section-header`, `ui-eyebrow`, `ui-meta-list`, `ui-tag-list`, `ui-newsletter`, `ui-related-list`, `ui-byline`, `ui-trending-list` |
+| Author | `ui-section-header`, `ui-eyebrow`, `ui-meta-list`, `ui-tag-list`, `ui-newsletter`, `ui-author-card`, `ui-related-list`, `ui-byline`, `ui-social-links` |
+| Search | `ui-section-header`, `ui-eyebrow`, `ui-meta-list`, `ui-tag-list`, `ui-newsletter`, `ui-related-list`, `ui-byline` |
+| 404 | `ui-section-header`, `ui-related-list`, `ui-social-links` |
+
+### Final Architecture Decision
+
+Cards, grids, search presentation and behavior, filters, author profile layout, error presentation, and empty states remain consumer layout or application responsibilities. The demos did not demonstrate a stable gap requiring a new public primitive.
+
+No blocking gaps were found. The blog demo is ready for internal demonstration. This status does not authorize migration or replacement of original SayUI components.
+
 ## Page Map
 
 | Page | Purpose | Primary content | Secondary content | Required navigation |
