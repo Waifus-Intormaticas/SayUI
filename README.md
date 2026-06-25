@@ -2,7 +2,7 @@
 
 > A minimal, modular, framework-agnostic UI component library built with HTML, SCSS, and compiled CSS.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-red)](package.json)
+[![Version](https://img.shields.io/badge/version-1.0.1-red)](package.json)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Status](https://img.shields.io/badge/status-internal%20v1-blue)](https://github.com/pixel-waffless/SayUI/blob/SayUI/docs/releases/sayui-internal-v1.md)
 
