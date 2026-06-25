@@ -19,7 +19,8 @@
   "author": "Jonathan Ventura",
   "style": "dist/css/sayui.css",
   "scripts": {
-    "build": "sass src/styles/main.scss dist/css/sayui.css",
+    "build": "npm run build:css && npm run build:min",
+    "build:css": "sass src/styles/main.scss dist/css/sayui.css",
     "watch": "sass src/styles/main.scss dist/css/sayui.css --watch",
     "build:min": "sass src/styles/main.scss dist/css/sayui.min.css --style=compressed"
   }

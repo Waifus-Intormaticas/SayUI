@@ -89,7 +89,7 @@ No migration occurred during P5.2. Original components remain current public com
 
 ## Final Internal Adoption Matrix
 
-This is the official internal-consumption matrix before SayUI is used by the blog.
+This is the official internal-consumption matrix used by the implemented blog demos and future internal compositions.
 
 ### Use Freely In New Compositions
 

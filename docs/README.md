@@ -13,6 +13,7 @@ This documentation describes the current architecture, foundations, component co
 - [Component contract files](components/README.md)
 - [Component Coexistence Matrix](component-coexistence.md)
 - [P5 Comparative Evaluation Plan](p5-comparison-plan.md)
+- [SayUI Internal v1 Release Notes](releases/sayui-internal-v1.md)
 - [Blog Architecture](blog-architecture.md) - implemented six-page demo architecture
 - [Blog Construction Blueprint](blog-blueprint.md) - completed consumer composition blueprint
 - [Article Components](article-components.md)

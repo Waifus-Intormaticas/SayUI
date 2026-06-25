@@ -1,6 +1,6 @@
 ﻿# Component Contracts
 
-This file is the index for SayUI component contracts. Detailed contracts live in `docs/components/`.
+This file is the index for SayUI component contracts. Detailed contracts live in `docs/components/`, with the remaining article contracts grouped in `docs/article-components.md`.
 
 SayUI components have different roles. Some are primitives, some are composed editorial components, and some are content components. Original components are not obsolete: they are first-class public parts of the library. Newer primitives do not automatically replace older composed components.
 
@@ -46,8 +46,10 @@ Do not migrate, rename, split, or remove a component without an approved contrac
 | [`ui-sidebar`](components/ui-sidebar.md) | Composed component | Public | Trending links, categories, and newsletter. | Do not split without approved contracts. |
 | [`ui-footer`](components/ui-footer.md) | Composed component | Public | Main footer. | Keep. |
 | [`ui-footer-editorial`](components/ui-footer-editorial.md) | Composed component | Public | Editorial footer. | Keep. |
+| [`ui-article-hero`](article-components.md#ui-article-hero) | Editorial component | Public | Article title, metadata, and hero media. | Keep public; do not auto-migrate its metadata. |
 | [`ui-article-main`](components/ui-article-main.md) | Editorial component | Public | Long-form article body with prose, quote, figure, tags, and comments. | Keep public; extract smaller patterns only with approved contracts. |
 | [`ui-article-sidebar`](components/ui-article-sidebar.md) | Editorial composed component | Public | Article sidebar with author block, social links, related stories, and tag cloud. | Keep public; do not split without approved contracts. |
+| [`ui-article-related`](article-components.md#ui-article-related) | Editorial composed component | Public | Related-story section with a responsive card grid. | Keep public and independent from text-only related lists. |
 
 ## Notes
 

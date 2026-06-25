@@ -34,7 +34,7 @@ SayUI is not:
 - A documentation generator
 - A JavaScript behavior layer
 
-A future blog or documentation site can consume SayUI from another project, but SayUI itself remains HTML + SCSS + compiled CSS.
+The included blog demos consume SayUI through static HTML composition, and external blog or documentation projects can do the same. SayUI itself remains HTML + SCSS + compiled CSS.
 
 ## Source Areas
 
@@ -71,7 +71,8 @@ The official relationship between original public components and newer primitive
 | `ui-article-main` | Editorial composed component | Public editorial | Article prose plus quote, principles, figure, tags, comments, and form patterns. | Keep; strong candidate for future contract design before splitting. |
 | `ui-article-sidebar` | Editorial composed component | Public editorial | Author card, related links, social links, and tag cloud. | Keep; split only after contract design. |
 | `ui-article-related` | Editorial composed component | Public editorial | Related story section. | Keep. |
-| `src/demo/index.html` | Demo / living documentation | Internal project asset | General component preview. | Keep. |
+| `index.html` | Demo / living documentation | Published project entry | Root editorial demo and navigation entry for GitHub Pages. | Keep routes relative to the repository root. |
+| `src/demo/blog-index.html` | Demo / living documentation | Internal project asset | Navigation index for the six blog consumer demos. | Keep linked from the root entry. |
 | `src/demo/ui-page.html` | Demo / living documentation | Internal project asset | Complete main page composition. | Keep. |
 | `src/demo/ui-editorial.html` | Demo / living documentation | Internal project asset | Complete editorial page composition. | Keep. |
 | `src/demo/ui-components.html` | Demo / living documentation | Internal project asset | Gallery for reusable primitives and technical/content components. | Keep and update as new public primitives are added. |
@@ -182,13 +183,15 @@ SayUI does not include `ui-category-list` or `ui-comment-list` in v1 because the
 
 ## Demos
 
-Path: `src/demo/`
+Paths: `index.html` and `src/demo/`
 
 Purpose: visual testing and living documentation. Demos are not production pages and do not represent a routing system.
 
 Current demo roles:
 
-- `index.html`: general component demo.
+- Root `index.html`: published editorial demo and entry to the blog/component demos.
+- `blog-index.html`: navigation index for the six blog consumer demos.
+- `blog-home.html`, `blog-article.html`, `blog-category.html`, `blog-author.html`, `blog-search.html`, and `blog-404.html`: consumer compositions built from existing primitives.
 - `ui-page.html`: complete main page composition.
 - `ui-editorial.html`: complete editorial/article page composition.
 - `ui-components.html`: reusable components gallery.
@@ -206,6 +209,8 @@ Current bundle files:
 
 - `sayui.css`
 - `sayui.min.css`
+
+`npm run build` regenerates both bundle files from `src/styles/main.scss`.
 
 The package metadata points consumers to:
 
@@ -277,10 +282,10 @@ The project has:
 - a complete Sass/CSS bundle workflow
 - foundational tokens
 - original editorial components
-- reusable P1 technical/editorial components
+- reusable technical/editorial components and modern primitives
 - documentation for component and layout contracts
 
-Before treating SayUI as a public beta, the next consolidation work should focus on comparative demos, visual validation, controlled adoption experiments, and continued documentation maintenance.
+Comparative evaluation, responsive/contextual validation, the internal adoption matrix, and the six-page consumer blog demo are complete. Remaining release work is maintenance-oriented: keep generated bundles, demos, and documentation synchronized.
 
 ### P4 Closure
 
@@ -304,7 +309,7 @@ No original component was migrated or replaced during P5.2. Original components 
 
 ### Internal Adoption Matrix
 
-Before blog integration, SayUI classifies its modern primitives as follows:
+For current blog and internal composition work, SayUI classifies its modern primitives as follows:
 
 - Use freely in new compositions: `ui-byline`, `ui-related-list`, `ui-newsletter`, `ui-comment`, `ui-comment-form`, `ui-eyebrow`, `ui-meta-list`, `ui-tag-list`, `ui-callout`, `ui-table`, `ui-code-block`, and `ui-toc`.
 - Use with contextual validation: `ui-trending-list`, `ui-social-links`, `ui-section-header`, and `ui-pullquote`.
@@ -316,6 +321,6 @@ Copyable documentation and the reusable-components demo use real or representati
 
 ## Consumer Blog Architecture
 
-The initial page map and primitive-consumption plan for the blog are documented separately in [Blog Architecture](blog-architecture.md).
+The implemented page map and primitive-consumption plan for the blog are documented separately in [Blog Architecture](blog-architecture.md) and [Blog Construction Blueprint](blog-blueprint.md).
 
 That plan belongs to the consumer project. It does not add routing, page templates, search behavior, generic grids, generic cards, or application concerns to SayUI, and it does not authorize migration of original components.

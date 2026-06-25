@@ -1,6 +1,6 @@
 # Component Contract Files
 
-This folder contains the detailed contracts for public SayUI components.
+This folder contains the detailed contracts for public SayUI components. The remaining article contracts are grouped in [Article Component Contracts](../article-components.md).
 
 Use [../components.md](../components.md) as the main component index and taxonomy summary.
 
@@ -36,5 +36,7 @@ Original components are not obsolete. They are first-class public parts of SayUI
 | `ui-sidebar` | [ui-sidebar.md](ui-sidebar.md) |
 | `ui-footer` | [ui-footer.md](ui-footer.md) |
 | `ui-footer-editorial` | [ui-footer-editorial.md](ui-footer-editorial.md) |
+| `ui-article-hero` | [Article Component Contracts](../article-components.md#ui-article-hero) |
 | `ui-article-main` | [ui-article-main.md](ui-article-main.md) |
 | `ui-article-sidebar` | [ui-article-sidebar.md](ui-article-sidebar.md) |
+| `ui-article-related` | [Article Component Contracts](../article-components.md#ui-article-related) |
