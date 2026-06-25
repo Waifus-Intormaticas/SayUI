@@ -2,176 +2,190 @@
 
 > A minimal, modular, framework-agnostic UI component library built with HTML, SCSS, and compiled CSS.
 
-![Version](https://img.shields.io/badge/version-1.0.0-red)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-active-blue)
+[![Version](https://img.shields.io/badge/version-1.0.0-red)](package.json)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Status](https://img.shields.io/badge/status-internal%20v1-blue)](https://github.com/pixel-waffless/SayUI/blob/SayUI/docs/releases/sayui-internal-v1.md)
 
-## Overview
-
-SayUI is a lightweight visual component library for editorial pages, blogs, and content-driven interfaces.
-
-It is intentionally simple:
-
-- HTML snippets for component structure.
-- SCSS source files for development.
-- A single compiled CSS file for consumers.
-- No framework runtime.
-- No routing or content system.
-
-SayUI can be consumed by any project that can load CSS and write HTML.
+SayUI provides documented HTML contracts and a visual layer for editorial pages, blogs, documentation, and content-driven interfaces. It has no framework runtime, router, CMS, or JavaScript behavior dependency.
 
 ## Installation
 
-Use the compiled CSS file in your HTML:
-
-```html
-<link rel="stylesheet" href="dist/css/sayui.css">
+```bash
+npm install sayui
 ```
 
-For minified production CSS:
+## CSS Usage
 
-```html
-<link rel="stylesheet" href="dist/css/sayui.min.css">
+Import the standard bundle from a CSS-aware build tool:
+
+```css
+@import "sayui/css";
 ```
 
-Consumer projects should import the compiled CSS and use the documented `ui-*` classes in their markup.
+Or import it from JavaScript when the consumer build supports CSS imports:
+
+```js
+import "sayui/css";
+```
+
+For a direct HTML workflow, copy or expose the installed bundle and link it:
+
+```html
+<link rel="stylesheet" href="/node_modules/sayui/dist/css/sayui.css">
+```
+
+## Minified CSS
+
+Use the minified subpath in production-oriented builds:
+
+```css
+@import "sayui/css/min";
+```
+
+The physical file is:
+
+```text
+node_modules/sayui/dist/css/sayui.min.css
+```
+
+## SCSS Usage
+
+SayUI publishes its Sass entry and component sources for consumers that need source-level integration:
+
+```scss
+@use "pkg:sayui/scss";
+```
+
+The exported Sass entry is:
+
+```text
+node_modules/sayui/src/styles/main.scss
+```
+
+Consumers should prefer the compiled CSS unless they specifically need Sass integration.
+
+## HTML Contracts
+
+SayUI does not render components. Consumers write semantic HTML using the documented `ui-*` class contracts:
+
+```html
+<header class="ui-section-header">
+  <h2 class="ui-section-header__title">Latest Stories</h2>
+</header>
+```
+
+Component HTML examples are included under:
+
+```text
+node_modules/sayui/src/components/
+```
+
+Detailed contracts are included under:
+
+```text
+node_modules/sayui/docs/components/
+```
+
+## Public Primitives
+
+SayUI Internal v1 includes these 17 reusable primitives and editorial/content components:
+
+- `ui-section-header`
+- `ui-eyebrow`
+- `ui-meta-list`
+- `ui-tag-list`
+- `ui-pullquote`
+- `ui-newsletter`
+- `ui-author-card`
+- `ui-related-list`
+- `ui-byline`
+- `ui-comment`
+- `ui-comment-form`
+- `ui-trending-list`
+- `ui-social-links`
+- `ui-callout`
+- `ui-table`
+- `ui-code-block`
+- `ui-toc`
+
+SayUI also includes original public editorial compositions such as topbars, banners, post cards, sidebars, footers, and article components. Modern primitives do not make those components obsolete and do not authorize automatic migrations.
+
+## Adoption Notes
+
+- `ui-byline`, `ui-related-list`, `ui-newsletter`, `ui-comment`, `ui-comment-form`, `ui-eyebrow`, `ui-meta-list`, `ui-tag-list`, `ui-callout`, `ui-table`, `ui-code-block`, and `ui-toc` are ready for new internal compositions.
+- `ui-trending-list`, `ui-social-links`, `ui-section-header`, and `ui-pullquote` should be validated in their final width or surface.
+- `ui-author-card` remains experimental as a migration target for the existing article-sidebar author block, though it can be used independently.
+
+See the [Component Coexistence Matrix](https://github.com/pixel-waffless/SayUI/blob/SayUI/docs/component-coexistence.md) for the complete adoption policy.
+
+## Demo
+
+The published GitHub Pages demo is available at:
+
+https://pixel-waffless.github.io/SayUI/
+
+It includes:
+
+- Reusable component gallery.
+- Blog Home.
+- Blog Article.
+- Blog Category.
+- Blog Author.
+- Blog Search.
+- Blog 404.
+
+The blog pages are static consumer compositions. Demo form actions such as `/comments` and `/newsletter/subscribe` require a real backend or external form provider; GitHub Pages does not process them.
 
 ## Development
 
-SayUI uses Sass as its official compiler.
+Install the project toolchain:
 
-Build the standard CSS file:
+```bash
+npm install
+```
+
+Build both distribution bundles:
 
 ```bash
 npm run build
 ```
 
-Watch SCSS changes:
+Other commands:
 
 ```bash
+npm run build:css
+npm run build:min
 npm run watch
 ```
 
-Build the minified CSS file:
+`npm run build` generates:
 
-```bash
-npm run build:min
+```text
+dist/css/sayui.css
+dist/css/sayui.min.css
 ```
 
-Equivalent Sass commands:
+`npm pack` runs the build automatically through `prepack`.
 
-```bash
-sass src/styles/main.scss dist/css/sayui.css
-sass src/styles/main.scss dist/css/sayui.css --watch
-sass src/styles/main.scss dist/css/sayui.min.css --style=compressed
-```
+## Package Contents
 
-## Project Structure
+The npm package intentionally includes:
 
-```txt
-src/
-  components/
-    banner/
-    editorial-topbar/
-    ui-footer/
-    ui-footer-editorial/
-    ui-main-header/
-    ui-post-card/
-    ui-post-grid/
-    ui-sidebar/
-    ui-topbar/
-    article/
-      ui-article-hero/
-      ui-article-main/
-      ui-article-related/
-      ui-article-sidebar/
+- Compiled CSS and source maps in `dist/`.
+- Component HTML and SCSS sources.
+- Layout HTML and SCSS sources.
+- Foundation and bundle SCSS sources.
+- Component contracts and usage documentation.
+- `README.md`, `LICENSE`, and `package.json`.
 
-  layouts/
-    ui-page/
-    ui-layout/
-    ui-main/
-    ui-editorial-page/
-    ui-editorial-grid/
-
-  styles/
-    foundations/
-      _variables.scss
-      _typography.scss
-      _mixins.scss
-    main.scss
-
-  demo/
-    index.html
-    ui-page.html
-    ui-editorial.html
-    demo.css
-    img/
-
-dist/
-  css/
-    sayui.css
-    sayui.min.css
-```
-
-## Architecture
-
-SayUI follows a small separation of concerns:
-
-- **Foundations**: design tokens, typography scales, and mixins.
-- **Layouts**: structural composition patterns.
-- **Components**: reusable visual blocks.
-- **Demos**: examples used to preview and test compositions.
-- **Dist**: compiled CSS for consumers.
-
-## Components
-
-Current component groups include:
-
-- Topbars: `ui-topbar`, `ui-editorial-topbar`
-- Editorial hero: `ui-banner`, `ui-article-hero`
-- Post listing: `ui-post-card`, `ui-post-grid`
-- Sidebars: `ui-sidebar`, `ui-article-sidebar`
-- Article body: `ui-article-main`
-- Related content: `ui-article-related`
-- Footers: `ui-footer`, `ui-footer-editorial`
-
-## Layouts
-
-SayUI includes two intentional demo/layout families:
-
-- `ui-page`: general editorial listing page.
-- `ui-editorial-page`: article-focused editorial page.
-
-These layouts are examples and composition templates. Consumer projects may use one layout, combine components, or adapt the markup while keeping the `ui-*` class contracts.
-
-## Demo
-
-Open the demo file directly in a browser:
-
-```txt
-src/demo/index.html
-```
-
-The demo imports:
-
-```html
-<link rel="stylesheet" href="../../dist/css/sayui.css">
-```
-
-## Usage Guidelines
-
-- Keep SayUI framework-agnostic.
-- Use the compiled CSS in consumer projects.
-- Keep component class names under the `ui-*` namespace.
-- Extend with custom classes in consumer projects instead of editing compiled CSS.
-- Keep Sass changes organized under foundations, layouts, or components.
+Repository demos, screenshots, documentation images, and project-only assets are excluded from the npm package.
 
 ## License
 
-MIT
+[MIT](LICENSE)
 
 ## Author
 
 Jonathan Ventura
 
-GitHub: [JVenturaDev](https://github.com/JVenturaDev)
+Repository: [pixel-waffless/SayUI](https://github.com/pixel-waffless/SayUI)
