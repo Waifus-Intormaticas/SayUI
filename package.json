@@ -1,0 +1,57 @@
+{
+  "name": "sayui",
+  "version": "1.0.0",
+  "description": "A minimal, modular and editorial UI component library built with HTML, SCSS, and compiled CSS.",
+  "license": "MIT",
+  "homepage": "https://pixel-waffless.github.io/SayUI/",
+  "bugs": {
+    "url": "https://github.com/pixel-waffless/SayUI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixel-waffless/SayUI.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "ui-library",
+    "components",
+    "editorial",
+    "blog",
+    "html"
+  ],
+  "author": "Jonathan Ventura",
+  "style": "./dist/css/sayui.css",
+  "sass": "./src/styles/main.scss",
+  "files": [
+    "dist/",
+    "src/components/",
+    "src/layouts/",
+    "src/styles/",
+    "docs/components/",
+    "docs/components.md",
+    "docs/article-components.md",
+    "docs/usage-rules.md"
+  ],
+  "exports": {
+    ".": "./dist/css/sayui.css",
+    "./css": "./dist/css/sayui.css",
+    "./css/min": "./dist/css/sayui.min.css",
+    "./scss": "./src/styles/main.scss",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "scripts": {
+    "build": "npm run build:css && npm run build:min",
+    "build:css": "sass src/styles/main.scss dist/css/sayui.css",
+    "watch": "sass src/styles/main.scss dist/css/sayui.css --watch",
+    "build:min": "sass src/styles/main.scss dist/css/sayui.min.css --style=compressed",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "sass": "1.98.0"
+  }
+}

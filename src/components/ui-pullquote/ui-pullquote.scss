@@ -1,0 +1,123 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+@use '../../styles/foundations/radius' as *;
+@use '../../styles/foundations/breakpoints' as *;
+@use '../../styles/foundations/shadows' as *;
+
+.ui-pullquote {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin: $space-8 $space-0;
+    padding: $space-6;
+    border-left: 4px solid var(--primary);
+    border-radius: $radius-sm;
+    background-color: var(--sidebar-bg);
+    color: var(--dark);
+    box-shadow: $shadow-inner-subtle;
+}
+
+.ui-pullquote__content {
+    @include text($size: $font-size-2xl, $line-height: $leading-8, $weight: $font-weight-extrabold);
+
+    margin: $space-0;
+    color: inherit;
+    font-style: italic;
+    letter-spacing: -0.025em;
+}
+
+.ui-pullquote__cite {
+    @include text($size: $font-size-2xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    display: block;
+    margin-top: $space-4;
+    color: var(--slate-medium);
+    font-style: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ui-pullquote__mark {
+    @include text($size: $font-size-6xl, $line-height: $line-height-none, $weight: $font-weight-extrabold);
+
+    position: absolute;
+    top: -0.75rem;
+    left: $space-3;
+    color: var(--primary-medium);
+    pointer-events: none;
+}
+
+.ui-pullquote--decorated {
+    padding-top: $space-8;
+}
+
+.ui-pullquote--compact {
+    margin: $space-5 $space-0;
+    padding: $space-4 $space-5;
+}
+
+.ui-pullquote--compact .ui-pullquote__content {
+    @include text($size: $font-size-lg, $line-height: $leading-7, $weight: $font-weight-extrabold);
+}
+
+.ui-pullquote--compact .ui-pullquote__cite {
+    margin-top: $space-3;
+}
+
+.ui-pullquote--strong {
+    padding: $space-8;
+    border-left-width: 6px;
+    background-color: var(--dark);
+    color: var(--white);
+    box-shadow: $shadow-md;
+}
+
+.ui-pullquote--strong .ui-pullquote__cite {
+    color: var(--white-faint);
+}
+
+.ui-pullquote--strong .ui-pullquote__mark {
+    color: var(--primary);
+}
+
+.ui-pullquote--editorial {
+    margin: $space-12 $space-0;
+    padding: $space-8 $space-10;
+    border-radius: $radius-none;
+    box-shadow: none;
+}
+
+.ui-pullquote--editorial .ui-pullquote__mark {
+    top: -1rem;
+    left: -0.5rem;
+}
+
+.ui-pullquote--editorial .ui-pullquote__content {
+    @include text($size: $font-size-3xl, $line-height: $line-height-tight, $weight: $font-weight-extrabold);
+
+    margin-bottom: $space-4;
+}
+
+@media (max-width: $breakpoint-xs) {
+    .ui-pullquote {
+        padding: $space-5;
+    }
+
+    .ui-pullquote__content {
+        @include text($size: $font-size-xl, $line-height: $leading-7, $weight: $font-weight-extrabold);
+    }
+
+    .ui-pullquote--decorated {
+        padding-top: $space-8;
+    }
+
+    .ui-pullquote--strong {
+        padding: $space-6;
+    }
+
+    .ui-pullquote--editorial {
+        padding: $space-6;
+    }
+}

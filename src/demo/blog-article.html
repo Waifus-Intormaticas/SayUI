@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="styles/demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing for Quiet Attention | SayUI Blog Demo</title>
+</head>
+
+<body class="blog-demo">
+    <header class="blog-demo-header">
+        <a class="blog-demo-header__brand" href="blog-home.html">SayUI Journal</a>
+
+        <nav class="blog-demo-header__nav" aria-label="Primary navigation">
+            <a class="blog-demo-header__link" href="blog-home.html">Stories</a>
+            <a class="blog-demo-header__link" href="blog-category.html">Design</a>
+            <a class="blog-demo-header__link" href="blog-author.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-demo-article">
+            <header class="blog-demo-hero">
+                <a class="ui-eyebrow ui-eyebrow--editorial" href="blog-category.html">
+                    Editorial Design
+                </a>
+
+                <h1 class="blog-demo-hero__title">
+                    Designing for quiet attention
+                </h1>
+
+                <p class="blog-demo-hero__dek">
+                    A practical study of rhythm, hierarchy, and restraint in interfaces built for sustained reading.
+                </p>
+
+                <div class="blog-demo-hero__details">
+                    <div class="ui-byline">
+                        <img class="ui-byline__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+
+                        <div class="ui-byline__body">
+                            <a class="ui-byline__name" href="blog-author.html">
+                                Elena Valery
+                            </a>
+
+                            <span class="ui-byline__meta">
+                                <span class="ui-byline__item">Editorial desk</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <ul class="ui-meta-list ui-meta-list--inline ui-meta-list--with-separators"
+                        aria-label="Article metadata">
+                        <li class="ui-meta-list__item">
+                            <time datetime="2026-06-24">June 24, 2026</time>
+                        </li>
+                        <li class="ui-meta-list__item">9 min read</li>
+                    </ul>
+                </div>
+            </header>
+
+            <figure class="blog-demo-cover">
+                <img class="blog-demo-cover__image" src="img/unnamed.png"
+                    alt="A red chair, side table, plant, and pendant light against a red wall">
+                <figcaption class="blog-demo-cover__caption">
+                    Calm interfaces borrow their rhythm from spaces that leave room to pause.
+                </figcaption>
+            </figure>
+
+            <div class="blog-demo-layout">
+                <div class="blog-demo-content">
+                    <section class="blog-demo-prose" id="introduction" aria-labelledby="introduction-title">
+                        <h2 class="blog-demo-prose__title" id="introduction-title">Attention is a layout decision</h2>
+
+                        <p class="blog-demo-prose__paragraph blog-demo-prose__lead">
+                            Reading interfaces often fail through accumulation. Every label asks for emphasis, every
+                            module asks for separation, and every action asks to be noticed immediately.
+                        </p>
+
+                        <p class="blog-demo-prose__paragraph">
+                            A quieter interface is not an empty one. It gives each element enough contrast to perform
+                            its role without forcing all elements into the foreground. The result depends less on a
+                            signature visual effect and more on a dependable sequence of spacing, type, and content.
+                        </p>
+
+                        <blockquote
+                            class="blog-demo-prose__feature ui-pullquote ui-pullquote--decorated ui-pullquote--editorial">
+                            <span class="ui-pullquote__mark" aria-hidden="true">&ldquo;</span>
+
+                            <p class="ui-pullquote__content">
+                                Restraint is useful when it makes the next decision easier to see.
+                            </p>
+
+                            <cite class="ui-pullquote__cite">
+                                SayUI editorial notes
+                            </cite>
+                        </blockquote>
+                    </section>
+
+                    <section class="blog-demo-prose" id="rhythm" aria-labelledby="rhythm-title">
+                        <h2 class="blog-demo-prose__title" id="rhythm-title">Build rhythm before decoration</h2>
+
+                        <p class="blog-demo-prose__paragraph">
+                            Start with the intervals readers feel repeatedly: the space after a heading, the distance
+                            between paragraphs, and the transition from prose into a technical example. Repetition
+                            makes these decisions more visible than isolated polish.
+                        </p>
+
+                        <div class="blog-demo-prose__feature ui-table__wrapper">
+                            <table class="ui-table ui-table--responsive ui-table--striped">
+                                <caption class="ui-table__caption">
+                                    Reading rhythm checks
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Element</th>
+                                        <th scope="col">Question</th>
+                                        <th scope="col">Desired effect</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Heading</th>
+                                        <td>Does the next paragraph feel connected?</td>
+                                        <td>Clear continuation</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Pullquote</th>
+                                        <td>Does emphasis interrupt the argument?</td>
+                                        <td>Useful pause</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Code</th>
+                                        <td>Can long lines be inspected safely?</td>
+                                        <td>Controlled overflow</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="blog-demo-prose__paragraph">
+                            The implementation can stay modest. A semantic content sequence and a small set of
+                            reusable contracts are often enough:
+                        </p>
+
+                        <figure class="blog-demo-prose__feature ui-code-block">
+                            <figcaption class="ui-code-block__caption">
+                                Article structure
+                            </figcaption>
+
+                            <div class="ui-code-block__header">
+                                <span class="ui-code-block__filename">article.html</span>
+                                <span class="ui-code-block__language">html</span>
+                            </div>
+
+                            <pre class="ui-code-block__pre"><code class="ui-code-block__code">&lt;article&gt;
+  &lt;header&gt;...&lt;/header&gt;
+  &lt;section aria-labelledby="example-rhythm-title"&gt;
+    &lt;h2 id="example-rhythm-title"&gt;Build rhythm first&lt;/h2&gt;
+  &lt;/section&gt;
+&lt;/article&gt;</code></pre>
+                        </figure>
+                    </section>
+
+                    <section class="blog-demo-prose" id="constraints" aria-labelledby="constraints-title">
+                        <h2 class="blog-demo-prose__title" id="constraints-title">Let constraints stay visible</h2>
+
+                        <p class="blog-demo-prose__paragraph">
+                            Components should solve their own visual responsibility without pretending to own the
+                            article, route, or data source around them. That boundary keeps a library useful across
+                            static pages, server-rendered sites, and application frameworks.
+                        </p>
+
+                        <p class="blog-demo-prose__paragraph">
+                            In this page, the columns and prose width belong to the consumer demo. The table,
+                            pullquote, code block, metadata, and navigation keep their public SayUI contracts.
+                        </p>
+                    </section>
+
+                    <footer class="blog-demo-article-footer">
+                        <h2 class="blog-demo-article-footer__title">Explore the topics</h2>
+
+                        <ul class="ui-tag-list ui-tag-list--interactive" aria-label="Article topics">
+                            <li class="ui-tag-list__item">
+                                <a class="ui-tag-list__tag" href="blog-category.html">
+                                    Design systems
+                                </a>
+                            </li>
+                            <li class="ui-tag-list__item">
+                                <a class="ui-tag-list__tag" href="blog-category.html">
+                                    Accessibility
+                                </a>
+                            </li>
+                            <li class="ui-tag-list__item">
+                                <a class="ui-tag-list__tag" href="blog-category.html">
+                                    Editorial design
+                                </a>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+
+                <aside class="blog-demo-sidebar" aria-label="Article sidebar">
+                    <nav class="ui-toc ui-toc--boxed ui-toc--sticky" aria-labelledby="blog-toc-title">
+                        <h2 class="ui-toc__title" id="blog-toc-title">On this page</h2>
+
+                        <ol class="ui-toc__list">
+                            <li class="ui-toc__item ui-toc__item--active">
+                                <a class="ui-toc__link ui-toc__link--active" href="#introduction"
+                                    aria-current="location">
+                                    Attention is a layout decision
+                                </a>
+                            </li>
+                            <li class="ui-toc__item">
+                                <a class="ui-toc__link" href="#rhythm">
+                                    Build rhythm before decoration
+                                </a>
+                            </li>
+                            <li class="ui-toc__item">
+                                <a class="ui-toc__link" href="#constraints">
+                                    Let constraints stay visible
+                                </a>
+                            </li>
+                            <li class="ui-toc__item">
+                                <a class="ui-toc__link" href="#conversation">
+                                    Conversation
+                                </a>
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <section class="blog-demo-sidebar__section" aria-labelledby="related-title">
+                        <h2 class="blog-demo-sidebar__title" id="related-title">Related reading</h2>
+
+                        <ul class="ui-related-list ui-related-list--divided">
+                            <li class="ui-related-list__item">
+                                <a class="ui-related-list__link" href="blog-article.html">
+                                    <span class="ui-related-list__category">Systems</span>
+                                    <span class="ui-related-list__title">
+                                        A design system is a set of editorial decisions
+                                    </span>
+                                    <span class="ui-related-list__meta">
+                                        <time datetime="2026-06-12">June 12, 2026</time>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="ui-related-list__item">
+                                <a class="ui-related-list__link" href="blog-article.html">
+                                    <span class="ui-related-list__category">Typography</span>
+                                    <span class="ui-related-list__title">
+                                        Finding a useful measure for long-form reading
+                                    </span>
+                                    <span class="ui-related-list__meta">6 min read</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="ui-newsletter ui-newsletter--compact" aria-labelledby="blog-newsletter-title">
+                        <h2 class="ui-newsletter__title" id="blog-newsletter-title">Weekly field notes</h2>
+
+                        <p class="ui-newsletter__text">
+                            One considered essay about interfaces and editorial systems.
+                        </p>
+
+                        <form class="ui-newsletter__form" action="/newsletter/subscribe" method="post">
+                            <label class="ui-newsletter__label" for="blog-newsletter-email">
+                                Email address
+                            </label>
+                            <input class="ui-newsletter__input" id="blog-newsletter-email" name="email" type="email"
+                                autocomplete="email" placeholder="you@example.com">
+                            <button class="ui-newsletter__submit" type="submit">
+                                Subscribe
+                            </button>
+                            <p class="ui-newsletter__note">
+                                No tracking pixels. Unsubscribe anytime.
+                            </p>
+                        </form>
+                    </section>
+                </aside>
+            </div>
+        </article>
+
+        <section class="blog-demo-conversation" id="conversation" aria-labelledby="conversation-title">
+            <header class="blog-demo-conversation__header">
+                <h2 class="blog-demo-conversation__title" id="conversation-title">Conversation</h2>
+                <p class="blog-demo-conversation__intro">
+                    Responses are presented as a documented composition of individual comments.
+                </p>
+            </header>
+
+            <div class="blog-demo-comments">
+                <article class="ui-comment">
+                    <div class="ui-comment__avatar-wrapper">
+                        <img class="ui-comment__avatar" src="img/Hanekawa Tsubasa.jpg" alt="Julian Moss">
+                    </div>
+
+                    <div class="ui-comment__body">
+                        <header class="ui-comment__header">
+                            <span class="ui-comment__author">Julian Moss</span>
+                            <time class="ui-comment__time" datetime="2026-06-24T09:30:00-06:00">
+                                9:30 AM
+                            </time>
+                        </header>
+
+                        <p class="ui-comment__text">
+                            The distinction between component rhythm and page rhythm is especially useful. It makes
+                            the ownership boundary much easier to reason about.
+                        </p>
+
+                        <button class="ui-comment__reply" type="button">Reply</button>
+                    </div>
+                </article>
+
+                <article class="ui-comment ui-comment--reply">
+                    <div class="ui-comment__avatar-wrapper">
+                        <img class="ui-comment__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+                    </div>
+
+                    <div class="ui-comment__body">
+                        <header class="ui-comment__header">
+                            <span class="ui-comment__author">Elena Valery</span>
+                            <span class="ui-comment__badge">Author</span>
+                            <time class="ui-comment__time" datetime="2026-06-24T10:05:00-06:00">
+                                10:05 AM
+                            </time>
+                        </header>
+
+                        <p class="ui-comment__text">
+                            Exactly. The page can change its composition without forcing the content components to
+                            change their contracts.
+                        </p>
+
+                        <button class="ui-comment__reply" type="button">Reply</button>
+                    </div>
+                </article>
+            </div>
+
+            <form class="ui-comment-form" action="/comments" method="post" aria-labelledby="blog-comment-form-title">
+                <h3 class="ui-comment-form__title" id="blog-comment-form-title">Add to the conversation</h3>
+
+                <div class="ui-comment-form__field">
+                    <label class="ui-comment-form__label" for="blog-comment">
+                        Comment
+                    </label>
+                    <textarea class="ui-comment-form__textarea" id="blog-comment" name="comment" rows="6"
+                        aria-describedby="blog-comment-note"></textarea>
+                    <p class="ui-comment-form__note" id="blog-comment-note">
+                        Keep your response relevant and respectful.
+                    </p>
+                </div>
+
+                <div class="ui-comment-form__actions">
+                    <button class="ui-comment-form__submit" type="submit">
+                        Post comment
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="blog-demo-footer">
+        <p class="blog-demo-footer__text">
+            SayUI Journal is a consumer-composition demo built from existing public primitives.
+        </p>
+        <a class="blog-demo-footer__link" href="blog-home.html">Return to all stories</a>
+    </footer>
+</body>
+
+</html>

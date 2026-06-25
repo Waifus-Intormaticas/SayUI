@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="styles/demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayUI Reusable Components Demo</title>
+</head>
+
+<body>
+    <main class="demo-components">
+        <header class="demo-components__header">
+            <span class="demo-components__eyebrow">SayUI demo</span>
+            <h1 class="demo-components__title">Reusable components</h1>
+            <p class="demo-components__intro">
+                A visual gallery for framework-agnostic SayUI components intended for technical and editorial
+                content. This page is a demo, not a production route.
+            </p>
+        </header>
+
+        <div class="demo-components__grid">
+            <section class="demo-components__section" aria-labelledby="demo-comparison-infrastructure-title">
+                <h2 class="demo-components__section-title" id="demo-comparison-infrastructure-title">
+                    P5.1 comparison lots 1-5
+                </h2>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-byline-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-byline-title">
+                        Byline vs Banner Author
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-byline-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-byline-original-label">
+                                Original
+                            </h4>
+
+                            <div class="ui-banner__author">
+                                <img class="ui-banner__author-image" src="img/unnamed (1).png" alt="Elena Valery">
+
+                                <div class="ui-banner__author-info">
+                                    <p class="ui-banner__author-name">Elena Valery</p>
+                                    <p class="ui-banner__meta">
+                                        <time datetime="2026-06-23">Jun 23, 2026</time>
+                                        &bull; 8 min read
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-byline-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-byline-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <div class="ui-byline">
+                                <img class="ui-byline__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+
+                                <div class="ui-byline__body">
+                                    <a class="ui-byline__name" href="blog-author.html">
+                                        Elena Valery
+                                    </a>
+
+                                    <span class="ui-byline__meta">
+                                        <span class="ui-byline__item">
+                                            <time datetime="2026-06-23">Jun 23, 2026</time>
+                                        </span>
+                                        <span class="ui-byline__item">8 min read</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-related-list-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-related-list-title">
+                        Related List vs Article Sidebar List
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-related-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-related-original-label">
+                                Original
+                            </h4>
+
+                            <ul class="ui-article-sidebar__list">
+                                <li class="ui-article-sidebar__item">
+                                    <a class="ui-article-sidebar__link" href="blog-article.html">
+                                        <span class="ui-article-sidebar__category">Design</span>
+                                        <p class="ui-article-sidebar__item-title">
+                                            Designing with Time as a Constraint
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="ui-article-sidebar__item ui-article-sidebar__item-space">
+                                    <a class="ui-article-sidebar__link" href="blog-article.html">
+                                        <span class="ui-article-sidebar__category">Interaction</span>
+                                        <p class="ui-article-sidebar__item-title">
+                                            Motion as Spatial Context
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-related-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-related-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <ul class="ui-related-list" aria-label="Related articles">
+                                <li class="ui-related-list__item">
+                                    <a class="ui-related-list__link" href="blog-article.html">
+                                        <span class="ui-related-list__category">Design</span>
+                                        <span class="ui-related-list__title">
+                                            Designing with Time as a Constraint
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="ui-related-list__item">
+                                    <a class="ui-related-list__link" href="blog-article.html">
+                                        <span class="ui-related-list__category">Interaction</span>
+                                        <span class="ui-related-list__title">
+                                            Motion as Spatial Context
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-trending-list-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-trending-list-title">
+                        Trending List vs Sidebar Trending List
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-trending-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-trending-original-label">
+                                Original
+                            </h4>
+
+                            <div class="demo-comparison__sidebar-context">
+                                <aside class="ui-sidebar">
+                                    <section>
+                                        <div class="ui-sidebar__trending-list">
+                                            <a class="ui-sidebar__trending-item" href="blog-article.html">
+                                                <div class="ui-sidebar__thumb-wrapper">
+                                                    <img class="ui-sidebar__thumb" src="img/Hanekawa Tsubasa.jpg"
+                                                        alt="">
+                                                </div>
+
+                                                <div>
+                                                    <h5 class="ui-sidebar__item-title">
+                                                        10 Grid Systems Every Designer Should Master
+                                                    </h5>
+                                                    <span class="ui-sidebar__item-meta">48k views</span>
+                                                </div>
+                                            </a>
+
+                                            <a class="ui-sidebar__trending-item"
+                                                href="blog-article.html">
+                                                <div class="ui-sidebar__thumb-wrapper">
+                                                    <img class="ui-sidebar__thumb" src="img/unnamed (2).png" alt="">
+                                                </div>
+
+                                                <div>
+                                                    <h5 class="ui-sidebar__item-title">
+                                                        Editorial Components as Product Surface
+                                                    </h5>
+                                                    <span class="ui-sidebar__item-meta">18k views</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </section>
+                                </aside>
+                            </div>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-trending-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-trending-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <ul class="ui-trending-list" aria-label="Trending articles">
+                                <li class="ui-trending-list__item">
+                                    <a class="ui-trending-list__link" href="blog-article.html">
+                                        <span class="ui-trending-list__media">
+                                            <img class="ui-trending-list__image" src="img/Hanekawa Tsubasa.jpg" alt="">
+                                        </span>
+
+                                        <span class="ui-trending-list__body">
+                                            <span class="ui-trending-list__title">
+                                                10 Grid Systems Every Designer Should Master
+                                            </span>
+                                            <span class="ui-trending-list__meta">48k views</span>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="ui-trending-list__item">
+                                    <a class="ui-trending-list__link" href="blog-article.html">
+                                        <span class="ui-trending-list__media">
+                                            <img class="ui-trending-list__image" src="img/unnamed (2).png" alt="">
+                                        </span>
+
+                                        <span class="ui-trending-list__body">
+                                            <span class="ui-trending-list__title">
+                                                Editorial Components as Product Surface
+                                            </span>
+                                            <span class="ui-trending-list__meta">18k views</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-social-links-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-social-links-title">
+                        Social Links vs Article Sidebar Social
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-social-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-social-original-label">
+                                Original
+                            </h4>
+
+                            <div class="ui-article-sidebar__social" aria-label="Author links">
+                                <a class="ui-article-sidebar__social-link" href="mailto:elena@example.com"
+                                    aria-label="Email Elena Valery">
+                                    <span aria-hidden="true">@</span>
+                                </a>
+
+                                <a class="ui-article-sidebar__social-link" href="https://example.com/elena"
+                                    aria-label="Visit Elena Valery's website">
+                                    <span aria-hidden="true">www</span>
+                                </a>
+                            </div>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-social-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-social-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <ul class="ui-social-links" aria-label="Author links">
+                                <li class="ui-social-links__item">
+                                    <a class="ui-social-links__link" href="mailto:elena@example.com"
+                                        aria-label="Email Elena Valery">
+                                        <span class="ui-social-links__icon" aria-hidden="true">@</span>
+                                    </a>
+                                </li>
+
+                                <li class="ui-social-links__item">
+                                    <a class="ui-social-links__link" href="https://example.com/elena"
+                                        aria-label="Visit Elena Valery's website">
+                                        <span class="ui-social-links__icon" aria-hidden="true">www</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-section-header-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-section-header-title">
+                        Section Header vs Article Main Section Title
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-section-header-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-section-header-original-label">
+                                Original
+                            </h4>
+
+                            <h3 class="ui-article-main__section-title">
+                                Core Principles of Minimalist Motion
+                            </h3>
+
+                            <p>
+                                These principles establish a clear rhythm for the content that follows.
+                            </p>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-section-header-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-section-header-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <header class="ui-section-header">
+                                <h3 class="ui-section-header__title">
+                                    Core Principles of Minimalist Motion
+                                </h3>
+                            </header>
+
+                            <p>
+                                These principles establish a clear rhythm for the content that follows.
+                            </p>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-pullquote-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-pullquote-title">
+                        Pullquote vs Article Main Quote
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-pullquote-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-pullquote-original-label">
+                                Original
+                            </h4>
+
+                            <blockquote class="ui-article-main__quote">
+                                <span class="material-symbols-outlined ui-article-main__quote-icon"
+                                    aria-hidden="true">format_quote</span>
+
+                                <p class="ui-article-main__quote-content">
+                                    Minimalism is not the absence of something. It is the perfect amount of something.
+                                </p>
+
+                                <cite class="ui-article-main__quote-cite">
+                                    Editorial Design Principles, 2024
+                                </cite>
+                            </blockquote>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-pullquote-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-pullquote-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <blockquote class="ui-pullquote ui-pullquote--decorated ui-pullquote--editorial">
+                                <span class="ui-pullquote__mark" aria-hidden="true">&ldquo;</span>
+
+                                <p class="ui-pullquote__content">
+                                    Minimalism is not the absence of something. It is the perfect amount of something.
+                                </p>
+
+                                <cite class="ui-pullquote__cite">
+                                    Editorial Design Principles, 2024
+                                </cite>
+                            </blockquote>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-newsletter-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-newsletter-title">
+                        Newsletter vs Sidebar Newsletter
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-newsletter-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-newsletter-original-label">
+                                Original
+                            </h4>
+
+                            <div class="demo-comparison__sidebar-context">
+                                <aside class="ui-sidebar">
+                                    <section class="ui-sidebar__newsletter"
+                                        aria-labelledby="comparison-sidebar-newsletter-title">
+                                        <span class="material-symbols-outlined ui-sidebar__newsletter-icon"
+                                            aria-hidden="true">mail</span>
+
+                                        <h4 class="ui-sidebar__newsletter-title"
+                                            id="comparison-sidebar-newsletter-title">
+                                            The Weekly Digest
+                                        </h4>
+
+                                        <p class="ui-sidebar__newsletter-text">
+                                            Join 20,000+ designers and get our best stories delivered directly to
+                                            your inbox every Sunday morning.
+                                        </p>
+
+                                        <form class="ui-sidebar__form" action="/subscribe" method="post">
+                                            <label for="comparison-sidebar-newsletter-email">
+                                                Email address
+                                            </label>
+                                            <input class="ui-sidebar__input" id="comparison-sidebar-newsletter-email"
+                                                name="email" type="email" autocomplete="email"
+                                                placeholder="Your email address">
+                                            <button class="ui-sidebar__submit" type="submit">
+                                                Subscribe Now
+                                            </button>
+                                            <p class="ui-sidebar__form-note">
+                                                No spam, ever. Unsubscribe anytime.
+                                            </p>
+                                        </form>
+                                    </section>
+                                </aside>
+                            </div>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-newsletter-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-newsletter-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <section class="ui-newsletter ui-newsletter--strong"
+                                aria-labelledby="comparison-newsletter-title">
+                                <span class="material-symbols-outlined ui-newsletter__icon"
+                                    aria-hidden="true">mail</span>
+
+                                <div class="ui-newsletter__body">
+                                    <h4 class="ui-newsletter__title" id="comparison-newsletter-title">
+                                        The Weekly Digest
+                                    </h4>
+
+                                    <p class="ui-newsletter__text">
+                                        Join 20,000+ designers and get our best stories delivered directly to your
+                                        inbox every Sunday morning.
+                                    </p>
+
+                                    <form class="ui-newsletter__form" action="/subscribe" method="post">
+                                        <label class="ui-newsletter__label"
+                                            for="comparison-newsletter-email">
+                                            Email address
+                                        </label>
+                                        <input class="ui-newsletter__input" id="comparison-newsletter-email"
+                                            name="email" type="email" autocomplete="email"
+                                            placeholder="Your email address">
+                                        <button class="ui-newsletter__submit" type="submit">
+                                            Subscribe Now
+                                        </button>
+                                        <p class="ui-newsletter__note">
+                                            No spam, ever. Unsubscribe anytime.
+                                        </p>
+                                    </form>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-author-card-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-author-card-title">
+                        Author Card vs Article Sidebar Author
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-author-card-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-author-card-original-label">
+                                Original
+                            </h4>
+
+                            <div class="ui-article-sidebar__card"
+                                aria-labelledby="comparison-article-sidebar-author-name">
+                                <div class="ui-article-sidebar__author">
+                                    <div class="ui-article-sidebar__avatar-container">
+                                        <img class="ui-article-sidebar__avatar" src="img/unnamed (1).png"
+                                            alt="Elena Valery">
+                                    </div>
+
+                                    <div class="ui-article-sidebar__author-info">
+                                        <h4 class="ui-article-sidebar__author-name"
+                                            id="comparison-article-sidebar-author-name">
+                                            Elena Valery
+                                        </h4>
+                                        <p class="ui-article-sidebar__author-role">
+                                            Senior Design Editor
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="ui-article-sidebar__description">
+                                    Elena explores the intersection of cognitive psychology and digital craftsmanship.
+                                </p>
+
+                                <div class="ui-article-sidebar__social" aria-label="Author links">
+                                    <a class="ui-article-sidebar__social-link" href="mailto:elena@example.com"
+                                        aria-label="Email Elena Valery">
+                                        <span class="material-symbols-outlined"
+                                            aria-hidden="true">alternate_email</span>
+                                    </a>
+                                    <a class="ui-article-sidebar__social-link" href="https://example.com/elena"
+                                        aria-label="Visit Elena Valery's website">
+                                        <span class="material-symbols-outlined" aria-hidden="true">public</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-author-card-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-author-card-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <aside class="ui-author-card ui-author-card--editorial"
+                                aria-labelledby="comparison-author-card-name">
+                                <div class="ui-author-card__header">
+                                    <div class="ui-author-card__avatar-wrapper">
+                                        <img class="ui-author-card__avatar" src="img/unnamed (1).png"
+                                            alt="Elena Valery">
+                                    </div>
+
+                                    <div class="ui-author-card__identity">
+                                        <h4 class="ui-author-card__name" id="comparison-author-card-name">
+                                            Elena Valery
+                                        </h4>
+                                        <p class="ui-author-card__role">
+                                            Senior Design Editor
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="ui-author-card__bio">
+                                    Elena explores the intersection of cognitive psychology and digital craftsmanship.
+                                </p>
+
+                                <div class="ui-author-card__links" aria-label="Author links">
+                                    <a class="ui-author-card__link" href="mailto:elena@example.com"
+                                        aria-label="Email Elena Valery">
+                                        <span class="material-symbols-outlined"
+                                            aria-hidden="true">alternate_email</span>
+                                    </a>
+                                    <a class="ui-author-card__link" href="https://example.com/elena"
+                                        aria-label="Visit Elena Valery's website">
+                                        <span class="material-symbols-outlined" aria-hidden="true">public</span>
+                                    </a>
+                                </div>
+                            </aside>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-comment-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-comment-title">
+                        Comment vs Article Main Comment
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-comment-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-comment-original-label">
+                                Original
+                            </h4>
+
+                            <div class="ui-article-main__comment">
+                                <div class="ui-article-main__avatar-container">
+                                    <img class="ui-article-main__avatar" src="img/Hanekawa Tsubasa.jpg"
+                                        alt="Julian Moss">
+                                </div>
+
+                                <div>
+                                    <div class="ui-article-main__meta">
+                                        <span class="ui-article-main__author">Julian Moss</span>
+                                        <span class="ui-article-main__time">2h ago</span>
+                                    </div>
+
+                                    <p class="ui-article-main__text">
+                                        The point about motion as spatial awareness is critical. I've seen too many
+                                        minimalist apps where I get lost because views just pop in without context.
+                                    </p>
+
+                                    <button class="ui-article-main__reply-button" type="button">Reply</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-comment-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-comment-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <article class="ui-comment">
+                                <div class="ui-comment__avatar-wrapper">
+                                    <img class="ui-comment__avatar" src="img/Hanekawa Tsubasa.jpg" alt="Julian Moss">
+                                </div>
+
+                                <div class="ui-comment__body">
+                                    <header class="ui-comment__header">
+                                        <span class="ui-comment__author">Julian Moss</span>
+                                        <time class="ui-comment__time"
+                                            datetime="2026-06-23T14:00:00">2h ago</time>
+                                    </header>
+
+                                    <p class="ui-comment__text">
+                                        The point about motion as spatial awareness is critical. I've seen too many
+                                        minimalist apps where I get lost because views just pop in without context.
+                                    </p>
+
+                                    <button class="ui-comment__reply" type="button">Reply</button>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="demo-comparison" aria-labelledby="demo-comparison-comment-form-title">
+                    <h3 class="demo-comparison__title" id="demo-comparison-comment-form-title">
+                        Comment Form vs Article Main Comment Form
+                    </h3>
+
+                    <div class="demo-comparison__grid">
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-comment-form-original-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-comment-form-original-label">
+                                Original
+                            </h4>
+
+                            <div class="ui-article-main__comment-form">
+                                <h4 class="ui-article-main__form-title">
+                                    Add to the Conversation
+                                </h4>
+
+                                <label for="comparison-article-comment">
+                                    Comment
+                                </label>
+                                <textarea class="ui-article-main__textarea" id="comparison-article-comment"
+                                    name="comment" placeholder="Share your thoughts..."></textarea>
+
+                                <button class="ui-article-main__submit" type="submit">
+                                    Post Comment
+                                </button>
+                            </div>
+                        </section>
+
+                        <section class="demo-comparison__panel"
+                            aria-labelledby="demo-comparison-comment-form-primitive-label">
+                            <h4 class="demo-comparison__label" id="demo-comparison-comment-form-primitive-label">
+                                Primitive
+                            </h4>
+
+                            <form class="ui-comment-form" action="/comments" method="post"
+                                aria-labelledby="comparison-comment-form-title">
+                                <h4 class="ui-comment-form__title" id="comparison-comment-form-title">
+                                    Add to the Conversation
+                                </h4>
+
+                                <div class="ui-comment-form__field">
+                                    <label class="ui-comment-form__label" for="comparison-comment">
+                                        Comment
+                                    </label>
+                                    <textarea class="ui-comment-form__textarea" id="comparison-comment"
+                                        name="comment" placeholder="Share your thoughts..."></textarea>
+                                </div>
+
+                                <div class="ui-comment-form__actions">
+                                    <button class="ui-comment-form__submit" type="submit">
+                                        Post Comment
+                                    </button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </section>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-section-header-title">
+                <h2 class="demo-components__section-title" id="demo-section-header-title">ui-section-header</h2>
+
+                <div class="demo-components__stack">
+                    <header class="ui-section-header" aria-labelledby="section-header-standard-title">
+                        <h2 class="ui-section-header__title" id="section-header-standard-title">
+                            Latest Stories
+                        </h2>
+
+                        <p class="ui-section-header__description">
+                            Recent articles from the editorial desk.
+                        </p>
+                    </header>
+
+                    <header class="ui-section-header ui-section-header--inline ui-section-header--with-divider">
+                        <h2 class="ui-section-header__title">Read Next</h2>
+                        <span class="ui-section-header__divider" aria-hidden="true"></span>
+                    </header>
+
+                    <header class="ui-section-header ui-section-header--compact ui-section-header--accent">
+                        <h3 class="ui-section-header__title">Categories</h3>
+                    </header>
+
+                    <header class="ui-section-header ui-section-header--editorial">
+                        <h2 class="ui-section-header__title">Latest Stories</h2>
+                    </header>
+
+                    <header class="ui-section-header ui-section-header--related ui-section-header--with-divider">
+                        <h2 class="ui-section-header__title">Related Reads</h2>
+                        <span class="ui-section-header__divider" aria-hidden="true"></span>
+                    </header>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-eyebrow-title">
+                <h2 class="demo-components__section-title" id="demo-eyebrow-title">ui-eyebrow</h2>
+
+                <div class="demo-components__stack">
+                    <span class="ui-eyebrow">Design</span>
+
+                    <a class="ui-eyebrow" href="#components">
+                        Editorial Systems
+                    </a>
+
+                    <span class="ui-eyebrow ui-eyebrow--compact">
+                        Tech
+                    </span>
+
+                    <span class="ui-eyebrow ui-eyebrow--muted">
+                        Sponsored
+                    </span>
+
+                    <span class="ui-eyebrow ui-eyebrow--accent">
+                        Featured Story
+                    </span>
+
+                    <span class="ui-eyebrow ui-eyebrow--editorial">
+                        Color Theory
+                    </span>
+
+                    <a class="ui-eyebrow ui-eyebrow--underline" href="#components">
+                        Development
+                    </a>
+                </div>
+            </section>
+
+            <section class="demo-components__section" id="components" aria-labelledby="demo-tag-list-title">
+                <h2 class="demo-components__section-title" id="demo-tag-list-title">ui-tag-list</h2>
+
+                <div class="demo-components__stack">
+                    <ul class="ui-tag-list" aria-label="Article tags">
+                        <li class="ui-tag-list__item">
+                            <span class="ui-tag-list__tag">Accessibility</span>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <span class="ui-tag-list__tag">Design Systems</span>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <span class="ui-tag-list__tag">SCSS</span>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-tag-list ui-tag-list--interactive" aria-label="Filter by topic">
+                        <li class="ui-tag-list__item">
+                            <button class="ui-tag-list__tag ui-tag-list__tag--active" type="button" aria-pressed="true">
+                                Components
+                            </button>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <button class="ui-tag-list__tag" type="button" aria-pressed="false">
+                                Tokens
+                            </button>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <button class="ui-tag-list__tag" type="button" aria-pressed="false">
+                                Layouts
+                            </button>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-tag-list ui-tag-list--with-count ui-tag-list--stacked" aria-label="Categories">
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="#components">
+                                <span class="ui-tag-list__label">Components</span>
+                                <span class="ui-tag-list__count" aria-label="5 components">5</span>
+                            </a>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="#demo-toc-title">
+                                <span class="ui-tag-list__label">Guides</span>
+                                <span class="ui-tag-list__count" aria-label="1 guide section">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-callout-title">
+                <h2 class="demo-components__section-title" id="demo-callout-title">ui-callout</h2>
+
+                <div class="demo-components__stack">
+                    <aside class="ui-callout" aria-labelledby="callout-note-title">
+                        <div class="ui-callout__body">
+                            <h3 class="ui-callout__title" id="callout-note-title">Before using SayUI</h3>
+                            <p class="ui-callout__content">
+                                Import the compiled CSS bundle before applying component classes.
+                            </p>
+                        </div>
+                    </aside>
+
+                    <aside class="ui-callout ui-callout--warning" aria-labelledby="callout-warning-title">
+                        <span class="ui-callout__icon" aria-hidden="true">!</span>
+                        <div class="ui-callout__body">
+                            <h3 class="ui-callout__title" id="callout-warning-title">Contract first</h3>
+                            <p class="ui-callout__content">
+                                Keep semantic HTML intact when copying component examples.
+                            </p>
+                        </div>
+                    </aside>
+
+                    <aside class="ui-callout ui-callout--strong ui-callout--success"
+                        aria-labelledby="callout-success-title">
+                        <div class="ui-callout__body">
+                            <h3 class="ui-callout__title" id="callout-success-title">Framework agnostic</h3>
+                            <p class="ui-callout__content">
+                                This component works without JavaScript or a framework runtime.
+                            </p>
+                            <div class="ui-callout__actions">
+                                <a class="ui-callout__link" href="../../docs/components.md">Read contract</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-pullquote-title">
+                <h2 class="demo-components__section-title" id="demo-pullquote-title">ui-pullquote</h2>
+
+                <div class="demo-components__stack">
+                    <blockquote class="ui-pullquote">
+                        <p class="ui-pullquote__content">
+                            Minimalism is not absence. It is the right amount of signal.
+                        </p>
+                    </blockquote>
+
+                    <blockquote class="ui-pullquote ui-pullquote--decorated">
+                        <span class="ui-pullquote__mark" aria-hidden="true">&ldquo;</span>
+
+                        <p class="ui-pullquote__content">
+                            Motion is the why and where of the interface.
+                        </p>
+
+                        <cite class="ui-pullquote__cite">
+                            Elena Valery
+                        </cite>
+                    </blockquote>
+
+                    <blockquote class="ui-pullquote ui-pullquote--compact">
+                        <p class="ui-pullquote__content">
+                            Good editorial rhythm is quiet but deliberate.
+                        </p>
+                    </blockquote>
+
+                    <blockquote class="ui-pullquote ui-pullquote--strong">
+                        <p class="ui-pullquote__content">
+                            A strong pullquote should add emphasis without becoming a callout.
+                        </p>
+                    </blockquote>
+
+                    <blockquote class="ui-pullquote ui-pullquote--decorated ui-pullquote--editorial">
+                        <span class="ui-pullquote__mark" aria-hidden="true">&ldquo;</span>
+
+                        <p class="ui-pullquote__content">
+                            Design systems become memorable when their rhythm feels intentional.
+                        </p>
+
+                        <cite class="ui-pullquote__cite">
+                            SayUI editorial notes
+                        </cite>
+                    </blockquote>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-newsletter-title">
+                <h2 class="demo-components__section-title" id="demo-newsletter-title">ui-newsletter</h2>
+
+                <div class="demo-components__stack">
+                    <section class="ui-newsletter" aria-labelledby="newsletter-demo-title">
+                        <span class="ui-newsletter__icon" aria-hidden="true">@</span>
+
+                        <div class="ui-newsletter__body">
+                            <h2 class="ui-newsletter__title" id="newsletter-demo-title">The Weekly Digest</h2>
+
+                            <p class="ui-newsletter__text">
+                                Get selected stories delivered to your inbox every Sunday.
+                            </p>
+
+                            <form class="ui-newsletter__form" action="/subscribe" method="post">
+                                <label class="ui-newsletter__label" for="newsletter-demo-email">Email address</label>
+                                <input class="ui-newsletter__input" id="newsletter-demo-email" name="email"
+                                    type="email" autocomplete="email" placeholder="you@example.com">
+                                <button class="ui-newsletter__submit" type="submit">Subscribe Now</button>
+                                <p class="ui-newsletter__note">No spam, ever. Unsubscribe anytime.</p>
+                            </form>
+                        </div>
+                    </section>
+
+                    <section class="ui-newsletter ui-newsletter--strong" aria-labelledby="newsletter-strong-demo-title">
+                        <span class="ui-newsletter__icon" aria-hidden="true">@</span>
+
+                        <div class="ui-newsletter__body">
+                            <h2 class="ui-newsletter__title" id="newsletter-strong-demo-title">The Weekly Digest</h2>
+
+                            <p class="ui-newsletter__text">
+                                Join 20,000+ designers and get our best stories delivered every Sunday.
+                            </p>
+
+                            <form class="ui-newsletter__form" action="/subscribe" method="post">
+                                <label class="ui-newsletter__label" for="newsletter-strong-demo-email">Email
+                                    address</label>
+                                <input class="ui-newsletter__input" id="newsletter-strong-demo-email" name="email"
+                                    type="email" autocomplete="email" placeholder="Your email address">
+                                <button class="ui-newsletter__submit" type="submit">Subscribe Now</button>
+                                <p class="ui-newsletter__note">No spam, ever. Unsubscribe anytime.</p>
+                            </form>
+                        </div>
+                    </section>
+
+                    <aside class="ui-newsletter ui-newsletter--compact" aria-labelledby="newsletter-compact-demo-title">
+                        <h3 class="ui-newsletter__title" id="newsletter-compact-demo-title">Weekly updates</h3>
+
+                        <form class="ui-newsletter__form" action="/subscribe" method="post">
+                            <label class="ui-newsletter__label" for="newsletter-compact-demo-email">Email
+                                address</label>
+                            <input class="ui-newsletter__input" id="newsletter-compact-demo-email" name="email"
+                                type="email" autocomplete="email" placeholder="you@example.com">
+                            <button class="ui-newsletter__submit" type="submit">Subscribe</button>
+                        </form>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-author-card-title">
+                <h2 class="demo-components__section-title" id="demo-author-card-title">ui-author-card</h2>
+
+                <div class="demo-components__stack">
+                    <article class="ui-author-card" aria-labelledby="author-card-demo-minimal-name">
+                        <h3 class="ui-author-card__name" id="author-card-demo-minimal-name">
+                            Elena Valery
+                        </h3>
+                    </article>
+
+                    <article class="ui-author-card" aria-labelledby="author-card-demo-full-name">
+                        <div class="ui-author-card__header">
+                            <div class="ui-author-card__avatar-wrapper">
+                                <img class="ui-author-card__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+                            </div>
+
+                            <div class="ui-author-card__identity">
+                                <h3 class="ui-author-card__name" id="author-card-demo-full-name">
+                                    Elena Valery
+                                </h3>
+                                <p class="ui-author-card__role">Senior Design Editor</p>
+                            </div>
+                        </div>
+
+                        <p class="ui-author-card__bio">
+                            Elena explores the intersection of cognitive psychology and digital craftsmanship.
+                        </p>
+
+                        <div class="ui-author-card__links" aria-label="Author links">
+                            <a class="ui-author-card__link" href="mailto:elena@example.com"
+                                aria-label="Email Elena Valery">
+                                <span aria-hidden="true">@</span>
+                            </a>
+                            <a class="ui-author-card__link" href="https://example.com/elena"
+                                aria-label="Visit Elena Valery website">
+                                <span aria-hidden="true">www</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="ui-author-card" aria-labelledby="author-card-demo-no-avatar-name">
+                        <div class="ui-author-card__identity">
+                            <h3 class="ui-author-card__name" id="author-card-demo-no-avatar-name">
+                                Elena Valery
+                            </h3>
+                            <p class="ui-author-card__role">Senior Design Editor</p>
+                        </div>
+
+                        <p class="ui-author-card__bio">
+                            Elena writes about interface craft and editorial systems.
+                        </p>
+                    </article>
+
+                    <article class="ui-author-card ui-author-card--compact"
+                        aria-labelledby="author-card-demo-compact-name">
+                        <div class="ui-author-card__header">
+                            <div class="ui-author-card__avatar-wrapper">
+                                <img class="ui-author-card__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+                            </div>
+
+                            <div class="ui-author-card__identity">
+                                <h3 class="ui-author-card__name" id="author-card-demo-compact-name">
+                                    Elena Valery
+                                </h3>
+                                <p class="ui-author-card__role">Senior Editor</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <aside class="ui-author-card ui-author-card--editorial"
+                        aria-labelledby="author-card-demo-editorial-name">
+                        <div class="ui-author-card__header">
+                            <div class="ui-author-card__avatar-wrapper">
+                                <img class="ui-author-card__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+                            </div>
+
+                            <div class="ui-author-card__identity">
+                                <h3 class="ui-author-card__name" id="author-card-demo-editorial-name">
+                                    Elena Valery
+                                </h3>
+                                <p class="ui-author-card__role">Senior Design Editor</p>
+                            </div>
+                        </div>
+
+                        <p class="ui-author-card__bio">
+                            Elena explores the intersection of cognitive psychology and digital craftsmanship.
+                        </p>
+
+                        <div class="ui-author-card__links" aria-label="Author links">
+                            <a class="ui-author-card__link" href="mailto:elena@example.com"
+                                aria-label="Email Elena Valery">
+                                <span aria-hidden="true">@</span>
+                            </a>
+                            <a class="ui-author-card__link" href="https://example.com/elena"
+                                aria-label="Visit Elena Valery website">
+                                <span aria-hidden="true">www</span>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-byline-title">
+                <h2 class="demo-components__section-title" id="demo-byline-title">ui-byline</h2>
+
+                <div class="demo-components__stack">
+                    <p class="ui-byline">
+                        <span class="ui-byline__name">Elena Valery</span>
+                    </p>
+
+                    <div class="ui-byline">
+                        <img class="ui-byline__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+
+                        <div class="ui-byline__body">
+                            <span class="ui-byline__name">Elena Valery</span>
+                        </div>
+                    </div>
+
+                    <div class="ui-byline">
+                        <img class="ui-byline__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+
+                        <div class="ui-byline__body">
+                            <a class="ui-byline__name" href="blog-author.html">Elena Valery</a>
+                        </div>
+                    </div>
+
+                    <div class="ui-byline">
+                        <img class="ui-byline__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+
+                        <div class="ui-byline__body">
+                            <a class="ui-byline__name" href="blog-author.html">Elena Valery</a>
+
+                            <span class="ui-byline__meta">
+                                <span class="ui-byline__item">
+                                    <time datetime="2024-03-24">Mar 24, 2024</time>
+                                </span>
+                                <span class="ui-byline__item">8 min read</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="ui-byline ui-byline--compact">
+                        <span class="ui-byline__name">Elena Valery</span>
+                        <span class="ui-byline__meta">
+                            <span class="ui-byline__item">8 min read</span>
+                        </span>
+                    </p>
+
+                    <div class="ui-byline ui-byline--stacked">
+                        <img class="ui-byline__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+
+                        <div class="ui-byline__body">
+                            <span class="ui-byline__name">Elena Valery</span>
+
+                            <span class="ui-byline__meta">
+                                <span class="ui-byline__item">
+                                    <time datetime="2024-03-24">Mar 24, 2024</time>
+                                </span>
+                                <span class="ui-byline__item">8 min read</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <address class="ui-byline">
+                        <img class="ui-byline__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+
+                        <div class="ui-byline__body">
+                            <a class="ui-byline__name" href="blog-author.html">Elena Valery</a>
+                            <span class="ui-byline__meta">
+                                <span class="ui-byline__item">Editorial desk</span>
+                            </span>
+                        </div>
+                    </address>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-comment-title">
+                <h2 class="demo-components__section-title" id="demo-comment-title">ui-comment</h2>
+
+                <div class="demo-components__stack">
+                    <article class="ui-comment">
+                        <div class="ui-comment__body">
+                            <header class="ui-comment__header">
+                                <span class="ui-comment__author">Julian Moss</span>
+                            </header>
+
+                            <p class="ui-comment__text">
+                                This is a thoughtful comment.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="ui-comment">
+                        <div class="ui-comment__avatar-wrapper">
+                            <img class="ui-comment__avatar" src="img/Hanekawa Tsubasa.jpg" alt="Julian Moss">
+                        </div>
+
+                        <div class="ui-comment__body">
+                            <header class="ui-comment__header">
+                                <span class="ui-comment__author">Julian Moss</span>
+                                <time class="ui-comment__time" datetime="2026-06-23T14:00:00">2h ago</time>
+                            </header>
+
+                            <p class="ui-comment__text">
+                                The point about motion as spatial awareness is critical.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="ui-comment">
+                        <div class="ui-comment__avatar-wrapper">
+                            <img class="ui-comment__avatar" src="img/e392d05893d73ba1a9da81d3f3752daf.jpg"
+                                alt="Elena Valery">
+                        </div>
+
+                        <div class="ui-comment__body">
+                            <header class="ui-comment__header">
+                                <span class="ui-comment__author">Elena Valery</span>
+                                <span class="ui-comment__badge">Author</span>
+                                <time class="ui-comment__time" datetime="2026-06-23T15:00:00">1h ago</time>
+                            </header>
+
+                            <p class="ui-comment__text">
+                                Motion is the why and where of the interface.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="ui-comment">
+                        <div class="ui-comment__body">
+                            <header class="ui-comment__header">
+                                <span class="ui-comment__author">Julian Moss</span>
+                                <time class="ui-comment__time" datetime="2026-06-23T14:00:00">2h ago</time>
+                            </header>
+
+                            <p class="ui-comment__text">
+                                This is exactly the kind of detail that makes motion feel useful.
+                            </p>
+
+                            <button class="ui-comment__reply" type="button">Reply</button>
+                        </div>
+                    </article>
+
+                    <article class="ui-comment ui-comment--reply">
+                        <div class="ui-comment__avatar-wrapper">
+                            <img class="ui-comment__avatar" src="img/e392d05893d73ba1a9da81d3f3752daf.jpg"
+                                alt="Elena Valery">
+                        </div>
+
+                        <div class="ui-comment__body">
+                            <header class="ui-comment__header">
+                                <span class="ui-comment__author">Elena Valery</span>
+                                <span class="ui-comment__badge">Author</span>
+                                <time class="ui-comment__time" datetime="2026-06-23T15:00:00">1h ago</time>
+                            </header>
+
+                            <p class="ui-comment__text">
+                                Exactly. Motion should explain where the interface is going.
+                            </p>
+
+                            <button class="ui-comment__reply" type="button">Reply</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-comment-form-title">
+                <h2 class="demo-components__section-title" id="demo-comment-form-title">ui-comment-form</h2>
+
+                <div class="demo-components__stack">
+                    <form class="ui-comment-form" aria-label="Add a comment">
+                        <div class="ui-comment-form__field">
+                            <label class="ui-comment-form__label" for="demo-comment-minimal">Comment</label>
+                            <textarea class="ui-comment-form__textarea" id="demo-comment-minimal"
+                                name="comment"></textarea>
+                        </div>
+
+                        <div class="ui-comment-form__actions">
+                            <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                        </div>
+                    </form>
+
+                    <form class="ui-comment-form" action="/comments" method="post"
+                        aria-labelledby="demo-comment-recommended-title">
+                        <h3 class="ui-comment-form__title" id="demo-comment-recommended-title">
+                            Add to the Conversation
+                        </h3>
+
+                        <div class="ui-comment-form__field">
+                            <label class="ui-comment-form__label" for="demo-comment-recommended">Comment</label>
+                            <textarea class="ui-comment-form__textarea" id="demo-comment-recommended" name="comment"
+                                rows="6"></textarea>
+                        </div>
+
+                        <div class="ui-comment-form__actions">
+                            <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                        </div>
+                    </form>
+
+                    <form class="ui-comment-form" action="/comments" method="post"
+                        aria-labelledby="demo-comment-help-title">
+                        <h3 class="ui-comment-form__title" id="demo-comment-help-title">Leave a Comment</h3>
+
+                        <div class="ui-comment-form__field">
+                            <label class="ui-comment-form__label" for="demo-comment-help">Comment</label>
+                            <textarea class="ui-comment-form__textarea" id="demo-comment-help" name="comment" rows="6"
+                                aria-describedby="demo-comment-note"></textarea>
+                            <p class="ui-comment-form__note" id="demo-comment-note">
+                                Keep your response relevant and respectful.
+                            </p>
+                        </div>
+
+                        <div class="ui-comment-form__actions">
+                            <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                        </div>
+                    </form>
+
+                    <form class="ui-comment-form" action="/comments" method="post" aria-label="Write a comment">
+                        <div class="ui-comment-form__field">
+                            <label class="ui-comment-form__label" for="demo-comment-untitled">Comment</label>
+                            <textarea class="ui-comment-form__textarea" id="demo-comment-untitled" name="comment"
+                                rows="6"></textarea>
+                        </div>
+
+                        <div class="ui-comment-form__actions">
+                            <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                        </div>
+                    </form>
+
+                    <section class="demo-components__stack" aria-labelledby="demo-comment-composition-title">
+                        <header class="ui-section-header ui-section-header--compact">
+                            <h3 class="ui-section-header__title" id="demo-comment-composition-title">
+                                Discussion
+                            </h3>
+                        </header>
+
+                        <article class="ui-comment">
+                            <div class="ui-comment__body">
+                                <header class="ui-comment__header">
+                                    <span class="ui-comment__author">Julian Moss</span>
+                                    <time class="ui-comment__time" datetime="2026-06-23T14:00:00">2h ago</time>
+                                </header>
+
+                                <p class="ui-comment__text">
+                                    Semantic forms make the discussion easier to use.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="ui-comment">
+                            <div class="ui-comment__body">
+                                <header class="ui-comment__header">
+                                    <span class="ui-comment__author">Nora Vale</span>
+                                    <time class="ui-comment__time" datetime="2026-06-23T14:30:00">90m ago</time>
+                                </header>
+
+                                <p class="ui-comment__text">
+                                    Keeping submission behavior outside the component makes the contract portable.
+                                </p>
+                            </div>
+                        </article>
+
+                        <form class="ui-comment-form" action="/comments" method="post"
+                            aria-labelledby="demo-composition-form-title">
+                            <h4 class="ui-comment-form__title" id="demo-composition-form-title">Add a Comment</h4>
+
+                            <div class="ui-comment-form__field">
+                                <label class="ui-comment-form__label" for="demo-composition-comment">Comment</label>
+                                <textarea class="ui-comment-form__textarea" id="demo-composition-comment"
+                                    name="comment" rows="6"></textarea>
+                            </div>
+
+                            <div class="ui-comment-form__actions">
+                                <button class="ui-comment-form__submit" type="submit">Post Comment</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-social-links-title">
+                <h2 class="demo-components__section-title" id="demo-social-links-title">ui-social-links</h2>
+
+                <div class="demo-components__stack">
+                    <ul class="ui-social-links" aria-label="Social links">
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="blog-index.html">
+                                <span class="ui-social-links__label">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-social-links" aria-label="Follow SayUI">
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="https://social.example/sayui"
+                                aria-label="Follow SayUI on Example">
+                                <span class="ui-social-links__icon" aria-hidden="true">EX</span>
+                            </a>
+                        </li>
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="blog-index.html"
+                                aria-label="Subscribe to the RSS feed">
+                                <span class="ui-social-links__icon" aria-hidden="true">RSS</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-social-links" aria-label="Contact and social links">
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="mailto:hello@example.com">
+                                <span class="ui-social-links__label">Email</span>
+                            </a>
+                        </li>
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="https://example.com">
+                                <span class="ui-social-links__label">Website</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-social-links ui-social-links--compact" aria-label="Editorial channels">
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="blog-index.html">
+                                <span class="ui-social-links__label">RSS</span>
+                            </a>
+                        </li>
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="blog-home.html">
+                                <span class="ui-social-links__label">Newsletter</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-social-links ui-social-links--boxed" aria-label="Author links">
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="mailto:elena@example.com"
+                                aria-label="Email Elena Valery">
+                                <span class="ui-social-links__icon" aria-hidden="true">@</span>
+                            </a>
+                        </li>
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="https://example.com/elena"
+                                aria-label="Visit Elena Valery's website">
+                                <span class="ui-social-links__icon" aria-hidden="true">www</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-social-links ui-social-links--boxed" aria-label="SayUI channels">
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="blog-index.html">
+                                <span class="ui-social-links__icon" aria-hidden="true">RSS</span>
+                                <span class="ui-social-links__label">Subscribe</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-related-list-title">
+                <h2 class="demo-components__section-title" id="demo-related-list-title">ui-related-list</h2>
+
+                <div class="demo-components__stack">
+                    <ul class="ui-related-list" aria-label="Related articles">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">
+                                    Digital Sovereignty in the Age of AI
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <section aria-labelledby="related-list-demo-title">
+                        <h3 id="related-list-demo-title">Related Stories</h3>
+
+                        <ul class="ui-related-list">
+                            <li class="ui-related-list__item">
+                                <a class="ui-related-list__link" href="blog-article.html">
+                                    <span class="ui-related-list__category">Politics</span>
+                                    <span class="ui-related-list__title">
+                                        Digital Sovereignty in the Age of AI
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="ui-related-list__item">
+                                <a class="ui-related-list__link" href="blog-article.html">
+                                    <span class="ui-related-list__category">Culture</span>
+                                    <span class="ui-related-list__title">
+                                        The Return of Neumorphism
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <ul class="ui-related-list" aria-label="Related stories by category">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__category">Tech</span>
+                                <span class="ui-related-list__title">
+                                    Hardware for the Distracted: The Light Phone III
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-related-list" aria-label="Trending stories">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">
+                                    10 Grid Systems Every Designer Should Master
+                                </span>
+                                <span class="ui-related-list__meta">48k views</span>
+                            </a>
+                        </li>
+
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">
+                                    Designing with Time as a Constraint
+                                </span>
+                                <span class="ui-related-list__meta">
+                                    <time datetime="2026-06-23">Jun 23, 2026</time>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-related-list ui-related-list--compact" aria-label="Related resources">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">Motion as spatial context</span>
+                            </a>
+                        </li>
+
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">Minimalism and cognitive load</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-related-list ui-related-list--divided" aria-label="Related stories">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__category">Politics</span>
+                                <span class="ui-related-list__title">
+                                    Digital Sovereignty in the Age of AI
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__category">Culture</span>
+                                <span class="ui-related-list__title">
+                                    The Return of Neumorphism
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ol class="ui-related-list" aria-label="Recommended reading order">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">Start with semantic HTML</span>
+                            </a>
+                        </li>
+
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">Then apply reusable classes</span>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-trending-list-title">
+                <h2 class="demo-components__section-title" id="demo-trending-list-title">ui-trending-list</h2>
+
+                <div class="demo-components__stack">
+                    <ul class="ui-trending-list" aria-label="Trending articles">
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        10 Grid Systems Every Designer Should Master
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-trending-list" aria-label="Trending articles with thumbnails">
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__media">
+                                    <img class="ui-trending-list__image" src="img/Hanekawa Tsubasa.jpg" alt="">
+                                </span>
+
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        10 Grid Systems Every Designer Should Master
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-trending-list" aria-label="Most viewed articles">
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__media">
+                                    <img class="ui-trending-list__image" src="img/Hanekawa Tsubasa.jpg" alt="">
+                                </span>
+
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        10 Grid Systems Every Designer Should Master
+                                    </span>
+                                    <span class="ui-trending-list__meta">48k views</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-trending-list" aria-label="Recent recommendations">
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__media">
+                                    <img class="ui-trending-list__image" src="img/unnamed.png"
+                                        alt="Abstract editorial interface preview">
+                                </span>
+
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        Designing with Time as a Constraint
+                                    </span>
+                                    <span class="ui-trending-list__meta">
+                                        <time datetime="2026-06-23">Jun 23, 2026</time>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-trending-list ui-trending-list--compact" aria-label="Trending resources">
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__media">
+                                    <img class="ui-trending-list__image" src="img/unnamed (1).png" alt="">
+                                </span>
+
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        Motion as spatial context
+                                    </span>
+                                    <span class="ui-trending-list__meta">8 min read</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="ui-trending-list ui-trending-list--divided" aria-label="Popular articles">
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__media">
+                                    <img class="ui-trending-list__image" src="img/Hanekawa Tsubasa.jpg" alt="">
+                                </span>
+
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        10 Grid Systems Every Designer Should Master
+                                    </span>
+                                    <span class="ui-trending-list__meta">48k views</span>
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__media">
+                                    <img class="ui-trending-list__image" src="img/unnamed (2).png" alt="">
+                                </span>
+
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        Editorial Components as Product Surface
+                                    </span>
+                                    <span class="ui-trending-list__meta">18k views</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ol class="ui-trending-list" aria-label="Manual editorial ranking">
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__media">
+                                    <img class="ui-trending-list__image" src="img/unnamed(3).png" alt="">
+                                </span>
+
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        Start with semantic HTML
+                                    </span>
+                                    <span class="ui-trending-list__meta">Editor's pick</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-table-title">
+                <h2 class="demo-components__section-title" id="demo-table-title">ui-table</h2>
+
+                <div class="ui-table__wrapper">
+                    <table class="ui-table ui-table--responsive ui-table--striped">
+                        <caption class="ui-table__caption">
+                            Component support matrix
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Component</th>
+                                <th scope="col">JavaScript</th>
+                                <th scope="col">Primary use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">ui-callout</th>
+                                <td>Not required</td>
+                                <td>Editorial and technical notes</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ui-table</th>
+                                <td>Not required</td>
+                                <td>Tabular data</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ui-toc</th>
+                                <td>Not required</td>
+                                <td>Static in-page navigation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-code-title">
+                <h2 class="demo-components__section-title" id="demo-code-title">ui-code-block</h2>
+
+                <div class="demo-components__stack">
+                    <pre class="ui-code-block"><code>npm run build</code></pre>
+
+                    <figure class="ui-code-block">
+                        <figcaption class="ui-code-block__caption">
+                            Component markup
+                        </figcaption>
+
+                        <div class="ui-code-block__header">
+                            <span class="ui-code-block__filename">example.html</span>
+                            <span class="ui-code-block__language">html</span>
+                            <button class="ui-code-block__copy" type="button">Copy</button>
+                        </div>
+
+                        <pre class="ui-code-block__pre"><code class="ui-code-block__code">&lt;article class="ui-callout"&gt;
+  &lt;p class="ui-callout__content"&gt;Accessible by default.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-toc-title">
+                <h2 class="demo-components__section-title" id="demo-toc-title">ui-toc</h2>
+
+                <div class="demo-components__split">
+                    <article class="demo-components__stack">
+                        <section id="overview">
+                            <h3>Overview</h3>
+                            <p>
+                                The TOC links point to real headings on the page. Active state is manual and does not
+                                require scrollspy.
+                            </p>
+                        </section>
+
+                        <section id="installation">
+                            <h3>Installation</h3>
+                            <p>
+                                Consumer projects import the compiled CSS bundle and use documented classes.
+                            </p>
+                        </section>
+
+                        <section id="requirements">
+                            <h3>Requirements</h3>
+                            <p>
+                                SayUI components rely on semantic HTML, Sass-generated CSS, and accessible contracts.
+                            </p>
+                        </section>
+                    </article>
+
+                    <nav class="ui-toc ui-toc--boxed ui-toc--sticky" aria-labelledby="component-toc-title">
+                        <h3 class="ui-toc__title" id="component-toc-title">On this page</h3>
+
+                        <ol class="ui-toc__list">
+                            <li class="ui-toc__item ui-toc__item--active">
+                                <a class="ui-toc__link ui-toc__link--active" href="#overview"
+                                    aria-current="location">Overview</a>
+                            </li>
+                            <li class="ui-toc__item">
+                                <a class="ui-toc__link" href="#installation">Installation</a>
+
+                                <ol class="ui-toc__list ui-toc__list--nested">
+                                    <li class="ui-toc__item">
+                                        <a class="ui-toc__link" href="#requirements">Requirements</a>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-meta-list-title">
+                <h2 class="demo-components__section-title" id="demo-meta-list-title">ui-meta-list</h2>
+
+                <div class="demo-components__stack">
+                    <ul class="ui-meta-list ui-meta-list--inline ui-meta-list--with-separators"
+                        aria-label="Article metadata">
+                        <li class="ui-meta-list__item">
+                            <time datetime="2024-03-24">Mar 24, 2024</time>
+                        </li>
+                        <li class="ui-meta-list__item">5 min read</li>
+                        <li class="ui-meta-list__item">48k views</li>
+                    </ul>
+
+                    <ul class="ui-meta-list ui-meta-list--compact ui-meta-list--with-separators"
+                        aria-label="Compact article metadata">
+                        <li class="ui-meta-list__item">By Elena Valery</li>
+                        <li class="ui-meta-list__item">
+                            <time datetime="2026-06-22">Jun 22, 2026</time>
+                        </li>
+                        <li class="ui-meta-list__item">Design</li>
+                    </ul>
+
+                    <dl class="ui-meta-list ui-meta-list--stacked" aria-label="Publication metadata">
+                        <div class="ui-meta-list__item">
+                            <dt class="ui-meta-list__label">Published</dt>
+                            <dd class="ui-meta-list__value">
+                                <time datetime="2024-10-15">October 15, 2024</time>
+                            </dd>
+                        </div>
+
+                        <div class="ui-meta-list__item">
+                            <dt class="ui-meta-list__label">Author</dt>
+                            <dd class="ui-meta-list__value">Elena Valery</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
  @use'../../../styles/foundations/variables' as *;
  @use'../../../styles/foundations/mixins' as *;
  @use'../../../styles/foundations/typography' as *;
+ @use'../../../styles/foundations/breakpoints' as *;
 
  .ui-article-related {
      padding-top: 5rem;
@@ -120,7 +121,7 @@
 
  }
 
- @media (min-width: 768px) {
+ @include respond-md {
      .ui-article-related {
          &__grid {
              grid-template-columns: repeat(3, minmax(0, 1fr));

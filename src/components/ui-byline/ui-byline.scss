@@ -1,0 +1,107 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+@use '../../styles/foundations/radius' as *;
+
+.ui-byline {
+    @include text($size: $font-size-sm, $line-height: $leading-5, $weight: $font-weight-bold);
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-3;
+    margin: $space-0;
+    color: var(--dark);
+    font-style: normal;
+}
+
+.ui-byline__avatar {
+    display: block;
+    flex-shrink: 0;
+    width: $space-10;
+    height: $space-10;
+    border-radius: $radius-full;
+    background-color: var(--avatar-bg);
+    object-fit: cover;
+    object-position: center;
+}
+
+.ui-byline__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    min-width: $space-0;
+}
+
+.ui-byline__name {
+    color: inherit;
+    font-weight: $font-weight-extrabold;
+    text-decoration: none;
+}
+
+a.ui-byline__name {
+    transition: color 150ms ease;
+}
+
+a.ui-byline__name:hover {
+    color: var(--primary);
+}
+
+a.ui-byline__name:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.ui-byline__meta {
+    @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-bold);
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-1 $space-2;
+    color: var(--slate-light);
+}
+
+.ui-byline__item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: $space-1;
+}
+
+.ui-byline__item + .ui-byline__item::before {
+    content: "";
+    display: inline-block;
+    width: $space-1;
+    height: $space-1;
+    border-radius: $radius-full;
+    background-color: currentColor;
+    opacity: 0.7;
+}
+
+.ui-byline--compact {
+    @include text($size: $font-size-xs, $line-height: $leading-4, $weight: $font-weight-bold);
+
+    gap: $space-2;
+}
+
+.ui-byline--compact .ui-byline__avatar {
+    width: $space-8;
+    height: $space-8;
+}
+
+.ui-byline--compact .ui-byline__body {
+    gap: $space-0-5;
+}
+
+.ui-byline--compact .ui-byline__meta {
+    @include text($size: $font-size-2xs, $line-height: $leading-4, $weight: $font-weight-bold);
+}
+
+.ui-byline--stacked {
+    align-items: flex-start;
+}
+
+.ui-byline--stacked .ui-byline__body {
+    gap: $space-1-5;
+}

@@ -1,0 +1,110 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+@use '../../styles/foundations/radius' as *;
+@use '../../styles/foundations/shadows' as *;
+
+.ui-comment-form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+    width: 100%;
+    padding: $space-6;
+    border: 1px solid var(--border-soft);
+    border-radius: $radius-md;
+    background-color: var(--sidebar-bg);
+    color: var(--dark);
+    box-shadow: $shadow-inner-subtle;
+}
+
+.ui-comment-form__title {
+    @include text($size: $font-size-xl, $line-height: $leading-7, $weight: $font-weight-extrabold);
+
+    margin: $space-0;
+    color: var(--dark);
+}
+
+.ui-comment-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    width: 100%;
+}
+
+.ui-comment-form__label {
+    @include text($size: $font-size-sm, $line-height: $leading-5, $weight: $font-weight-bold);
+
+    color: var(--slate-strong);
+}
+
+.ui-comment-form__textarea {
+    @include text($size: $font-size-base, $line-height: $line-height-relaxed);
+
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 8rem;
+    padding: $space-4;
+    border: 1px solid var(--border-light);
+    border-radius: $radius-sm;
+    background-color: var(--white);
+    color: var(--dark);
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.ui-comment-form__textarea:focus-visible {
+    border-color: var(--primary);
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.ui-comment-form__note {
+    @include text($size: $font-size-xs, $line-height: $leading-5);
+
+    margin: $space-0;
+    color: var(--slate-medium);
+}
+
+.ui-comment-form__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-3;
+}
+
+.ui-comment-form__submit {
+    @include text($size: $font-size-sm, $line-height: $leading-5, $weight: $font-weight-bold);
+
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: $space-12;
+    padding: $space-3 $space-5;
+    border: 1px solid var(--dark);
+    border-radius: $radius-sm;
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: inherit;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.ui-comment-form__submit:hover {
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+
+.ui-comment-form__submit:active {
+    transform: scale(0.98);
+}
+
+.ui-comment-form__submit:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}

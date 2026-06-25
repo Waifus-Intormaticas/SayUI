@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="styles/demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayUI Original Components Demo</title>
+</head>
+
+<body>
+    <main class="demo-components">
+        <header class="demo-components__header">
+            <span class="demo-components__eyebrow">SayUI demo</span>
+            <h1 class="demo-components__title">Original components</h1>
+            <p class="demo-components__intro">
+                A focused gallery for SayUI's original components. These pieces are first-class reusable
+                components, shown here outside the complete page demos.
+            </p>
+        </header>
+
+        <div class="demo-components__grid">
+            <section class="demo-components__section" aria-labelledby="demo-topbars-title">
+                <h2 class="demo-components__section-title" id="demo-topbars-title">Topbars</h2>
+
+                <div class="demo-components__stack">
+                    <header class="ui-topbar">
+                        <div class="ui-topbar__inner">
+                            <div class="ui-topbar__left">
+                                <a class="ui-topbar__brand" href="blog-index.html">
+                                    <div class="ui-topbar__logo">
+                                        <span class="material-symbols-outlined" aria-hidden="true">broken_image</span>
+                                    </div>
+
+                                    <h1>SayUI</h1>
+                                </a>
+
+                                <nav class="ui-topbar__nav" aria-label="Primary">
+                                    <a href="blog-index.html" class="ui-topbar__link">Home</a>
+                                    <a href="blog-index.html" class="ui-topbar__link">Stories</a>
+                                    <a href="blog-index.html" class="ui-topbar__link">Design</a>
+                                    <a href="blog-index.html" class="ui-topbar__link">Culture</a>
+                                </nav>
+                            </div>
+
+                            <div class="ui-topbar__actions">
+                                <button class="ui-topbar__search-button" type="button" aria-label="Search">
+                                    <span class="material-symbols-outlined ui-topbar__search-icon"
+                                        aria-hidden="true">search</span>
+                                </button>
+                                <button class="ui-topbar__subscribe-button" type="button">Subscribe</button>
+                                <button class="ui-topbar__menu-button" type="button" aria-label="Open menu">
+                                    <span class="material-symbols-outlined ui-topbar__menu-icon"
+                                        aria-hidden="true">menu</span>
+                                </button>
+
+                                <nav class="ui-topbar__mobile-nav" aria-label="Mobile primary">
+                                    <a href="blog-index.html" class="ui-topbar__link">Home</a>
+                                    <a href="blog-index.html" class="ui-topbar__link">Stories</a>
+                                    <a href="blog-index.html" class="ui-topbar__link">Design</a>
+                                    <a href="blog-index.html" class="ui-topbar__link">Culture</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </header>
+
+                    <header class="ui-editorial-topbar">
+                        <div class="ui-editorial-topbar__inner">
+                            <div class="ui-editorial-topbar__left">
+                                <a class="ui-editorial-topbar__brand" href="blog-index.html">Crimson Courier</a>
+
+                                <nav class="ui-editorial-topbar__nav" aria-label="Editorial">
+                                    <a href="blog-index.html" class="ui-editorial-topbar__link">Latest</a>
+                                    <a href="blog-index.html" class="ui-editorial-topbar__link">Politics</a>
+                                    <a href="blog-index.html" class="ui-editorial-topbar__link">Culture</a>
+                                    <a href="blog-index.html" class="ui-editorial-topbar__link">Tech</a>
+                                </nav>
+                            </div>
+
+                            <div class="ui-editorial-topbar__actions">
+                                <button class="material-symbols-outlined ui-editorial-topbar__search-button"
+                                    type="button" aria-label="Search">
+                                    search
+                                </button>
+                                <button class="ui-editorial-topbar__subscribe-button" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-featured-title">
+                <h2 class="demo-components__section-title" id="demo-featured-title">Featured / Content</h2>
+
+                <div class="demo-components__stack">
+                    <section class="ui-banner" aria-labelledby="demo-banner-title">
+                        <div class="ui-banner__wrapper">
+                            <div class="ui-banner__media">
+                                <img src="img/wallhaven-je58ly_1920x1080.png" class="ui-banner__image"
+                                    alt="Abstract red architectural scene" />
+                            </div>
+
+                            <div class="ui-banner__content">
+                                <span class="ui-banner__eyebrow">Featured Story</span>
+
+                                <h2 class="ui-banner__title" id="demo-banner-title">
+                                    The Future of Minimalist Design
+                                </h2>
+
+                                <p class="ui-banner__description">
+                                    A reusable feature block for highlighting one editorial story with media,
+                                    author context, and a call to action.
+                                </p>
+
+                                <div class="ui-banner__author">
+                                    <img src="img/e392d05893d73ba1a9da81d3f3752daf.jpg" alt="Alex Debil"
+                                        class="ui-banner__author-image" />
+
+                                    <div class="ui-banner__author-info">
+                                        <p class="ui-banner__author-name">Alex Debil</p>
+                                        <p class="ui-banner__meta">Editorial Design - 8 min read</p>
+                                    </div>
+                                </div>
+
+                                <a href="blog-index.html" class="ui-banner__link">
+                                    Read full article
+                                    <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="ui-main">
+                        <div class="ui-main__header-row">
+                            <h3 class="ui-main__heading">Latest Stories</h3>
+                            <div class="ui-main__filters">
+                                <button class="ui-main__filter-button" type="button">All</button>
+                                <button class="ui-main__filter-button" type="button">Design</button>
+                                <button class="ui-main__filter-button" type="button">Tech</button>
+                                <button class="ui-main__filter-button" type="button">Culture</button>
+                            </div>
+                        </div>
+
+                        <div class="ui-main__grid">
+                            <article class="ui-post-card">
+                                <div class="ui-post-card__image-wrapper">
+                                    <img src="img/unnamed(3).png" alt="Color theory article thumbnail"
+                                        class="ui-post-card__image">
+                                </div>
+                                <div class="ui-post-card__content">
+                                    <span class="ui-post-card__eyebrow">Color Theory</span>
+                                    <h4 class="ui-post-card__title">Mastering Red in Editorial Interfaces</h4>
+                                    <p class="ui-post-card__description">
+                                        Exploring how a focused color system can hold a full editorial identity.
+                                    </p>
+                                    <div class="ui-post-card__meta">Mar 24, 2024 - 5 min read</div>
+                                </div>
+                            </article>
+
+                            <article class="ui-post-card">
+                                <div class="ui-post-card__image-wrapper">
+                                    <img src="img/unnamed (2).png" alt="Typography article thumbnail"
+                                        class="ui-post-card__image">
+                                </div>
+                                <div class="ui-post-card__content">
+                                    <span class="ui-post-card__eyebrow">Typography</span>
+                                    <h4 class="ui-post-card__title">Designing Rhythm for Long-Form Reading</h4>
+                                    <p class="ui-post-card__description">
+                                        How spacing, type scale, and restraint shape comfortable reading systems.
+                                    </p>
+                                    <div class="ui-post-card__meta">Apr 2, 2024 - 7 min read</div>
+                                </div>
+                            </article>
+
+                            <article class="ui-post-card">
+                                <div class="ui-post-card__image-wrapper">
+                                    <img src="img/Hanekawa Tsubasa.jpg" alt="Interface article thumbnail"
+                                        class="ui-post-card__image">
+                                </div>
+                                <div class="ui-post-card__content">
+                                    <span class="ui-post-card__eyebrow">Interfaces</span>
+                                    <h4 class="ui-post-card__title">Motion Systems for Editorial Products</h4>
+                                    <p class="ui-post-card__description">
+                                        Exploring subtle transitions as a reading aid rather than decoration.
+                                    </p>
+                                    <div class="ui-post-card__meta">Apr 12, 2024 - 6 min read</div>
+                                </div>
+                            </article>
+
+                            <article class="ui-post-card">
+                                <div class="ui-post-card__image-wrapper">
+                                    <img src="img/unnamed.png" alt="Minimalist design article thumbnail"
+                                        class="ui-post-card__image">
+                                </div>
+                                <div class="ui-post-card__content">
+                                    <span class="ui-post-card__eyebrow">Minimalism</span>
+                                    <h4 class="ui-post-card__title">Designing Quiet Systems With Strong Rhythm</h4>
+                                    <p class="ui-post-card__description">
+                                        A practical look at density, hierarchy, and editorial restraint.
+                                    </p>
+                                    <div class="ui-post-card__meta">May 1, 2024 - 4 min read</div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="ui-main__more">
+                            <button class="ui-main__more-button" type="button">
+                                More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-sidebar-title">
+                <h2 class="demo-components__section-title" id="demo-sidebar-title">Sidebars</h2>
+
+                <aside class="ui-sidebar">
+                    <section>
+                        <h4 class="ui-sidebar__section-title">Trending Now</h4>
+                        <div class="ui-sidebar__trending-list">
+                            <a href="blog-index.html" class="ui-sidebar__trending-item">
+                                <div class="ui-sidebar__thumb-wrapper">
+                                    <img src="img/Hanekawa Tsubasa.jpg" alt="Grid systems article thumbnail"
+                                        class="ui-sidebar__thumb">
+                                </div>
+                                <div>
+                                    <h5 class="ui-sidebar__item-title">10 Grid Systems Every Designer Should Master</h5>
+                                    <span class="ui-sidebar__item-meta">48k Views</span>
+                                </div>
+                            </a>
+
+                            <a href="blog-index.html" class="ui-sidebar__trending-item">
+                                <div class="ui-sidebar__thumb-wrapper">
+                                    <img src="img/unnamed.png" alt="Typography tools article thumbnail"
+                                        class="ui-sidebar__thumb">
+                                </div>
+                                <div>
+                                    <h5 class="ui-sidebar__item-title">Typography Tools for Quiet Interfaces</h5>
+                                    <span class="ui-sidebar__item-meta">21k Views</span>
+                                </div>
+                            </a>
+
+                            <a href="blog-index.html" class="ui-sidebar__trending-item">
+                                <div class="ui-sidebar__thumb-wrapper">
+                                    <img src="img/unnamed (1).png" alt="Editorial systems article thumbnail"
+                                        class="ui-sidebar__thumb">
+                                </div>
+                                <div>
+                                    <h5 class="ui-sidebar__item-title">Editorial Components as Product Surface</h5>
+                                    <span class="ui-sidebar__item-meta">18k Views</span>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h4 class="ui-sidebar__section-title">Categories</h4>
+                        <div class="ui-sidebar__categories">
+                            <a href="blog-index.html" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Architecture</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">12</span>
+                                </span>
+                            </a>
+
+                            <a href="blog-index.html" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Editorial Design</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">45</span>
+                                </span>
+                            </a>
+
+                            <a href="blog-index.html" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Typography</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">31</span>
+                                </span>
+                            </a>
+
+                            <a href="blog-index.html" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Lifestyle</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">18</span>
+                                </span>
+                            </a>
+
+                            <a href="blog-index.html" class="ui-sidebar__category-link">
+                                <span class="ui-sidebar__category-title">Technology</span>
+                                <span class="ui-sidebar__count-badge">
+                                    <span class="ui-sidebar__count-text">56</span>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="ui-sidebar__newsletter" aria-labelledby="demo-newsletter-title">
+                        <span class="material-symbols-outlined ui-sidebar__newsletter-icon"
+                            aria-hidden="true">mail</span>
+                        <h4 class="ui-sidebar__newsletter-title" id="demo-newsletter-title">The Weekly Digest</h4>
+                        <p class="ui-sidebar__newsletter-text">
+                            Get our best visual stories delivered every Sunday morning.
+                        </p>
+                        <form class="ui-sidebar__form">
+                            <input aria-label="Email address" placeholder="Your email address" type="email"
+                                class="ui-sidebar__input">
+                            <button class="ui-sidebar__submit" type="submit">Subscribe Now</button>
+                            <p class="ui-sidebar__form-note">No spam, ever. Unsubscribe anytime.</p>
+                        </form>
+                    </section>
+                </aside>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-footers-title">
+                <h2 class="demo-components__section-title" id="demo-footers-title">Footers</h2>
+
+                <div class="demo-components__stack">
+                    <footer class="ui-footer">
+                        <div class="ui-footer__inner">
+                            <div class="ui-footer__header">
+                                <div class="ui-footer__brand">
+                                    <div class="ui-footer__icon-box">
+                                        <span class="material-symbols-outlined ui-footer__brand-icon"
+                                            aria-hidden="true">broken_image</span>
+                                    </div>
+                                    <h2 class="ui-footer__title">Editorial</h2>
+                                </div>
+
+                            <div class="ui-footer__socials" aria-label="Social links">
+                                    <a class="ui-footer__social-link" href="blog-index.html" aria-label="Follow SayUI">
+                                        <span class="material-symbols-outlined ui-footer__social-icon"
+                                            aria-hidden="true">brand_family</span>
+                                    </a>
+                                    <a class="ui-footer__social-link" href="blog-index.html" aria-label="Follow by email">
+                                        <span class="material-symbols-outlined ui-footer__social-icon"
+                                            aria-hidden="true">mail</span>
+                                    </a>
+                                    <a class="ui-footer__social-link" href="blog-index.html" aria-label="Follow RSS">
+                                        <span class="material-symbols-outlined ui-footer__social-icon"
+                                            aria-hidden="true">rss_feed</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="ui-footer__grid">
+                                <div class="ui-footer__column">
+                                    <p class="ui-footer__column-title">Company</p>
+                                    <a class="ui-footer__link" href="blog-index.html">About</a>
+                                    <a class="ui-footer__link" href="blog-index.html">Careers</a>
+                                    <a class="ui-footer__link" href="blog-index.html">Contact</a>
+                                </div>
+
+                                <div class="ui-footer__column">
+                                    <p class="ui-footer__column-title">Resources</p>
+                                    <a class="ui-footer__link" href="blog-index.html">Guides</a>
+                                    <a class="ui-footer__link" href="blog-index.html">Components</a>
+                                    <a class="ui-footer__link" href="blog-index.html">Archive</a>
+                                </div>
+
+                                <div class="ui-footer__column">
+                                    <p class="ui-footer__column-title">Legal</p>
+                                    <a class="ui-footer__link" href="blog-index.html">Privacy</a>
+                                    <a class="ui-footer__link" href="blog-index.html">Terms</a>
+                                    <a class="ui-footer__link" href="blog-index.html">Licensing</a>
+                                </div>
+
+                                <div class="ui-footer__column">
+                                    <p class="ui-footer__column-title">Follow</p>
+                                    <a class="ui-footer__link" href="blog-index.html">Newsletter</a>
+                                    <a class="ui-footer__link" href="blog-index.html">RSS</a>
+                                    <a class="ui-footer__link" href="blog-index.html">Updates</a>
+                                </div>
+                            </div>
+
+                            <div class="ui-footer__legend">2026 SayUI demo footer.</div>
+                        </div>
+                    </footer>
+
+                    <footer class="ui-footer-editorial">
+                        <div class="ui-footer-editorial__container">
+                            <div class="ui-footer-editorial__top">
+                                <div class="ui-footer-editorial__brand">
+                                    <span class="ui-footer-editorial__logo">Crimson Courier</span>
+                                    <p class="ui-footer-editorial__tagline">The Modern Broadside Edition</p>
+                                </div>
+
+                                <nav class="ui-footer-editorial__nav" aria-label="Editorial footer">
+                                    <a class="ui-footer-editorial__link" href="blog-index.html">About Us</a>
+                                    <a class="ui-footer-editorial__link" href="blog-index.html">Privacy Policy</a>
+                                    <a class="ui-footer-editorial__link" href="blog-index.html">Terms of Service</a>
+                                    <a class="ui-footer-editorial__link" href="blog-index.html">Contact</a>
+                                    <a class="ui-footer-editorial__link" href="blog-index.html">Advertise</a>
+                                </nav>
+                            </div>
+
+                            <div class="ui-footer-editorial__bottom">
+                                <p class="ui-footer-editorial__copyright">2026 Crimson Courier</p>
+                                <div class="ui-footer-editorial__social" aria-label="Social links">
+                                    <span class="ui-footer-editorial__social-item">
+                                        <span class="material-symbols-outlined ui-footer-editorial__icon"
+                                            aria-hidden="true">share</span>
+                                    </span>
+                                    <span class="ui-footer-editorial__social-item">
+                                        <span class="material-symbols-outlined ui-footer-editorial__icon"
+                                            aria-hidden="true">mail</span>
+                                    </span>
+                                    <span class="ui-footer-editorial__social-item">
+                                        <span class="material-symbols-outlined ui-footer-editorial__icon"
+                                            aria-hidden="true">rss_feed</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-article-hero-title">
+                <h2 class="demo-components__section-title" id="demo-article-hero-title">ui-article-hero</h2>
+
+                <div class="demo-components__stack">
+                    <section class="ui-article-hero">
+                        <div class="ui-article-hero__body">
+                            <div class="ui-article-hero__intro">
+                                <div class="ui-article-hero__header">
+                                    <span class="ui-article-hero__eyebrow">Design</span>
+                                </div>
+
+                                <h1 class="ui-article-hero__title">
+                                    The Intersection of Minimalism and Motion in UI
+                                </h1>
+
+                                <p class="ui-article-hero__subtitle">
+                                    How intentional animation elevates minimalist interfaces beyond static simplicity.
+                                </p>
+                            </div>
+
+                            <div class="ui-article-hero__meta-group">
+                                <p class="ui-article-hero__author-label">Written By</p>
+                                <p class="ui-article-hero__author-name">Alx Debil</p>
+                                <p class="ui-article-hero__published-label">Published</p>
+                                <p class="ui-article-hero__date">October 15, 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="ui-article-hero__image-wrapper">
+                            <img src="img/unnamed(3).png" class="ui-article-hero__image"
+                                alt="Minimalist interface composition">
+                            <div class="ui-article-hero__overlay"></div>
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-article-main-title">
+                <h2 class="demo-components__section-title" id="demo-article-main-title">ui-article-main</h2>
+
+                <div class="demo-components__stack">
+                    <article class="ui-article-main">
+                        <div class="ui-article-main__prose">
+                            <p class="ui-article-main__lead">
+                                Minimalism works best when clarity, rhythm, and restraint support the reader.
+                            </p>
+                            <p class="ui-article-main__paragraph">
+                                This excerpt shows representative prose, pull quote, principles, and figure patterns
+                                without reproducing the full editorial page demo.
+                            </p>
+
+                            <h2 class="ui-article-main__title">
+                                The Functional Role of Motion
+                            </h2>
+
+                            <p class="ui-article-main__paragraph">
+                                Meaningful motion maintains a reader's mental model during transitions and helps
+                                explain how each section relates to the one before it.
+                            </p>
+
+                            <blockquote class="ui-article-main__quote">
+                                <span class="material-symbols-outlined ui-article-main__quote-icon"
+                                    aria-hidden="true">format_quote</span>
+                                <p class="ui-article-main__quote-content">
+                                    Minimalism is not absence. It is the right amount of signal.
+                                </p>
+                                <cite class="ui-article-main__quote-cite">Editorial Design Principles</cite>
+                            </blockquote>
+
+                            <h3 class="ui-article-main__section-title">Core Principles</h3>
+                            <ul class="ui-article-main__principles">
+                                <li class="ui-article-main__principle">
+                                    <span class="ui-article-main__item-number">1</span>
+                                    <div class="ui-article-main__item-content">
+                                        <strong class="ui-article-main__item-title">Intentionality</strong>
+                                        <span class="ui-article-main__item-text">
+                                            Every visual decision should carry meaning.
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="ui-article-main__principle ui-article-main__principle--margin">
+                                    <span class="ui-article-main__item-number">2</span>
+                                    <div class="ui-article-main__item-content">
+                                        <strong class="ui-article-main__item-title">Rhythmic Timing</strong>
+                                        <span class="ui-article-main__item-text">
+                                            Timing should guide attention without interrupting the reading flow.
+                                        </span>
+                                    </div>
+                                </li>
+
+                                <li class="ui-article-main__principle ui-article-main__principle--margin">
+                                    <span class="ui-article-main__item-number">3</span>
+                                    <div class="ui-article-main__item-content">
+                                        <strong class="ui-article-main__item-title">Performance over Ornament</strong>
+                                        <span class="ui-article-main__item-text">
+                                            Motion and structure should support the task instead of adding noise.
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <figure class="ui-article-main__figure">
+                                <img src="img/unnamed (4).png" class="ui-article-main__figure-image"
+                                    alt="Spatial hierarchy with high contrast typography">
+                                <figcaption class="ui-article-main__figure-caption">
+                                    Fig 1.1: Spatial hierarchy through high-contrast typography.
+                                </figcaption>
+                            </figure>
+
+                            <p class="ui-article-main__caption-text">
+                                As interfaces become more editorial, components need enough structure to preserve
+                                rhythm, hierarchy, and long-form reading comfort.
+                            </p>
+                        </div>
+
+                        <div class="ui-article-main__tags">
+                            <span class="ui-article-main__tag">User Experience</span>
+                            <span class="ui-article-main__tag">Minimalism</span>
+                            <span class="ui-article-main__tag">Animation</span>
+                            <span class="ui-article-main__tag">Future Tech</span>
+                        </div>
+
+                        <section class="ui-article-main__comments-section">
+                            <h3 class="ui-article-main__discourse">The Discourse (3)</h3>
+
+                            <div class="ui-article-main__comments-content">
+                                <div class="ui-article-main__comment">
+                                    <div class="ui-article-main__avatar-container">
+                                        <img alt="Julian Moss" src="img/Hanekawa Tsubasa.jpg"
+                                            class="ui-article-main__avatar" />
+                                    </div>
+
+                                    <div>
+                                        <div class="ui-article-main__meta">
+                                            <span class="ui-article-main__author">Julian Moss</span>
+                                            <span class="ui-article-main__time">2h ago</span>
+                                        </div>
+
+                                        <p class="ui-article-main__text">
+                                            The point about motion as spatial awareness is critical.
+                                        </p>
+
+                                        <button class="ui-article-main__reply-button" type="button">Reply</button>
+                                    </div>
+                                </div>
+
+                                <div class="ui-article-main__comment ui-article-main__comment--reply">
+                                    <div class="ui-article-main__avatar-container ui-article-main__avatar-container--reply">
+                                        <img alt="Elena Valery" src="img/e392d05893d73ba1a9da81d3f3752daf.jpg"
+                                            class="ui-article-main__avatar" />
+                                    </div>
+
+                                    <div>
+                                        <div class="ui-article-main__meta">
+                                            <span class="ui-article-main__author">Elena Valery</span>
+                                            <span class="ui-article-main__badge">Author</span>
+                                            <span class="ui-article-main__time">1h ago</span>
+                                        </div>
+
+                                        <p class="ui-article-main__text">
+                                            Exactly. Motion is the why and where of the interface.
+                                        </p>
+
+                                        <button class="ui-article-main__reply-button" type="button">Reply</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ui-article-main__comment-form">
+                                <h4 class="ui-article-main__form-title">Add to the Conversation</h4>
+                                <textarea class="ui-article-main__textarea" aria-label="Comment"
+                                    placeholder="Share your thoughts..."></textarea>
+                                <button class="ui-article-main__submit" type="button">Post Comment</button>
+                            </div>
+                        </section>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-article-sidebar-title">
+                <h2 class="demo-components__section-title" id="demo-article-sidebar-title">ui-article-sidebar</h2>
+
+                <div class="demo-components__narrow">
+                    <aside class="ui-article-sidebar">
+                        <div class="ui-article-sidebar__card">
+                            <div class="ui-article-sidebar__author">
+                                <div class="ui-article-sidebar__avatar-container">
+                                    <img alt="Elena Valery" class="ui-article-sidebar__avatar"
+                                        src="img/unnamed (1).png" />
+                                </div>
+
+                                <div class="ui-article-sidebar__author-info">
+                                    <h4 class="ui-article-sidebar__author-name">Elena Valery</h4>
+                                    <p class="ui-article-sidebar__author-role">Senior Design Editor</p>
+                                </div>
+                            </div>
+
+                            <p class="ui-article-sidebar__description">
+                                Elena writes about cognitive psychology, typography, and interface craft.
+                            </p>
+
+                            <div class="ui-article-sidebar__social">
+                                <a class="ui-article-sidebar__social-link" href="blog-index.html" aria-label="Email Elena Valery">
+                                    <span class="material-symbols-outlined" aria-hidden="true">alternate_email</span>
+                                </a>
+                                <a class="ui-article-sidebar__social-link" href="blog-index.html" aria-label="Visit Elena Valery website">
+                                    <span class="material-symbols-outlined" aria-hidden="true">public</span>
+                                </a>
+                            </div>
+
+                            <div class="ui-article-sidebar__section">
+                                <h5 class="ui-article-sidebar__section-title">Related Stories</h5>
+
+                                <ul class="ui-article-sidebar__list">
+                                    <li class="ui-article-sidebar__item">
+                                        <a class="ui-article-sidebar__link" href="blog-index.html">
+                                            <span class="ui-article-sidebar__category">Tech</span>
+                                            <p class="ui-article-sidebar__item-title">
+                                                Hardware for the Distracted
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="ui-article-sidebar__item ui-article-sidebar__item-space">
+                                        <a class="ui-article-sidebar__link" href="blog-index.html">
+                                            <span class="ui-article-sidebar__category">Culture</span>
+                                            <p class="ui-article-sidebar__item-title">
+                                                The Return of Neumorphism: A Post-Flat Review
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="ui-article-sidebar__item ui-article-sidebar__item-space">
+                                        <a class="ui-article-sidebar__link" href="blog-index.html">
+                                            <span class="ui-article-sidebar__category">Politics</span>
+                                            <p class="ui-article-sidebar__item-title">
+                                                Digital Sovereignty in the Age of AI
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="ui-article-sidebar__section-teme">
+                                <h5 class="ui-article-sidebar__section-title">Category Cloud</h5>
+
+                                <div class="ui-article-sidebar__tags">
+                                    <a class="ui-article-sidebar__tag" href="blog-index.html">Architecture</a>
+                                    <a class="ui-article-sidebar__tag" href="blog-index.html">Crypto</a>
+                                    <a class="ui-article-sidebar__tag" href="blog-index.html">Fashion</a>
+                                    <a class="ui-article-sidebar__tag" href="blog-index.html">Sustainability</a>
+                                    <a class="ui-article-sidebar__tag" href="blog-index.html">Future</a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="demo-components__section" aria-labelledby="demo-article-related-title">
+                <h2 class="demo-components__section-title" id="demo-article-related-title">ui-article-related</h2>
+
+                <div class="demo-components__stack">
+                    <section class="ui-article-related">
+                        <div class="ui-article-related__container">
+                            <h3 class="ui-article-related__header">
+                                Read Next
+                                <div class="ui-article-related__divider" aria-hidden="true"></div>
+                            </h3>
+
+                            <div class="ui-article-related__grid">
+                                <article class="ui-article-related__card">
+                                    <div class="ui-article-related__image-wrapper">
+                                        <img class="ui-article-related__image" src="img/unnamed (6).png"
+                                            alt="Development article thumbnail">
+                                    </div>
+
+                                    <div class="ui-article-related__content">
+                                        <span class="ui-article-related__category">Development</span>
+                                        <h4 class="ui-article-related__title">
+                                            The Syntax of Sustainability
+                                        </h4>
+                                        <p class="ui-article-related__description">
+                                            How interface efficiency became part of environmental design.
+                                        </p>
+                                    </div>
+                                </article>
+
+                                <article class="ui-article-related__card">
+                                    <div class="ui-article-related__image-wrapper">
+                                        <img class="ui-article-related__image" src="img/unnamed (5).png"
+                                            alt="Urbanism article thumbnail">
+                                    </div>
+
+                                    <div class="ui-article-related__content">
+                                        <span class="ui-article-related__category">Urbanism</span>
+                                        <h4 class="ui-article-related__title">
+                                            The 15-Minute City Paradox
+                                        </h4>
+                                        <p class="ui-article-related__description">
+                                            Re-evaluating the hyper-local dream amidst global economic shifts.
+                                        </p>
+                                    </div>
+                                </article>
+
+                                <article class="ui-article-related__card">
+                                    <div class="ui-article-related__image-wrapper">
+                                        <img class="ui-article-related__image" src="img/unnamed (3).png"
+                                            alt="Science article thumbnail">
+                                    </div>
+
+                                    <div class="ui-article-related__content">
+                                        <span class="ui-article-related__category">Science</span>
+                                        <h4 class="ui-article-related__title">
+                                            Synthetic Biology's New Dawn
+                                        </h4>
+                                        <p class="ui-article-related__description">
+                                            The ethical implications of designer enzymes in everyday products.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

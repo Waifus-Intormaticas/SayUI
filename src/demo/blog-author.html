@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="styles/demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elena Valery | SayUI Journal</title>
+</head>
+
+<body class="blog-demo">
+    <header class="blog-demo-header">
+        <a class="blog-demo-header__brand" href="blog-home.html">SayUI Journal</a>
+
+        <nav class="blog-demo-header__nav" aria-label="Primary navigation">
+            <a class="blog-demo-header__link" href="blog-home.html">Stories</a>
+            <a class="blog-demo-header__link" href="blog-category.html">Design</a>
+            <a class="blog-demo-header__link" href="blog-category.html">Development</a>
+            <a class="blog-demo-header__link" href="blog-author.html">About</a>
+        </nav>
+    </header>
+
+    <main class="blog-demo-author">
+        <header class="blog-demo-author-hero">
+            <span class="blog-demo-author-hero__eyebrow ui-eyebrow ui-eyebrow--editorial">Author</span>
+
+            <article class="blog-demo-author-hero__card ui-author-card" aria-labelledby="author-profile-name">
+                <div class="ui-author-card__header">
+                    <div class="ui-author-card__avatar-wrapper">
+                        <img class="ui-author-card__avatar" src="img/unnamed (1).png" alt="Elena Valery">
+                    </div>
+
+                    <div class="ui-author-card__identity">
+                        <h1 class="ui-author-card__name" id="author-profile-name">Elena Valery</h1>
+                        <p class="ui-author-card__role">Senior Design Editor</p>
+                    </div>
+                </div>
+
+                <p class="ui-author-card__bio">
+                    Elena writes about editorial systems, accessible interfaces, and the quiet mechanics of durable
+                    design.
+                </p>
+
+                <div class="ui-author-card__links" aria-label="Author links">
+                    <a class="ui-author-card__link" href="mailto:elena@sayui.example"
+                        aria-label="Email Elena Valery">
+                        <span aria-hidden="true">@</span>
+                    </a>
+                    <a class="ui-author-card__link" href="https://portfolio.example/elena-valery"
+                        aria-label="Visit Elena Valery's website">
+                        <span aria-hidden="true">www</span>
+                    </a>
+                </div>
+            </article>
+
+            <section class="blog-demo-author-hero__profile" aria-labelledby="author-about-title">
+                <h2 class="blog-demo-author-hero__title" id="author-about-title">About Elena</h2>
+
+                <p class="blog-demo-author-hero__paragraph">
+                    Elena studies how typography, interaction, and documentation shape a reader's confidence in an
+                    interface. Her work focuses on systems that stay useful after the polished launch state has
+                    passed.
+                </p>
+
+                <p class="blog-demo-author-hero__paragraph">
+                    She leads editorial reviews for SayUI Journal and works with product teams to turn visual
+                    decisions into stable, accessible component contracts.
+                </p>
+
+                <dl class="ui-meta-list ui-meta-list--stacked" aria-label="Author details">
+                    <div class="ui-meta-list__item">
+                        <dt class="ui-meta-list__label">Based in</dt>
+                        <dd class="ui-meta-list__value">Tegucigalpa, Honduras</dd>
+                    </div>
+                    <div class="ui-meta-list__item">
+                        <dt class="ui-meta-list__label">Published</dt>
+                        <dd class="ui-meta-list__value">18 essays</dd>
+                    </div>
+                    <div class="ui-meta-list__item">
+                        <dt class="ui-meta-list__label">Member since</dt>
+                        <dd class="ui-meta-list__value">
+                            <time datetime="2024-03">March 2024</time>
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+        </header>
+
+        <div class="blog-demo-author-layout">
+            <section class="blog-demo-author-main" aria-labelledby="author-stories-title">
+                <header class="ui-section-header ui-section-header--editorial"
+                    aria-labelledby="author-stories-title">
+                    <h2 class="ui-section-header__title" id="author-stories-title">Latest from Elena</h2>
+                    <p class="ui-section-header__description">
+                        Essays about editorial rhythm, accessibility, and component architecture.
+                    </p>
+                </header>
+
+                <div class="blog-demo-story-grid">
+                    <article class="blog-demo-story">
+                        <a class="blog-demo-story__media" href="blog-article.html">
+                            <img class="blog-demo-story__image" src="img/unnamed.png"
+                                alt="A red chair, side table, plant, and pendant light against a red wall">
+                        </a>
+
+                        <div class="blog-demo-story__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="blog-category.html">
+                                Editorial design
+                            </a>
+
+                            <h3 class="blog-demo-story__title">
+                                <a class="blog-demo-story__title-link"
+                                    href="blog-article.html">
+                                    Designing for quiet attention
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-story__summary">
+                                A practical study of rhythm, hierarchy, and restraint in interfaces built for
+                                sustained reading.
+                            </p>
+
+                            <div class="ui-byline ui-byline--compact">
+                                <a class="ui-byline__name" href="blog-author.html">Elena Valery</a>
+                                <span class="ui-byline__meta">
+                                    <span class="ui-byline__item">
+                                        <time datetime="2026-06-24">June 24, 2026</time>
+                                    </span>
+                                    <span class="ui-byline__item">9 min read</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-demo-story">
+                        <a class="blog-demo-story__media" href="blog-article.html">
+                            <img class="blog-demo-story__image" src="img/unnamed(3).png"
+                                alt="Three pale interface mockups arranged on a warm background">
+                        </a>
+
+                        <div class="blog-demo-story__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="blog-category.html">
+                                Documentation
+                            </a>
+
+                            <h3 class="blog-demo-story__title">
+                                <a class="blog-demo-story__title-link" href="blog-article.html">
+                                    Documentation is part of the component interface
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-story__summary">
+                                Examples and boundaries turn a collection of selectors into a public contract people
+                                can trust.
+                            </p>
+
+                            <ul class="ui-meta-list ui-meta-list--inline ui-meta-list--with-separators"
+                                aria-label="Article metadata">
+                                <li class="ui-meta-list__item">
+                                    <time datetime="2026-06-11">June 11, 2026</time>
+                                </li>
+                                <li class="ui-meta-list__item">6 min read</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="blog-demo-story">
+                        <a class="blog-demo-story__media" href="blog-article.html">
+                            <img class="blog-demo-story__image" src="img/unnamed (6).png"
+                                alt="Three laboratory glass vessels against a turquoise background">
+                        </a>
+
+                        <div class="blog-demo-story__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="blog-category.html">
+                                Research
+                            </a>
+
+                            <h3 class="blog-demo-story__title">
+                                <a class="blog-demo-story__title-link" href="blog-article.html">
+                                    Test primitives inside the contexts that challenge them
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-story__summary">
+                                Narrow columns and incomplete content reveal more than a perfectly controlled
+                                component gallery.
+                            </p>
+
+                            <div class="ui-byline ui-byline--compact">
+                                <a class="ui-byline__name" href="blog-author.html">Elena Valery</a>
+                                <span class="ui-byline__meta">
+                                    <span class="ui-byline__item">
+                                        <time datetime="2026-06-04">June 4, 2026</time>
+                                    </span>
+                                    <span class="ui-byline__item">8 min read</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-demo-story">
+                        <a class="blog-demo-story__media" href="blog-article.html">
+                            <img class="blog-demo-story__image" src="img/unnamed (5).png"
+                                alt="Layered mountain silhouettes fading into a pale sky">
+                        </a>
+
+                        <div class="blog-demo-story__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="blog-category.html">
+                                Typography
+                            </a>
+
+                            <h3 class="blog-demo-story__title">
+                                <a class="blog-demo-story__title-link" href="blog-article.html">
+                                    Finding a useful measure for long-form reading
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-story__summary">
+                                Line length is a relationship between type, space, and attention rather than a fixed
+                                universal number.
+                            </p>
+
+                            <ul class="ui-meta-list ui-meta-list--inline ui-meta-list--with-separators"
+                                aria-label="Article metadata">
+                                <li class="ui-meta-list__item">
+                                    <time datetime="2026-05-26">May 26, 2026</time>
+                                </li>
+                                <li class="ui-meta-list__item">6 min read</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <section class="blog-demo-author-selected" aria-labelledby="author-selected-title">
+                    <header class="ui-section-header ui-section-header--related ui-section-header--with-divider"
+                        aria-labelledby="author-selected-title">
+                        <h2 class="ui-section-header__title" id="author-selected-title">Selected reading</h2>
+                        <span class="ui-section-header__divider" aria-hidden="true"></span>
+                    </header>
+
+                    <ul class="ui-related-list ui-related-list--divided">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__category">Accessibility</span>
+                                <span class="ui-related-list__title">Start with semantic defaults</span>
+                                <span class="ui-related-list__meta">
+                                    <time datetime="2026-05-12">May 12, 2026</time>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__category">Architecture</span>
+                                <span class="ui-related-list__title">Prefer coexistence before migration</span>
+                                <span class="ui-related-list__meta">5 min read</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <aside class="blog-demo-author-sidebar" aria-label="Author topics and channels">
+                <section class="blog-demo-author-sidebar__section" aria-labelledby="author-topics-title">
+                    <header class="ui-section-header ui-section-header--compact"
+                        aria-labelledby="author-topics-title">
+                        <h2 class="ui-section-header__title" id="author-topics-title">Frequent topics</h2>
+                    </header>
+
+                    <ul class="ui-tag-list ui-tag-list--stacked" aria-label="Topics written by Elena Valery">
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="blog-category.html">Editorial design</a>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="blog-category.html">Design systems</a>
+                        </li>
+                        <li class="ui-tag-list__item">
+                            <a class="ui-tag-list__tag" href="blog-category.html">Accessibility</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="blog-demo-author-sidebar__section" aria-labelledby="author-channels-title">
+                    <header class="ui-section-header ui-section-header--compact"
+                        aria-labelledby="author-channels-title">
+                        <h2 class="ui-section-header__title" id="author-channels-title">Follow Elena</h2>
+                    </header>
+
+                    <ul class="ui-social-links ui-social-links--boxed" aria-label="Elena Valery channels">
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="mailto:elena@sayui.example">
+                                <span class="ui-social-links__label">Email</span>
+                            </a>
+                        </li>
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="https://social.example/elena-valery">
+                                <span class="ui-social-links__label">Social</span>
+                            </a>
+                        </li>
+                        <li class="ui-social-links__item">
+                            <a class="ui-social-links__link" href="blog-index.html">
+                                <span class="ui-social-links__label">RSS</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="ui-newsletter ui-newsletter--compact" aria-labelledby="author-newsletter-title">
+                    <h2 class="ui-newsletter__title" id="author-newsletter-title">Elena's reading notes</h2>
+
+                    <p class="ui-newsletter__text">
+                        A monthly selection of essays, references, and working notes.
+                    </p>
+
+                    <form class="ui-newsletter__form" action="/newsletter/elena/subscribe" method="post">
+                        <label class="ui-newsletter__label" for="author-newsletter-email">Email address</label>
+                        <input class="ui-newsletter__input" id="author-newsletter-email" name="email" type="email"
+                            autocomplete="email" placeholder="you@example.com">
+                        <button class="ui-newsletter__submit" type="submit">Subscribe</button>
+                        <p class="ui-newsletter__note">One email each month. Unsubscribe anytime.</p>
+                    </form>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="blog-demo-footer">
+        <p class="blog-demo-footer__text">
+            SayUI Journal is a consumer-composition demo built from existing public primitives.
+        </p>
+        <a class="blog-demo-footer__link" href="blog-home.html">Return to all stories</a>
+    </footer>
+</body>
+
+</html>

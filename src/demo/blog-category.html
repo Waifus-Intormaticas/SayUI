@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="styles/demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Systems | SayUI Journal</title>
+</head>
+
+<body class="blog-demo">
+    <header class="blog-demo-header">
+        <a class="blog-demo-header__brand" href="blog-home.html">SayUI Journal</a>
+
+        <nav class="blog-demo-header__nav" aria-label="Primary navigation">
+            <a class="blog-demo-header__link" href="blog-home.html">Stories</a>
+            <a class="blog-demo-header__link" href="blog-category.html" aria-current="page">Design</a>
+            <a class="blog-demo-header__link" href="blog-category.html">Development</a>
+            <a class="blog-demo-header__link" href="blog-author.html">About</a>
+        </nav>
+    </header>
+
+    <main class="blog-demo-category">
+        <header class="blog-demo-category-header">
+            <span class="blog-demo-category-header__eyebrow ui-eyebrow ui-eyebrow--editorial">Category</span>
+
+            <h1 class="blog-demo-category-header__title">Design systems</h1>
+
+            <p class="blog-demo-category-header__description">
+                Practical essays about component boundaries, visual foundations, documentation, and the decisions
+                that help interface libraries remain coherent.
+            </p>
+
+            <dl class="blog-demo-category-header__meta ui-meta-list ui-meta-list--stacked"
+                aria-label="Category details">
+                <div class="ui-meta-list__item">
+                    <dt class="ui-meta-list__label">Stories</dt>
+                    <dd class="ui-meta-list__value">24 published essays</dd>
+                </div>
+                <div class="ui-meta-list__item">
+                    <dt class="ui-meta-list__label">Updated</dt>
+                    <dd class="ui-meta-list__value">
+                        <time datetime="2026-06-24">June 24, 2026</time>
+                    </dd>
+                </div>
+            </dl>
+        </header>
+
+        <nav class="blog-demo-category-topics" aria-labelledby="related-categories-title">
+            <h2 class="blog-demo-category-topics__title" id="related-categories-title">Related categories</h2>
+
+            <ul class="ui-tag-list ui-tag-list--interactive">
+                <li class="ui-tag-list__item">
+                    <a class="ui-tag-list__tag ui-tag-list__tag--active" href="blog-category.html"
+                        aria-current="page">
+                        Design systems
+                    </a>
+                </li>
+                <li class="ui-tag-list__item">
+                    <a class="ui-tag-list__tag" href="blog-category.html">Accessibility</a>
+                </li>
+                <li class="ui-tag-list__item">
+                    <a class="ui-tag-list__tag" href="blog-category.html">Editorial design</a>
+                </li>
+                <li class="ui-tag-list__item">
+                    <a class="ui-tag-list__tag" href="blog-category.html">Development</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="blog-demo-category-layout">
+            <section class="blog-demo-category-main" aria-labelledby="category-stories-title">
+                <header class="ui-section-header ui-section-header--editorial"
+                    aria-labelledby="category-stories-title">
+                    <h2 class="ui-section-header__title" id="category-stories-title">Latest in design systems</h2>
+                    <p class="ui-section-header__description">
+                        Newest first, selected by the editorial desk.
+                    </p>
+                </header>
+
+                <div class="blog-demo-story-grid">
+                    <article class="blog-demo-story">
+                        <a class="blog-demo-story__media" href="blog-article.html">
+                            <img class="blog-demo-story__image" src="img/unnamed (3).png"
+                                alt="A close view of colorful source code on a dark screen">
+                        </a>
+
+                        <div class="blog-demo-story__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="blog-category.html">
+                                Architecture
+                            </a>
+
+                            <h3 class="blog-demo-story__title">
+                                <a class="blog-demo-story__title-link" href="blog-article.html">
+                                    Component boundaries are product decisions
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-story__summary">
+                                Reuse becomes durable when ownership is explicit and each contract solves one stable
+                                responsibility.
+                            </p>
+
+                            <div class="ui-byline ui-byline--compact">
+                                <a class="ui-byline__name" href="blog-author.html">Marcus Chen</a>
+                                <span class="ui-byline__meta">
+                                    <span class="ui-byline__item">
+                                        <time datetime="2026-06-21">June 21, 2026</time>
+                                    </span>
+                                    <span class="ui-byline__item">7 min read</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-demo-story">
+                        <a class="blog-demo-story__media" href="blog-article.html">
+                            <img class="blog-demo-story__image" src="img/unnamed (4).png"
+                                alt="A pale mobile interface mockup on a muted green background">
+                        </a>
+
+                        <div class="blog-demo-story__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="blog-category.html">
+                                Foundations
+                            </a>
+
+                            <h3 class="blog-demo-story__title">
+                                <a class="blog-demo-story__title-link" href="blog-article.html">
+                                    Design tokens should describe decisions
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-story__summary">
+                                Token names become useful when they communicate visual intent instead of exposing
+                                isolated values.
+                            </p>
+
+                            <ul class="ui-meta-list ui-meta-list--inline ui-meta-list--with-separators"
+                                aria-label="Article metadata">
+                                <li class="ui-meta-list__item">
+                                    <time datetime="2026-06-17">June 17, 2026</time>
+                                </li>
+                                <li class="ui-meta-list__item">10 min read</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="blog-demo-story">
+                        <a class="blog-demo-story__media" href="blog-article.html">
+                            <img class="blog-demo-story__image" src="img/unnamed(3).png"
+                                alt="Three pale interface mockups arranged on a warm background">
+                        </a>
+
+                        <div class="blog-demo-story__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="blog-category.html">
+                                Documentation
+                            </a>
+
+                            <h3 class="blog-demo-story__title">
+                                <a class="blog-demo-story__title-link" href="blog-article.html">
+                                    Documentation is part of the component interface
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-story__summary">
+                                A public class is only half a contract. Good examples explain when a pattern belongs
+                                and where it stops.
+                            </p>
+
+                            <div class="ui-byline ui-byline--compact">
+                                <a class="ui-byline__name" href="blog-author.html">Elena Valery</a>
+                                <span class="ui-byline__meta">
+                                    <span class="ui-byline__item">
+                                        <time datetime="2026-06-11">June 11, 2026</time>
+                                    </span>
+                                    <span class="ui-byline__item">6 min read</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-demo-story">
+                        <a class="blog-demo-story__media" href="blog-article.html">
+                            <img class="blog-demo-story__image" src="img/unnamed (6).png"
+                                alt="Three laboratory glass vessels against a turquoise background">
+                        </a>
+
+                        <div class="blog-demo-story__body">
+                            <a class="ui-eyebrow ui-eyebrow--compact" href="blog-category.html">
+                                Validation
+                            </a>
+
+                            <h3 class="blog-demo-story__title">
+                                <a class="blog-demo-story__title-link" href="blog-article.html">
+                                    Test primitives inside the contexts that challenge them
+                                </a>
+                            </h3>
+
+                            <p class="blog-demo-story__summary">
+                                Narrow columns, long labels, and mixed content reveal more than a perfectly controlled
+                                component gallery.
+                            </p>
+
+                            <ul class="ui-meta-list ui-meta-list--inline ui-meta-list--with-separators"
+                                aria-label="Article metadata">
+                                <li class="ui-meta-list__item">
+                                    <time datetime="2026-06-04">June 4, 2026</time>
+                                </li>
+                                <li class="ui-meta-list__item">8 min read</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <section class="blog-demo-category-more" aria-labelledby="category-archive-title">
+                    <header class="ui-section-header ui-section-header--related ui-section-header--with-divider"
+                        aria-labelledby="category-archive-title">
+                        <h2 class="ui-section-header__title" id="category-archive-title">Essential reading</h2>
+                        <span class="ui-section-header__divider" aria-hidden="true"></span>
+                    </header>
+
+                    <ul class="ui-related-list ui-related-list--divided">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__category">Contracts</span>
+                                <span class="ui-related-list__title">Start with semantic defaults</span>
+                                <span class="ui-related-list__meta">
+                                    <time datetime="2026-05-28">May 28, 2026</time>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__category">Adoption</span>
+                                <span class="ui-related-list__title">
+                                    Prefer coexistence before migration
+                                </span>
+                                <span class="ui-related-list__meta">5 min read</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <aside class="blog-demo-category-sidebar" aria-label="Category sidebar">
+                <section class="blog-demo-category-sidebar__section" aria-labelledby="category-trending-title">
+                    <header class="ui-section-header ui-section-header--compact"
+                        aria-labelledby="category-trending-title">
+                        <h2 class="ui-section-header__title" id="category-trending-title">Trending in design</h2>
+                    </header>
+
+                    <ul class="ui-trending-list ui-trending-list--divided">
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__media">
+                                    <img class="ui-trending-list__image" src="img/unnamed (5).png" alt="">
+                                </span>
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        Editorial rhythm beyond the article body
+                                    </span>
+                                    <span class="ui-trending-list__meta">
+                                        <time datetime="2026-06-14">June 14, 2026</time>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="ui-trending-list__item">
+                            <a class="ui-trending-list__link" href="blog-article.html">
+                                <span class="ui-trending-list__media">
+                                    <img class="ui-trending-list__image" src="img/unnamed (5).png" alt="">
+                                </span>
+                                <span class="ui-trending-list__body">
+                                    <span class="ui-trending-list__title">
+                                        Finding a useful measure for long-form reading
+                                    </span>
+                                    <span class="ui-trending-list__meta">6 min read</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="blog-demo-category-sidebar__section" aria-labelledby="category-guides-title">
+                    <header class="ui-section-header ui-section-header--compact"
+                        aria-labelledby="category-guides-title">
+                        <h2 class="ui-section-header__title" id="category-guides-title">Field guides</h2>
+                    </header>
+
+                    <ul class="ui-related-list ui-related-list--compact">
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">How to audit a component contract</span>
+                            </a>
+                        </li>
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">Responsive context checklist</span>
+                            </a>
+                        </li>
+                        <li class="ui-related-list__item">
+                            <a class="ui-related-list__link" href="blog-article.html">
+                                <span class="ui-related-list__title">Documenting component boundaries</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="ui-newsletter ui-newsletter--compact" aria-labelledby="category-newsletter-title">
+                    <h2 class="ui-newsletter__title" id="category-newsletter-title">Systems field notes</h2>
+
+                    <p class="ui-newsletter__text">
+                        A weekly essay about design systems and interface architecture.
+                    </p>
+
+                    <form class="ui-newsletter__form" action="/newsletter/subscribe" method="post">
+                        <label class="ui-newsletter__label" for="category-newsletter-email">Email address</label>
+                        <input class="ui-newsletter__input" id="category-newsletter-email" name="email" type="email"
+                            autocomplete="email" placeholder="you@example.com">
+                        <button class="ui-newsletter__submit" type="submit">Subscribe</button>
+                        <p class="ui-newsletter__note">No spam. Unsubscribe anytime.</p>
+                    </form>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="blog-demo-footer">
+        <p class="blog-demo-footer__text">
+            SayUI Journal is a consumer-composition demo built from existing public primitives.
+        </p>
+        <a class="blog-demo-footer__link" href="blog-home.html">Return to all stories</a>
+    </footer>
+</body>
+
+</html>

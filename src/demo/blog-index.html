@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../dist/css/sayui.css">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="styles/demo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayUI Blog Demo</title>
+</head>
+
+<body class="blog-demo">
+    <header class="blog-demo-header">
+        <a class="blog-demo-header__brand" href="blog-index.html" aria-current="page">SayUI Blog Demo</a>
+
+        <nav class="blog-demo-header__nav" aria-label="Demo navigation">
+            <a class="blog-demo-header__link" href="ui-components.html">Components</a>
+            <a class="blog-demo-header__link" href="ui-original-components.html">Original components</a>
+            <a class="blog-demo-header__link" href="../../index.html">Editorial demo</a>
+        </nav>
+    </header>
+
+    <main class="blog-demo-index">
+        <header class="blog-demo-index__intro">
+            <span class="ui-eyebrow ui-eyebrow--editorial">Consumer compositions</span>
+
+            <div class="ui-section-header" aria-labelledby="blog-demo-index-title">
+                <h1 class="ui-section-header__title" id="blog-demo-index-title">SayUI Blog Demo</h1>
+                <p class="ui-section-header__description">
+                    Six static page compositions that use existing SayUI primitives without introducing blog-specific
+                    components, generic cards, or generic grids.
+                </p>
+            </div>
+
+            <p class="blog-demo-index__note">
+                These pages demonstrate consumer-owned layout. SayUI provides the public component contracts; each
+                page owns its routing, content, page shell, and composition.
+            </p>
+        </header>
+
+        <section class="blog-demo-index__pages" aria-labelledby="blog-pages-title">
+            <header class="ui-section-header ui-section-header--editorial" aria-labelledby="blog-pages-title">
+                <h2 class="ui-section-header__title" id="blog-pages-title">Blog pages</h2>
+                <p class="ui-section-header__description">
+                    Open any page directly. All links are relative and suitable for a static GitHub Pages deployment.
+                </p>
+            </header>
+
+            <div class="blog-demo-index-grid">
+                <article class="blog-demo-index-card">
+                    <span class="ui-eyebrow ui-eyebrow--compact">Discovery</span>
+                    <h3 class="blog-demo-index-card__title">
+                        <a class="blog-demo-index-card__link" href="blog-home.html">Home</a>
+                    </h3>
+                    <p class="blog-demo-index-card__description">
+                        Featured content, recent stories, trending links, topics, and newsletter composition.
+                    </p>
+                </article>
+
+                <article class="blog-demo-index-card">
+                    <span class="ui-eyebrow ui-eyebrow--compact">Long form</span>
+                    <h3 class="blog-demo-index-card__title">
+                        <a class="blog-demo-index-card__link" href="blog-article.html">Article</a>
+                    </h3>
+                    <p class="blog-demo-index-card__description">
+                        Article hero, prose, TOC, technical content, related reading, comments, and comment form.
+                    </p>
+                </article>
+
+                <article class="blog-demo-index-card">
+                    <span class="ui-eyebrow ui-eyebrow--compact">Taxonomy</span>
+                    <h3 class="blog-demo-index-card__title">
+                        <a class="blog-demo-index-card__link" href="blog-category.html">Category</a>
+                    </h3>
+                    <p class="blog-demo-index-card__description">
+                        Static category navigation, article listing, related resources, and editorial sidebar.
+                    </p>
+                </article>
+
+                <article class="blog-demo-index-card">
+                    <span class="ui-eyebrow ui-eyebrow--compact">Identity</span>
+                    <h3 class="blog-demo-index-card__title">
+                        <a class="blog-demo-index-card__link" href="blog-author.html">Author</a>
+                    </h3>
+                    <p class="blog-demo-index-card__description">
+                        Independent author card, extended biography, authored stories, topics, and channels.
+                    </p>
+                </article>
+
+                <article class="blog-demo-index-card">
+                    <span class="ui-eyebrow ui-eyebrow--compact">Archive</span>
+                    <h3 class="blog-demo-index-card__title">
+                        <a class="blog-demo-index-card__link" href="blog-search.html">Search</a>
+                    </h3>
+                    <p class="blog-demo-index-card__description">
+                        Static GET search form, result list, category suggestions, and useful guides.
+                    </p>
+                </article>
+
+                <article class="blog-demo-index-card">
+                    <span class="ui-eyebrow ui-eyebrow--compact">Recovery</span>
+                    <h3 class="blog-demo-index-card__title">
+                        <a class="blog-demo-index-card__link" href="blog-404.html">404</a>
+                    </h3>
+                    <p class="blog-demo-index-card__description">
+                        A focused not-found composition with valid recovery destinations and editorial channels.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="blog-demo-index__resources" aria-labelledby="demo-resources-title">
+            <header class="ui-section-header ui-section-header--compact" aria-labelledby="demo-resources-title">
+                <h2 class="ui-section-header__title" id="demo-resources-title">Library references</h2>
+            </header>
+
+            <ul class="ui-related-list ui-related-list--divided">
+                <li class="ui-related-list__item">
+                    <a class="ui-related-list__link" href="ui-components.html">
+                        <span class="ui-related-list__category">Primitives</span>
+                        <span class="ui-related-list__title">Reusable components gallery</span>
+                    </a>
+                </li>
+                <li class="ui-related-list__item">
+                    <a class="ui-related-list__link" href="ui-original-components.html">
+                        <span class="ui-related-list__category">Original components</span>
+                        <span class="ui-related-list__title">Original public components gallery</span>
+                    </a>
+                </li>
+                <li class="ui-related-list__item">
+                    <a class="ui-related-list__link" href="../../index.html">
+                        <span class="ui-related-list__category">Editorial composition</span>
+                        <span class="ui-related-list__title">Existing full article demo</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="blog-demo-footer">
+        <p class="blog-demo-footer__text">
+            Built as static HTML composition with SayUI primitives and consumer-owned layout.
+        </p>
+        <a class="blog-demo-footer__link" href="ui-components.html">Browse SayUI components</a>
+    </footer>
+</body>
+
+</html>

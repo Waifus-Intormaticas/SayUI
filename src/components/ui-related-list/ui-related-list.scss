@@ -1,0 +1,79 @@
+@use '../../styles/foundations/variables' as *;
+@use '../../styles/foundations/mixins' as *;
+@use '../../styles/foundations/typography' as *;
+@use '../../styles/foundations/spacing' as *;
+
+.ui-related-list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+    width: 100%;
+    margin: $space-0;
+    padding: $space-0;
+    list-style: none;
+}
+
+.ui-related-list__item {
+    min-width: $space-0;
+}
+
+.ui-related-list__link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-1;
+    color: var(--dark);
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.ui-related-list__link:hover {
+    color: var(--primary);
+}
+
+.ui-related-list__category {
+    @include text($size: $font-size-3xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    display: block;
+    color: var(--primary);
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+
+.ui-related-list__title {
+    @include text($line-height: $line-height-tight, $weight: $font-weight-bold);
+
+    display: block;
+    color: inherit;
+}
+
+.ui-related-list__meta {
+    @include text($size: $font-size-2xs, $line-height: $leading-4, $weight: $font-weight-black);
+
+    display: block;
+    color: var(--slate-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ui-related-list--compact {
+    gap: $space-3;
+}
+
+.ui-related-list--compact .ui-related-list__link {
+    gap: $space-0-5;
+}
+
+.ui-related-list--compact .ui-related-list__title {
+    @include text($size: $font-size-sm, $line-height: $leading-5, $weight: $font-weight-bold);
+}
+
+.ui-related-list--divided {
+    gap: $space-0;
+    border-top: 1px solid var(--border-soft);
+}
+
+.ui-related-list--divided .ui-related-list__item {
+    padding: $space-4 $space-0;
+    border-bottom: 1px solid var(--border-soft);
+}
