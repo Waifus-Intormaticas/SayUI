@@ -8,10 +8,20 @@
 
 SayUI provides documented HTML contracts and a visual layer for editorial pages, blogs, documentation, and content-driven interfaces. It has no framework runtime, router, CMS, or JavaScript behavior dependency.
 
+> **About the name**
+>
+> **SayUI** is the official brand name of the project. It is derived from **Sayu UI**, where **Sayu** is the project name and **UI** stands for *User Interface*.
+>
+> Depending on the platform, you may also encounter:
+>
+> - **SayUI** — official brand.
+> - **Sayu UI** — expanded written form.
+> - `sayu-ui` — npm package name.
+
 ## Installation
 
 ```bash
-npm install sayui
+npm install sayu-ui
 ```
 
 ## CSS Usage
@@ -19,19 +29,19 @@ npm install sayui
 Import the standard bundle from a CSS-aware build tool:
 
 ```css
-@import "sayui/css";
+@import "sayu-ui/css";
 ```
 
 Or import it from JavaScript when the consumer build supports CSS imports:
 
 ```js
-import "sayui/css";
+import "sayu-ui/css";
 ```
 
 For a direct HTML workflow, copy or expose the installed bundle and link it:
 
 ```html
-<link rel="stylesheet" href="/node_modules/sayui/dist/css/sayui.css">
+<link rel="stylesheet" href="/node_modules/sayu-ui/dist/css/sayui.css">
 ```
 
 ## Minified CSS
@@ -39,13 +49,13 @@ For a direct HTML workflow, copy or expose the installed bundle and link it:
 Use the minified subpath in production-oriented builds:
 
 ```css
-@import "sayui/css/min";
+@import "sayu-ui/css/min";
 ```
 
 The physical file is:
 
 ```text
-node_modules/sayui/dist/css/sayui.min.css
+node_modules/sayu-ui/dist/css/sayui.min.css
 ```
 
 ## SCSS Usage
@@ -53,13 +63,13 @@ node_modules/sayui/dist/css/sayui.min.css
 SayUI publishes its Sass entry and component sources for consumers that need source-level integration:
 
 ```scss
-@use "pkg:sayui/scss";
+@use "pkg:sayu-ui/scss";
 ```
 
 The exported Sass entry is:
 
 ```text
-node_modules/sayui/src/styles/main.scss
+node_modules/sayu-ui/src/styles/main.scss
 ```
 
 Consumers should prefer the compiled CSS unless they specifically need Sass integration.
@@ -77,13 +87,13 @@ SayUI does not render components. Consumers write semantic HTML using the docume
 Component HTML examples are included under:
 
 ```text
-node_modules/sayui/src/components/
+node_modules/sayu-ui/src/components/
 ```
 
 Detailed contracts are included under:
 
 ```text
-node_modules/sayui/docs/components/
+node_modules/sayu-ui/docs/components/
 ```
 
 ## Public Primitives

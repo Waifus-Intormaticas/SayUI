@@ -93,7 +93,7 @@ Example:
 ```html
 <figure class="ui-code-block ui-code-block--wrap">
   <figcaption class="ui-code-block__caption">Install command</figcaption>
-  <pre class="ui-code-block__pre" tabindex="0"><code class="ui-code-block__code">npm install sayui --save-dev --ignore-scripts</code></pre>
+  <pre class="ui-code-block__pre" tabindex="0"><code class="ui-code-block__code">npm install sayu-ui --save-dev --ignore-scripts</code></pre>
 </figure>
 ```
 

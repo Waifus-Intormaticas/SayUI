@@ -2,6 +2,8 @@
 
 SayUI Internal v1 is the first internally releasable state of the framework-agnostic HTML, SCSS, and compiled CSS library.
 
+The official project brand is **SayUI**, its expanded written form is **Sayu UI**, and its npm package name is `sayu-ui`. The distributed stylesheet filenames remain `sayui.css` and `sayui.min.css`.
+
 ## Summary
 
 - 17 public primitives are implemented, documented, demonstrated, imported into the main Sass bundle, and available in compiled CSS.
